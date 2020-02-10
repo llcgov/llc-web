@@ -1,5 +1,25 @@
 @extends('admin.layout.master')
 
-@section('name')
-    <h1>Start Section</h1>
+@section('content')
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+  </div>
+  <div class="row">
+    <div class="container">
+        <form action="">
+            <div class="form-group">
+                <input type="file" name="" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                <select name="" id="" class="form-control">
+                    <option value="">Banner</option>
+                    <option value="">Background</option>
+                    <option value="">Slider</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+  </div>
 @endsection
