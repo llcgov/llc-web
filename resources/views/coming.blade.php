@@ -48,7 +48,7 @@ hr {
 
 <div class="bgimg">
   <div class="topleft">
-    <img src="img/pg.png" alt="" width="100px">
+    <img src="img/pg.png" alt="" width="150px">
   </div>
   <div class="middle">
     <h1>COMING SOON</h1>
