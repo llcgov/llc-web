@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('images', 'ImagesController@index')->name('admin.images');
+
+
+Auth::routes();
