@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('admin.index');
 });
+
+Route::get('images', 'ImagesController@index')->name('admin.images');

@@ -3,9 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Image;
 
 class ImagesController extends Controller
 {
+    public function index()
+    {
+        $data['images'] = Image::all();
+        return view('admin.images', $data);
+    }
+
     public function upload(Request $request)
     {
         $file = request()->file('name');
