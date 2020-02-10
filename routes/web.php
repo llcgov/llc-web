@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('admin.index');
+});
+
+Route::get('/', function () {
+    return view('coming');
 });
