@@ -28,7 +28,7 @@
         </div>
 
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-fw fa-cog"></i><span>Images</span></a>
+          <a class="nav-link" href="#"><i class="fas fa-fw fa-image"></i><span>Images</span></a>
         </li>
 
         <li class="nav-item">

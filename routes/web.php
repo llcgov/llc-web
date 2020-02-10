@@ -18,3 +18,4 @@ Route::get('/home', function () {
 Route::get('/', function () {
     return view('coming');
 });
+Route::get('images', 'ImagesController@index')->name('admin.images');
