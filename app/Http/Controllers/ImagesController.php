@@ -17,9 +17,7 @@ class ImagesController extends Controller
     {
         $file = request()->file('name');
         $fileName =  $file->getClientOriginalName();
-
         $image = Storage::put('public/' . $request->input('type'), $file);
-
 
         Image::create([
             'name' => request()->file('name')->hashName(),
@@ -40,7 +38,6 @@ class ImagesController extends Controller
         }
         
         $file->delete();
-
         return redirect()->back();
     }
 }
