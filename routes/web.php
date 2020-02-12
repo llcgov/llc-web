@@ -19,3 +19,7 @@ Route::get('/', function () {
     return view('coming');
 });
 Route::get('images', 'ImagesController@index')->name('admin.images');
+
+Route::get('coming-soon', function () {
+    return view('coming_soon');
+});
