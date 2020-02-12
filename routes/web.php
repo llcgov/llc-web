@@ -11,11 +11,17 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('admin.index');
 });
 
+Route::get('/', function () {
+    return view('coming');
+});
 Route::get('images', 'ImagesController@index')->name('admin.images');
 
 
 Auth::routes();
+Route::get('coming-soon', function () {
+    return view('coming_soon');
+});
