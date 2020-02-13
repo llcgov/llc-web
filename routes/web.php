@@ -16,7 +16,7 @@
 // });
 
 Route::get('/', function () {
-    return view('coming');
+    return view('coming_soon');
 });
 // Images
 Route::get('images', 'ImagesController@index')->name('admin.images');
@@ -26,6 +26,9 @@ Route::get('delete/{id}', 'ImagesController@delete')->name('images.delete');
 // Posts
 Route::resource('posts', 'PostsController');
 
+// News 
+Route::resource('news', 'NewsController');
+
 
 Auth::routes();
 Route::get('coming-soon', function () {
@@ -34,6 +37,6 @@ Route::get('coming-soon', function () {
 
 Auth::routes();
 
-Route::get('/home', function() { return view('admin.index');} )->name('home');
+// Route::get('/home', function() { return view('admin.index');} )->name('home');
 
-Route::get('/admin-home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');

@@ -17,7 +17,7 @@
 
         <!-- Custom styles for this template-->
         
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/sb-admin/sb-admin.css') }}" rel="stylesheet">
         <link href="{{ asset('vendor/fontawesome-free/css/all.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
@@ -25,11 +25,11 @@
     </head>
     <body id="page-top">
         <div id="wrapper">
-            <div id="app">  
+            @include('admin.layout.sidebar')
+ 
                 <div id="content-wrapper" class="d-flex flex-column">
+                    @include('admin.layout.nav')
                     <div id="content">
-                        @include('admin.layout.nav')
-                        @include('admin.layout.sidebar')
                        <div class="container-fluid">
                             @yield('content')
                        </div>
@@ -37,7 +37,7 @@
                     </div>
                     @include('admin.layout.footer')
                 </div>
-            </div>
+          
 
         </div>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>

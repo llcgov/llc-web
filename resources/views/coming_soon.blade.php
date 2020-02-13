@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maundy | Comming Soon Page</title>
+  <title>City of Lapu-Lapu | Official Website of City Government of Cebu | Comming Soon Page</title>
   <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
   <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
   <link href='https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,400italic,300italic,300|Raleway:300,400,600' rel='stylesheet' type='text/css'>
@@ -26,37 +26,54 @@
       <div class="row">
         <div class="logo text-center">
           <img src="img/pg.png" alt="logo" width="150">
-          <h2>Comming Soon</h2>
+          <h2>Coming Soon</h2>
         </div>
         <div id="countdown" data-wow-delay=".3s" data-date="Mar 30, 2020 06:00:00"></div>
-        <h2 class="subs-title text-center">Subscribe now to get Recent updates!!!</h2>
+        {{-- <h2 class="subs-title text-center">Subscribe now to get Recent updates!!!</h2>
         <div class="subcription-info text-center">
           <form class="subscribe_form" action="#" method="post">
             <input required="" value="" placeholder="Enter your email..." class="email" id="email" name="email" type="email">
             <input class="subscribe" name="email" value="Subscribe!" type="submit">
           </form>
-          <p class="sub-p">We Promise to never span you.</p>
-        </div>
+          <p class="sub-p">We Promise to never spam you.</p>
+        </div> --}}
       </div>
     </div>
     <section>
-      <div class="container">
-        <div class="row bort text-center">
-          <div class="social">
-            <ul>
-              <li>
-                <a href="https://facebook.com/"><i class="fa fa-facebook"></i></a>
-
-              </li>
-              <li>
-                <a href=""><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </li>
-            </ul>
-          </div>
+      <div class="container text-center bg-dark">
+        <h2 class="subs-title">Subscribe now to get Recent updates!!!</h2>
+        <div class="subcription-info">
+          <form class="subscribe_form" action="#" method="post">
+            <input required="" value="" placeholder="Enter your email..." class="email" id="email" name="email" type="email">
+            <input class="subscribe" name="email" value="Subscribe!" type="submit">
+          </form>
+          <p class="sub-p">We Promise to never spam you.</p>
         </div>
+        <h4>Follow us on our facebook pages: </h4>
+          
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="social bg-dark text-light">
+                      <a href="https://www.facebook.com/Junard-Ahong-Chan-1597892066938019/">
+                        <span><h4 style="color:white"><i class="fa fa-facebook"></i>Junard "Ahong" Chan</h4></span>
+                      </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="social bg-dark">
+                    <a href="https://www.facebook.com/lapulapucitygovernment/">
+                      <span class="text-decoration-none"><h4 style="color:white"><i class="fa fa-facebook"></i>Lapu-Lapu City Government - Chan Administration</h4></span>
+                    </a>
+                    </a>
+                </div>
+              </div>
+              </div>
+         
+        {{-- <div class="row bort text-center">
+          <div class="social">
+            
+          </div>
+        </div> --}}
       </div>
     </section>
     
@@ -76,6 +93,7 @@
     </div>
   </section>
 </div> --}}
+{{--
 <div class="container bg-dark">
   <div id="contact-info">
     <div class="container">
@@ -118,9 +136,10 @@
   </div>
 
 </div>
-
+--}}
 
   </div>
+  {{--
   <footer class="footer">
     <div class="container">
       <div class="row bort">
@@ -134,49 +153,20 @@
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Maundy
             -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
 
       </div>
     </div>
   </footer>
+  --}}
   <script src="css/coming/js/jquery.min.js"></script>
   <script src="css/coming/js/bootstrap.min.js"></script>
   <script src="css/coming/js/jquery.countdown.min.js"></script>
   <script src="css/coming/js/wow.js"></script>
   <script src="css/coming/js/custom.js"></script>
   <script src="css/contactform/contactform.js"></script>
-  <script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("March 30, 2020 15:37:25").getTime();
-    
-    // Update the count down every 1 second
-    var countdownfunction = setInterval(function() {
-    
-      // Get todays date and time
-      var now = new Date().getTime();
-      
-      // Find the distance between now an the count down date
-      var distance = countDownDate - now;
-      
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
-      
-      // If the count down is over, write some text 
-      if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-      }
-    }, 1000);
-    </script>
+ 
 </body>
 
 </html>
