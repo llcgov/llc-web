@@ -31,3 +31,7 @@ Auth::routes();
 Route::get('coming-soon', function () {
     return view('coming_soon');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
