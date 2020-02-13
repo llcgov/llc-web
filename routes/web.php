@@ -18,10 +18,13 @@ Route::get('/home', function () {
 Route::get('/', function () {
     return view('coming');
 });
+// Images
 Route::get('images', 'ImagesController@index')->name('admin.images');
 Route::post('upload', 'ImagesController@upload')->name('images.upload');
 Route::get('delete/{id}', 'ImagesController@delete')->name('images.delete');
 
+// Posts
+Route::resource('posts', 'PostsController');
 
 
 Auth::routes();
