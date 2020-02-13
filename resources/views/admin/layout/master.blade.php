@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>SB Admin 2 - Dashboard</title>
+        <title>City of Lapu-Lapu | Official Website of City Government of Cebu | Admin Dashboard</title>
 
         <!-- Custom fonts for this template-->
         {{-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> --}}
@@ -25,12 +25,11 @@
     </head>
     <body id="page-top">
         <div id="wrapper">
-
-            @include('admin.layout.sidebar')
+            <div id="app">  
                 <div id="content-wrapper" class="d-flex flex-column">
                     <div id="content">
                         @include('admin.layout.nav')
-
+                        @include('admin.layout.sidebar')
                        <div class="container-fluid">
                             @yield('content')
                        </div>
@@ -38,6 +37,8 @@
                     </div>
                     @include('admin.layout.footer')
                 </div>
+            </div>
+
         </div>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     </body>
