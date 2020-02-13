@@ -19,6 +19,9 @@ Route::get('/', function () {
     return view('coming');
 });
 Route::get('images', 'ImagesController@index')->name('admin.images');
+Route::post('upload', 'ImagesController@upload')->name('images.upload');
+Route::get('delete/{id}', 'ImagesController@delete')->name('images.delete');
+
 
 
 Auth::routes();

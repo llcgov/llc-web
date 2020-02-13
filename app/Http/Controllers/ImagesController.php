@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Image;
+use Illuminate\Support\Facades\Storage;
 
 class ImagesController extends Controller
 {
     public function index()
     {
-        $data['images'] = Image::all();
+        $data['images'] = Image::paginate(10);
         return view('admin.images', $data);
     }
 
@@ -21,18 +22,19 @@ class ImagesController extends Controller
 
         Image::create([
             'name' => request()->file('name')->hashName(),
-            'path' => 'public/' . $request->input('type'),
-            'file_extension' => 'test',
-            'type' => 'test',
-            'size' => $request->input('type')
+            'path' => $request->input('type'),
+            'type' => $request->input('type'),
+            'size' => request()->file('name')->getSize()
         ]);
+        
+        return redirect()->back();
     }
 
     public function delete($id)
     {
         $file = Image::find($id);
         try {
-            unlink('storage/' . $file->category . '/' . $file->file_name);    
+            unlink('storage/' . $file->type . '/' . $file->name);    
         } catch (\Throwable $th) {
             return $th;
         }
