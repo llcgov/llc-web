@@ -42,11 +42,13 @@
                         <form action="{{route('posts.store')}}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <input type="text" name="title" class="form-control">
+                                <label for="title">Title</label>
+                                <input type="text" placeholder="Post Title" name="title" class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="content" class="form-control">
+                                <label for="content">Content</label>
+                                <textarea name="content" class="form-control" rows="5"></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Submit</button>

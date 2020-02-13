@@ -28,7 +28,7 @@
         </div>
 
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-fw fa-image"></i><span>Images</span></a>
+          <a class="nav-link" href="{{ route('admin.images') }}"><i class="fas fa-fw fa-image"></i><span>Images</span></a>
         </li>
 
         <li class="nav-item">
@@ -45,7 +45,7 @@
   
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-fw fa-folder"></i><span>Posts</span></a>
+          <a class="nav-link" href="{{ route('posts.index') }}"><i class="fas fa-fw fa-folder"></i><span>Posts</span></a>
         </li>
   
         <!-- Nav Item - Charts -->
