@@ -36,33 +36,31 @@
           <p class="sub-p">We Promise to never spam you.</p>
         </div>
         <h4>Follow us on our facebook pages: </h4>
-          
-            <div class="row">
-              <div class="col-md-4">
-                <div class="social">
-                  <a href="https://www.facebook.com/lapulapucitygovernment/">
-                    <img src="{{ asset('/img/onelapulapu.png') }}" width="250px" alt="">
-                  </a>
-                  {{ asset('/img/onelapulapu.png') }}
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="social grow">
-                  <a href="https://www.facebook.com/lapulapucitygovernment/">
-                    <img src="{{ asset('/img/llcg-white.png') }}" width="250px" alt="">
-                  </a>
-                </div>
-              </div>
-                
-              <div class="col-md-4">
-                <div class="social grow">
-                  <a href="https://www.facebook.com/lapulapucitygovernment/">
-                    <img src="{{ asset('/img/junardahongchan-white.png') }}" width="250px" alt="">
-                  </a>
-                </div>
-              </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="social">
+              <a href="https://www.facebook.com/lapulapucitygovernment/">
+                <img src="{{ asset('/img/onelapulapu.png') }}" width="250px" alt="">
+              </a>
+              {{ asset('/img/onelapulapu.png') }}
             </div>
+          </div>
+          <div class="col-md-4">
+            <div class="social grow">
+              <a href="https://www.facebook.com/lapulapucitygovernment/">
+                <img src="{{ asset('/img/llcg-white.png') }}" width="250px" alt="">
+              </a>
+            </div>
+          </div>
+            
+          <div class="col-md-4">
+            <div class="social grow">
+              <a href="https://www.facebook.com/lapulapucitygovernment/">
+                <img src="{{ asset('/img/junardahongchan-white.png') }}" width="250px" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
   </div>
   <script src="css/coming/js/jquery.min.js"></script>
   <script src="css/coming/js/bootstrap.min.js"></script>
