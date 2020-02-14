@@ -16,7 +16,7 @@
 // });
 
 Route::get('/', function () {
-    return view('coming_soon');
+    return view('client.index');
 });
 // Images
 Route::get('images', 'ImagesController@index')->name('admin.images');
