@@ -47,17 +47,17 @@
               </div>
 
               <div class="col-md-4">
-                <div class="social">
+                <div class="social grow">
                   <a href="https://www.facebook.com/lapulapucitygovernment/">
-                    <img src="{{ asset('/img/onelapulapu.png') }}" width="250px" alt="">
+                    <img src="{{ asset('/img/llcg-white.png') }}" width="250px" alt="">
                   </a>
                 </div>
               </div>
                 
               <div class="col-md-4">
-                <div class="social">
+                <div class="social grow">
                   <a href="https://www.facebook.com/lapulapucitygovernment/">
-                    <img src="{{ asset('/img/onelapulapu.png') }}" width="250px" alt="">
+                    <img src="{{ asset('/img/junardahongchan-white.png') }}" width="250px" alt="">
                   </a>
                 </div>
               </div>
