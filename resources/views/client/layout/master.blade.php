@@ -17,7 +17,8 @@
 
         <!-- Custom styles for this template-->
         
-        <link href="{{ asset('css/sb-admin/sb-admin.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/client/footer.css') }}" rel="stylesheet">
         <link href="{{ asset('vendor/fontawesome-free/css/all.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
@@ -31,7 +32,6 @@
                        <div class="container-fluid">
                             @yield('content')
                        </div>
-                        
                     </div>
                     @include('client.layout.footer')
                 </div>

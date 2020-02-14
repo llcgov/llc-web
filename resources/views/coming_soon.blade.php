@@ -43,6 +43,7 @@
                   <a href="https://www.facebook.com/lapulapucitygovernment/">
                     <img src="{{ asset('/img/onelapulapu.png') }}" width="250px" alt="">
                   </a>
+                  {{ asset('/img/onelapulapu.png') }}
                 </div>
               </div>
 
