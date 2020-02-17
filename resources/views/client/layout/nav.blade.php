@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    {{-- <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#"><h5>HOME</h5> <span class="sr-only">(current)</span></a>
       </li>
@@ -40,10 +40,19 @@
       <li class="nav-item active">
         <a class="nav-link" href="#"><h5>GALLERY</h5> <span class="sr-only">(current)</span></a>
       </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
+    </ul> --}}
+    <nav class="navbar-nav mr-auto text-light">
+      <h6 class="font-weight-light font-italic">The official website of the City of Lapu-Lapu</h6>
+    </nav>
+    
+    <h6 class="text-light">{{ \Carbon\Carbon::parse(\Carbon\Carbon::now())->format('l, F d, Y H:i') }} </h6> 
+    <h5 class="text-light px-2"> | </h5>
+    <a href="https://www.facebook.com/lapulapucitygovernment/" class="text-decoration-none pr-2"><h6 class="text-light"> <i class="fab fa-facebook-square"> </i> Lapu-Lapu City Government</h6></a>
+    {{-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> --}}
   </div>
 </nav>
+<img src="{{ asset('img/pg-new.png') }}" alt="llc-logo.png" height="100px" width="100px">
+
