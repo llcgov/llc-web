@@ -15,9 +15,10 @@
 //     return view('admin.index');
 // });
 
-Route::get('/', function () {
-    return view('client.index');
-});
+// Route::get('/', function () {
+//     return view('client.index');
+// });
+Route::get('/', 'MainController@index');
 // Images
 Route::get('images', 'ImagesController@index')->name('admin.images');
 Route::post('upload', 'ImagesController@upload')->name('images.upload');

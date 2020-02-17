@@ -54,5 +54,62 @@
     </form> --}}
   </div>
 </nav>
-<img src="{{ asset('img/pg-new.png') }}" alt="llc-logo.png" height="100px" width="100px">
-
+<div class="container-fluid">
+  {{-- <div class="row"> --}}
+    {{-- <div class="col-md-3 my-3">
+      <img src="{{ asset('img/pg-new.png') }}" alt="llc-logo.png" height="140px">
+    </div> --}}
+    <div class="my-2">
+      <img src="{{ asset('img/banner.jpg') }}" alt="llc-logo.png" width="100%" height="200px">
+    </div>
+    {{-- <div class="col-md-3">
+      <img src="{{ asset('img/pg-new.png') }}" alt="llc-logo.png" height="100px" width="100px">
+    </div>
+    <div class="col-md-3">
+      <img src="{{ asset('img/pg-new.png') }}" alt="llc-logo.png" height="100px" width="100px">
+    </div> --}}
+  {{-- </div> --}}
+</div>
+<div class="container">
+  <div class="row navbar navbar-expand-lg navbar-dark bg-primary">
+    {{-- <div class="col-md-5"></div> --}}
+    <div class="col-md-9 offset-md-3">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" >
+          <a class="nav-link" href="#"><h5 class="font-weight-bold"> HOME</h5> <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item active" >
+          <a class="nav-link" href="#">
+            <h5 class="font-weight-bold"> 
+              ONLINE SERVICES
+            </h5> 
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active" >
+          <a class="nav-link" href="#">
+            <h5 class="font-weight-bold">  
+              DEPARTMENTS
+            </h5> 
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active" >
+          <a class="nav-link" href="#">
+            <h5 class="font-weight-bold">  
+              TRANSPARANCY
+            </h5> 
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active" >
+          <a class="nav-link" href="#">
+            <h5 class="font-weight-bold"> 
+              CONTACT US
+            </h5> 
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
