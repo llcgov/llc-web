@@ -17,6 +17,7 @@ class MainController extends Controller
     public function index()
     {
         $data['posts'] = Post::all();
+        $data['images'] = Image::all();
         
         return view('client.index', $data);
     }
