@@ -110,17 +110,14 @@
     </head>
     <body id="page-top">
         <div id="wrapper">
-                <div id="content-wrapper" class="d-flex flex-column">
-                    @include('client.layout.nav')
-                    <div id="content">
-                       <div class="container-fluid">
-                            @yield('content')
-                       </div>
-                    </div>
-                    @include('client.layout.footer')
-                </div>
-          
-
+          <div id="content-wrapper" class="d-flex flex-column">
+            @include('client.layout.nav')
+            @include('client.layout.menu')
+            <div id="content">
+                  @yield('content')
+              </div>
+              @include('client.layout.footer')
+          </div>
         </div>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     </body>

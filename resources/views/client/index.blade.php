@@ -35,7 +35,9 @@
                 </div>
                 <ul class="list-group list-group-flush scroll">
                     @foreach ($posts as $item)
-                        <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> - {{ $item->title}}</li>
+                        @if ($item->post_type == 'Events')
+                            <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> - {{ $item->title}}</li>
+                        @endif
                     @endforeach
                 </ul>
             </div>
@@ -47,19 +49,23 @@
                 </div>
                 <ul class="list-group list-group-flush scroll">
                     @foreach ($posts as $item)
-                        <li class="text-dark list-group-item">{{ $item->title}}</li>
+                        @if ($item->post_type == 'Tourism')
+                        <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> {{ $item->title}}</li>
+                        @endif
                     @endforeach
                 </ul>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card text-white bg-primary">
+            <div class="card text-white bg-success">
                 <div class="card-header">
                     <h5 class="font-weight-bold">BIDS AND AWARDS</h5>
                 </div>
                 <ul class="list-group list-group-flush scroll">
                     @foreach ($posts as $item)
-                        <li class="text-dark list-group-item"> {{ $item->title}}</li>
+                        @if ($item->post_type == 'Bids')
+                            <li class="text-dark list-group-item"> {{ $item->title }} <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"></li>
+                        @endif
                     @endforeach
                 </ul>
             </div>
@@ -71,7 +77,9 @@
                 </div>
                 <ul class="list-group list-group-flush scroll">
                     @foreach ($posts as $item)
-                        <li class="text-dark list-group-item"> {{ $item->title}}</li>
+                        @if ($item->post_type == 'Jobs')
+                        <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> {{ $item->title}}</li>
+                        @endif
                     @endforeach
                 </ul>
             </div>
@@ -83,11 +91,19 @@
         <div class="col-md-7"> 
             <div class="embed-responsive embed-responsive-16by9">
                 {{-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> --}}
-                <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flapulapucitygovernment%2Fvideos%2F395809897803594%2F&show_text=0&width=560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flapulapucitygovernment%2Fvideos%2F395809897803594%2F&show_text=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
               </div>
         </div>
         <div class="col-md-5">
            <div id='calendar'></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-57">
+
+        </div>
+        <div class="">
+
         </div>
     </div>
 </div>

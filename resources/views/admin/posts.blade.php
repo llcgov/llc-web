@@ -21,6 +21,7 @@
                             <th scope="col">Image</th>
                             <th scope="col">Title</th>
                             <th scope="col">Content</th>
+                            <th scope="col">Post Type</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
@@ -30,6 +31,7 @@
                             <td><img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" width="100"></td>
                             <td>{{ $item->title}}</td>
                             <td>{{ $item->content}}</td>
+                            <td>{{ $item->post_type}}</td>
                             <td><a href="{{ route('posts.destroy', $item) }}"><button class="btn btn-danger">Danger</button></a><a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a></td>
                         </tr>
                         @endforeach
@@ -54,11 +56,25 @@
                             <div class="form-group">
                                 <input type="file" name="name" class="form-control">
                             </div>
-                            <div class="form-group">
-                                <select name="type" id="" class="form-control">
-                                    <option value="Posts">Posts</option>
-                                    <option value="Slider">News</option>
-                                </select>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select name="type" id="" class="form-control">
+                                            <option value="Posts">Posts</option>
+                                            <option value="Slider">News</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select name="post_type" class="form-control">
+                                            <option value="Tourism">Tourism</option>
+                                            <option value="Events">Events</option>
+                                            <option value="Jobs">Jobs</option>
+                                            <option value="Bids">Bids And Awards</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>

@@ -38,7 +38,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $post = Post::create(['title' => $request->input('title'), 'content' => $request->input('content')]);
+        $post = Post::create(['title' => $request->input('title'), 'content' => $request->input('content'), 'post_type' => $request->input('post_type')]);
 
         $file = request()->file('name');
         $fileName =  $file->getClientOriginalName();
