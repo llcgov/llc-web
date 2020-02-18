@@ -50,7 +50,7 @@
                 <ul class="list-group list-group-flush scroll">
                     @foreach ($posts as $item)
                         @if ($item->post_type == 'Tourism')
-                        <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> {{ $item->title}}</li>
+                        <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> - {{ $item->title}}</li>
                         @endif
                     @endforeach
                 </ul>
@@ -64,7 +64,7 @@
                 <ul class="list-group list-group-flush scroll">
                     @foreach ($posts as $item)
                         @if ($item->post_type == 'Bids')
-                            <li class="text-dark list-group-item"> {{ $item->title }} <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"></li>
+                            <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> - {{ $item->title }} </li>
                         @endif
                     @endforeach
                 </ul>
@@ -78,7 +78,7 @@
                 <ul class="list-group list-group-flush scroll">
                     @foreach ($posts as $item)
                         @if ($item->post_type == 'Jobs')
-                        <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> {{ $item->title}}</li>
+                        <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> - {{ $item->title}}</li>
                         @endif
                     @endforeach
                 </ul>
