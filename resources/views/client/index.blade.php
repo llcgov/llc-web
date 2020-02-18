@@ -2,7 +2,7 @@
 @section('content')
 <div class="container-fluid">
 <div class="row">
- <div class="offset-md-3 col-md-6 offset-md-3 my-2">
+ <div class="offset-md-2 col-md-8 offset-md-2 my-2">
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
             @foreach ($images as $key => $image_count)
@@ -12,7 +12,7 @@
         <div class="carousel-inner">
             @foreach ($images as $key_image => $image)
                 <div class="carousel-item {{ $key_image == 0 ? 'active': ''}}">
-                    <img src="{{ url( 'storage/' . $image->path . '/' . $image->name) }}" alt="Los Angeles" width="1100" height="500">
+                    <img src="{{ url( 'storage/' . $image->path . '/' . $image->name) }}" alt="Los Angeles" width="1300" height="500">
                 </div>
             @endforeach
         </div>
@@ -47,9 +47,10 @@
                     <h5 class="font-weight-bold">TOURISM</h5>
                 </div>
                 <ul class="list-group list-group-flush scroll">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    @foreach ($posts as $item)
+                        <li class="text-dark list-group-item">{{ $item->title}}</li>
+                    @endforeach
+                    {{-- <li class="list-group-item">Vestibulum at eros</li> --}}
                 </ul>
             </div>
         </div>
@@ -59,9 +60,10 @@
                     <h5 class="font-weight-bold">BIDS AND AWARDS</h5>
                 </div>
                 <ul class="list-group list-group-flush scroll">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    @foreach ($posts as $item)
+                        <li class="text-dark list-group-item"> {{ $item->title}}</li>
+                    @endforeach
+                    {{-- <li class="list-group-item">Vestibulum at eros</li> --}}
                 </ul>
             </div>
         </div>
@@ -71,20 +73,21 @@
                     <h5 class="font-weight-bold">JOBS</h5>
                 </div>
                 <ul class="list-group list-group-flush scroll">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    @foreach ($posts as $item)
+                        <li class="text-dark list-group-item"> {{ $item->title}}</li>
+                    @endforeach
+                    {{-- <li class="list-group-item">Vestibulum at eros</li> --}}
                 </ul>
             </div>
         </div>
     </div>
 {{-- END EVENTS AND POSTS --}}
 
-    <div class="row">
-        <div class="col-md-6">
-            <iframe width="720" height="360" src="https://www.youtube.com/embed/k9s7X-Hnohw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="row my-2">
+        <div class="col-md-7"> 
+            <iframe width="1080" height="720" src="https://www.youtube.com/embed/MC-mszipMKY" frameborder="0" allow="encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
            <div id='calendar'></div>
         </div>
     </div>
