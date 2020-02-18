@@ -17,7 +17,7 @@ class MainController extends Controller
     public function index()
     {
         $data['posts'] = Post::all();
-        $data['images'] = Image::all();
+        $data['images'] = Image::where('type', 'Slider')->get();
         
         return view('client.index', $data);
     }

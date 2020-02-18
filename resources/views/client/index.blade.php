@@ -29,20 +29,19 @@
 {{-- POSTS AND EVENTS --}}
     <div class="row">
         <div class="col-md-3">
-            <div class="card text-white bg-primary">
+            <div class="card text-white bg-danger">
                 <div class="card-header">
                     <h5 class="font-weight-bold">EVENTS</h5>
                 </div>
                 <ul class="list-group list-group-flush scroll">
                     @foreach ($posts as $item)
-                        <li class="text-dark list-group-item"> <img src="#" alt="sometxt.png">{{ $item->title}}</li>
+                        <li class="text-dark list-group-item"> <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" class="img-thumbnail" width="100px"> - {{ $item->title}}</li>
                     @endforeach
-                    {{-- <li class="list-group-item">Vestibulum at eros</li> --}}
                 </ul>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card text-white bg-primary">
+            <div class="card text-white bg-success">
                 <div class="card-header">
                     <h5 class="font-weight-bold">TOURISM</h5>
                 </div>
@@ -50,7 +49,6 @@
                     @foreach ($posts as $item)
                         <li class="text-dark list-group-item">{{ $item->title}}</li>
                     @endforeach
-                    {{-- <li class="list-group-item">Vestibulum at eros</li> --}}
                 </ul>
             </div>
         </div>
@@ -63,12 +61,11 @@
                     @foreach ($posts as $item)
                         <li class="text-dark list-group-item"> {{ $item->title}}</li>
                     @endforeach
-                    {{-- <li class="list-group-item">Vestibulum at eros</li> --}}
                 </ul>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card text-white bg-primary">
+            <div class="card text-white bg-success">
                 <div class="card-header">
                     <h5 class="font-weight-bold">JOBS</h5>
                 </div>
@@ -76,7 +73,6 @@
                     @foreach ($posts as $item)
                         <li class="text-dark list-group-item"> {{ $item->title}}</li>
                     @endforeach
-                    {{-- <li class="list-group-item">Vestibulum at eros</li> --}}
                 </ul>
             </div>
         </div>
@@ -85,7 +81,10 @@
 
     <div class="row my-2">
         <div class="col-md-7"> 
-            <iframe width="1080" height="720" src="https://www.youtube.com/embed/MC-mszipMKY" frameborder="0" allow="encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="embed-responsive embed-responsive-16by9">
+                {{-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> --}}
+                <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flapulapucitygovernment%2Fvideos%2F395809897803594%2F&show_text=0&width=560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+              </div>
         </div>
         <div class="col-md-5">
            <div id='calendar'></div>

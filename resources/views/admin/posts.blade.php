@@ -18,7 +18,7 @@
                 <table class="table">
                     <thead>
                         <tr>
- 
+                            <th scope="col">Image</th>
                             <th scope="col">Title</th>
                             <th scope="col">Content</th>
                             <th scope="col">Actions</th>
@@ -27,6 +27,7 @@
                     <tbody>
                         @foreach ($posts as $item)
                         <tr>
+                            <td><img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" width="100"></td>
                             <td>{{ $item->title}}</td>
                             <td>{{ $item->content}}</td>
                             <td><a href="{{ route('posts.destroy', $item) }}"><button class="btn btn-danger">Danger</button></a><a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a></td>
@@ -39,7 +40,7 @@
             <div id="images" class="tab-pane">
                 <div class="row">
                     <div class="container">
-                        <form action="{{route('posts.store')}}" method="POST">
+                        <form action="{{route('posts.store')}}" enctype="multipart/form-data" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="title">Title</label>
@@ -50,7 +51,15 @@
                                 <label for="content">Content</label>
                                 <textarea name="content" class="form-control" rows="5"></textarea>
                             </div>
-
+                            <div class="form-group">
+                                <input type="file" name="name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <select name="type" id="" class="form-control">
+                                    <option value="Posts">Posts</option>
+                                    <option value="Slider">News</option>
+                                </select>
+                            </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>

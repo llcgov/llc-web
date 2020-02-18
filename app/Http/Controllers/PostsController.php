@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Media;
+use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
@@ -36,8 +38,21 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        Post::create(['title' => $request->input('title'), 'content' => $request->input('content')]);
+        $post = Post::create(['title' => $request->input('title'), 'content' => $request->input('content')]);
 
+        $file = request()->file('name');
+        $fileName =  $file->getClientOriginalName();
+        $image = Storage::put('public/' . $request->input('type'), $file);
+
+        $media = Media::create([
+            'name' => request()->file('name')->hashName(),
+            'path' => $request->input('type'),
+            'type' => $request->input('type'),
+            'size' => request()->file('name')->getSize()
+        ]);
+
+        $post->media()->save($media);
+        
         return redirect()->back();
     }
 
