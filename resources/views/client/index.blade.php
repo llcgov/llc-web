@@ -5,13 +5,13 @@
  <div class="offset-md-3 col-md-6 offset-md-3 my-2">
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
-            @foreach ($images as $key => $image)
+            @foreach ($images as $key => $image_count)
             <li data-target="#demo" data-slide-to="{{$key}}" class="{{ $key == 0 ? 'active' : ''}}"></li>
             @endforeach
         </ul>
         <div class="carousel-inner">
-            @foreach ($images as $key => $image)
-                <div class="carousel-item {{ $key == 0 ? 'active': ''}}">
+            @foreach ($images as $key_image => $image)
+                <div class="carousel-item {{ $key_image == 0 ? 'active': ''}}">
                     <img src="{{ url( 'storage/' . $image->path . '/' . $image->name) }}" alt="Los Angeles" width="1100" height="500">
                 </div>
             @endforeach
@@ -81,11 +81,11 @@
 {{-- END EVENTS AND POSTS --}}
 
     <div class="row">
-        <div class="col-md-8">
-            YOUTUBE VIDEO DISPLAY
+        <div class="col-md-6">
+            <iframe width="720" height="360" src="https://www.youtube.com/embed/k9s7X-Hnohw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="col-md-4">
-            calendar
+        <div class="col-md-6">
+           <div id='calendar'></div>
         </div>
     </div>
 </div>

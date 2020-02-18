@@ -5,7 +5,10 @@
  */
 
 require('./bootstrap');
-
+require('@fullcalendar/core');
+require('@fullcalendar/daygrid');
+require('@fullcalendar/timegrid');
+require('@fullcalendar/list');
 window.Vue = require('vue');
 
 /**
