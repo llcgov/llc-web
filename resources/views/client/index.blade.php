@@ -1,6 +1,6 @@
 @extends('client.layout.master')
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid px-5">
 <div class="row">
  <div class="offset-md-2 col-md-8 offset-md-2 my-2">
     <div id="demo" class="carousel slide" data-ride="carousel">
