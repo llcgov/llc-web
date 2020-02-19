@@ -40,7 +40,7 @@
                                     <li class="text-dark list-group-item"> 
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" width="100px">
+                                                <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" width="80px">
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="text-uppercase font-content"><p> {{ $item->title}}</p></span>
@@ -65,7 +65,7 @@
                                 <li class="text-dark list-group-item">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" width="100px">
+                                            <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" width="80px">
                                         </div>
                                         <div class="col-md-8">
                                             <span class="text-uppercase font-content"><p> {{ $item->title}}</p></span>
@@ -115,7 +115,7 @@
                                 <li class="text-dark list-group-item"> 
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" width="100px">
+                                            <img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" alt="" width="80px">
                                         </div>
                                         <div class="col-md-8">
                                             <span class="text-uppercase font-content"><p>{{ $item->title}}</p></span>

@@ -1,6 +1,8 @@
     <div class="container-fluid nav-bg">
-      <div class="my-2">
-        <img src="{{ asset('img/banner.jpg') }}" alt="llc-logo.png" width="100%" height="200px">
+      <div class="row">
+          <div class="offset-md-1 col-md-4">
+                <img src="{{ asset('img/republic_of_ph_white.png') }}" alt="llc-logo.png" width="100%">
+          </div>
       </div>
     </div>
     <div class="navbar navbar-expand-lg navbar-dark bg-primary">
