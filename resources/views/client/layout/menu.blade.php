@@ -1,4 +1,4 @@
-    <div class="container-fluid">
+    <div class="container-fluid nav-bg">
       <div class="my-2">
         <img src="{{ asset('img/banner.jpg') }}" alt="llc-logo.png" width="100%" height="200px">
       </div>

@@ -6,3 +6,7 @@
 .font-content {
     font-family: Roboto, Helvetica, Arial, sans-serif;
 }
+
+.nav-bg{
+    background: url('http://localhost:8000/img/head.jpg');
+}
