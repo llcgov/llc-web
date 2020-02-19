@@ -17,7 +17,7 @@ class ImagesController extends Controller
     public function upload(Request $request)
     {
         $file = request()->file('name');
-        dd($file);
+        // dd($file);
         $fileName =  $file->getClientOriginalName();
         $image = Storage::put('public/' . $request->input('type'), $file);
 

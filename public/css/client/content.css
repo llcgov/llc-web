@@ -2,3 +2,7 @@
     max-height: 250px;
     overflow-y: auto;
 }
+
+.font-content {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}

@@ -4,7 +4,7 @@
       </div>
     </div>
     <div class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="row offset-md-4 col-md-5 offset-md-3">
+        <div class="row offset-md-4 col-md-6 offset-md-2">
             {{-- <div class=""> --}}
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
