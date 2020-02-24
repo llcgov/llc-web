@@ -18,7 +18,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <h4 class="font-weight-light text-light dropdown-toggle">  
-                            ONLINE SERVICES
+                            ONLINE SERVICE
                         </h4></a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="#"><h5 class="font-weight-light">New/Renew Business Permit</h5></a>

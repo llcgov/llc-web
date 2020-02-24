@@ -43,8 +43,8 @@
             <div id="images" class="tab-pane">
                 <div class="row">
                     <div class="container">
-                        <form action="{{route('images.upload')}}" enctype="multipart/form-data" method="POST">
-                            @csrf
+                        <form action="http://staging.lapulapucity.gov.ph/public/upload/" enctype="multipart/form-data" method="POST">
+                            {{ csrf_field() }}
                             <div class="form-group">
                                 <input type="file" name="name" class="form-control">
                             </div>
@@ -56,7 +56,7 @@
                                     <option value="Slider">Slider</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" formmethod="POST" formaction="{{route('images.upload')}}" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>

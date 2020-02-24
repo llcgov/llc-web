@@ -11,14 +11,9 @@
 |
 */
 
-// Route::get('/home', function () {
-//     return view('admin.index');
-// });
-
-// Route::get('/', function () {
-//     return view('client.index');
-// });
 Route::get('/', 'MainController@index');
+Route::get('home', 'HomeController@index')->name('home');
+
 // Images
 Route::get('images', 'ImagesController@index')->name('admin.images');
 Route::post('upload', 'ImagesController@upload')->name('images.upload');
@@ -30,14 +25,6 @@ Route::resource('posts', 'PostsController');
 // News 
 Route::resource('news', 'NewsController');
 
-
-Auth::routes();
-Route::get('coming-soon', function () {
-    return view('coming_soon');
-});
-
 Auth::routes();
 
-// Route::get('/home', function() { return view('admin.index');} )->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');

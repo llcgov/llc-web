@@ -1,0 +1,34 @@
+#RewriteBase /public/
+
+#Options +FollowSymLinks
+#RewriteEngine On
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.+)$ /index.php [L]
+
+#ErrorDocument 404 /404.php
+
+#Options -Indexes -MultiViews
+#RewriteEngine on
+
+#RewriteCond %{THE_REQUEST} \.php [NC]
+#RewriteRule ^(?!404\.php)$ - [L,NC,R=404]
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}.php -f
+#RewriteRule ^([^/]+)/?(.*)$ ./$1.php [L]
+
+#Options +FollowSymLinks
+#RewriteEngine On
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^ index.php [L]
+
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^staging.lapulapucity.gov.ph$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.staging.lapulapucity.gov.ph$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
