@@ -1,8 +1,32 @@
-RewriteBase /public/
+#RewriteBase /public/
 
-Options +FollowSymLinks
-RewriteEngine On
+#Options +FollowSymLinks
+#RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [L]
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.+)$ /index.php [L]
+
+#ErrorDocument 404 /404.php
+
+#Options -Indexes -MultiViews
+#RewriteEngine On 
+
+#RewriteCond %{THE_REQUEST} \.php [NC]
+#RewriteRule ^(?!404\.php)$ - [L,NC,R=404]
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}.php -f
+#RewriteRule ^([^/]+)/?(.*)$ ./$1.php [L]
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+</IfModule>
+
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
