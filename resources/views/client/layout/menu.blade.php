@@ -28,9 +28,9 @@
                     </div>
                   </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('offices')}}">
+                    <a class="nav-link" href="{{ route('departments')}}">
                         <h4 class="font-weight-light text-light">  
-                            OFFICES
+                            DEPARTMENTS
                         </h4> 
                         <span class="sr-only">(current)</span>
                     </a>

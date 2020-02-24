@@ -25,7 +25,7 @@ Route::resource('posts', 'PostsController');
 // News 
 Route::resource('news', 'NewsController');
 
-Route::get('department', function (){ return view('client.departments'); })->name('offices');
+Route::get('departments', function (){ return view('client.departments'); })->name('departments');
 
 Auth::routes();
 
