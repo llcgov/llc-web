@@ -50,7 +50,7 @@
   
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-          <a class="nav-link" href="charts.html">e<i class="fas fa-fw fa-chart-area"></i><span>Downloadables</span></a>
+          <a class="nav-link" href="{{ route('departments.index') }}">e<i class="fas fa-fw fa-chart-area"></i><span>Departments</span></a>
         </li>
   
         <!-- Nav Item - Tables -->

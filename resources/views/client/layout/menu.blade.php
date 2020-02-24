@@ -28,7 +28,7 @@
                     </div>
                   </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('departments')}}">
+                    <a class="nav-link" href="#">
                         <h4 class="font-weight-light text-light">  
                             DEPARTMENTS
                         </h4> 

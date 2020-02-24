@@ -14,9 +14,9 @@ class DepartmentsController extends Controller
      */
     public function index()
     {
-        $data['department'] = Department::all();
+        $data['departments'] = Department::all();
         
-        return view('client.departments', $data);
+        return view('admin.department', $data);
     }
 
     /**
@@ -37,7 +37,13 @@ class DepartmentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dept = Department::create([
+            'name' => $request->input('name'),
+            'office' => $request->input('office'),
+            'description' => $request->input('description')
+        ]);
+
+        return redirect()->back();
     }
 
     /**

@@ -14,19 +14,21 @@
 Route::get('/', 'MainController@index');
 Route::get('home', 'HomeController@index')->name('home');
 
-// Images
-Route::get('images', 'ImagesController@index')->name('admin.images');
-Route::post('upload', 'ImagesController@upload')->name('images.upload');
-Route::get('delete/{id}', 'ImagesController@delete')->name('images.delete');
 
-// Posts
-Route::resource('posts', 'PostsController');
+Route::group(['middleware' => ['auth']], function () {
+    // Posts
+    Route::resource('posts', 'PostsController');
 
-// News 
-Route::resource('news', 'NewsController');
+    // News 
+    Route::resource('news', 'NewsController');
+
+    // Images
+    Route::get('images', 'ImagesController@index')->name('admin.images');
+    Route::post('upload', 'ImagesController@upload')->name('images.upload');
+    Route::get('delete/{id}', 'ImagesController@delete')->name('images.delete');
+    Route::resource('departments', 'DepartmentsController');
+
+});
 
 // Route::get('departments', function (){ return view('client.departments'); })->name('departments');
-Route::resource('departments', 'DepartmentsController');
 Auth::routes();
-
-
