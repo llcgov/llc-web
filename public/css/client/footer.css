@@ -1,5 +1,5 @@
 .foot{
-    background: url('https://staging.lapulapucity.gov.ph/llc-web/public/img/zig.png');
+    background: url('/img/zig.png');
     background-position: center;
     background-repeat: repeat-x;
     padding: 30px;
