@@ -72,6 +72,9 @@
                                             <option value="Events">Events</option>
                                             <option value="Jobs">Jobs</option>
                                             <option value="Bids">Bids And Awards</option>
+                                            <option value="News">Latest News</option>
+                                            <option value="Serbisyo">Libreng Serbisyo</option>
+                                            <option value="Sports">Sports</option>
                                         </select>
                                     </div>
                                 </div>

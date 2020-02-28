@@ -113,9 +113,9 @@
           <div id="content-wrapper" class="d-flex flex-column">
             @include('client.layout.nav')
             @include('client.layout.menu')
-            <div id="content">
-                  @yield('content')
-              </div>
+            <div id="content" class="content">
+                @yield('content')
+            </div>
               @include('client.layout.footer')
           </div>
         </div>

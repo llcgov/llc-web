@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'MainController@index');
+Route::get('/', 'MainController@index')->name('client.home');
 Route::get('home', 'HomeController@index')->name('home');
-
+Route::get('about', function(){return view('client.about');})->name('client.about');
 
 Route::group(['middleware' => ['auth']], function () {
     // Posts
