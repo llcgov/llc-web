@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransparencyTable extends Migration
+class CreateTransparenciesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTransparencyTable extends Migration
      */
     public function up()
     {
-        Schema::create('transparency', function (Blueprint $table) {
+        Schema::create('transparencies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('path');
@@ -28,6 +28,6 @@ class CreateTransparencyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transparency');
+        Schema::dropIfExists('transparencies');
     }
 }

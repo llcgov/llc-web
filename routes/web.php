@@ -23,13 +23,17 @@ Route::group(['middleware' => ['auth']], function () {
 
     // News 
     Route::resource('news', 'NewsController');
+    
+    // Departments 
+    Route::resource('departments', 'DepartmentsController');
+
+    // Transparency
+    Route::resource('transparencies', 'TransparencyController');
 
     // Images
     Route::get('images', 'ImagesController@index')->name('admin.images');
     Route::post('upload', 'ImagesController@upload')->name('images.upload');
     Route::get('delete/{id}', 'ImagesController@delete')->name('images.delete');
-    Route::resource('departments', 'DepartmentsController');
-    // Route::resource('transparancy', function(){return view('client.pdf');})->name('client.pdf');
 
 });
 

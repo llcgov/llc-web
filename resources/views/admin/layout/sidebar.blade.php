@@ -55,9 +55,9 @@
   
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-          <a class="nav-link" href="tables.html">
+          <a class="nav-link" href="{{ route('transparencies.index') }}">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <span>Transparency Files</span></a>
         </li>
   
         <!-- Divider -->

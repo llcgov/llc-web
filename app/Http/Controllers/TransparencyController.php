@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Transparency;
+use Illuminate\Support\Facades\Storage;
 
 class TransparencyController extends Controller
 {
@@ -13,7 +15,8 @@ class TransparencyController extends Controller
      */
     public function index()
     {
-        //
+        $data['transparency'] = Transparency::all();
+        return view('admin.transparency', $data);
     }
 
     /**
@@ -34,7 +37,13 @@ class TransparencyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $file = request()->file('name');
+        $fileName =  $file->getClientOriginalName();
+        $file_path = Storage::put('public/PDF', $file);
+
+        $post = Transparency::create(['name' => request()->file('name')->hashName(), 'path' => 'public/PDF']);
+        return redirect()->back();
     }
 
     /**
@@ -79,6 +88,16 @@ class TransparencyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $file = Transparency::find($id);
+
+        try {
+            unlink('storage/PDF/' . $file->name);    
+            $file->delete();
+
+        } catch (\Throwable $th) {
+            return $th;
+        }
+
+        return redirect()->back();
     }
 }

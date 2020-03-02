@@ -32,7 +32,17 @@
                             <td>{{ $item->title}}</td>
                             <td>{{ $item->content}}</td>
                             <td>{{ $item->post_type}}</td>
-                            <td><a href="{{ route('posts.destroy', $item) }}"><button class="btn btn-danger">Danger</button></a><a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a></td>
+                            <td>
+                                <form action="{{ route('posts.destroy', $item->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                                <a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a>
+                            </td>
+                                {{-- <a href="{{ route('posts.destroy', $item) }}"><button class="btn btn-danger">Danger</button></a> --}}
+                                {{-- <a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a> --}}
+                          
                         </tr>
                         @endforeach
                     </tbody>
