@@ -18,18 +18,18 @@
             <img src="{{ asset('img/lapu-lapu.jpg') }}" alt="" class="mw-100">
         </div>
         <div class="col-md-8">
+            <br><br>
             <h5 class="text-justify text-dark">
                 <span class="ml-5"> <strong>The existence of two bridges</strong></span> has impressed the accessibility between The City of Lapu-Lapu and other areas in the Province of Cebu which has cut down on  transportation expenses as well as travelling time.
                 <br><br>
                 <span class="ml-5"></span>The City is separated from the province of Cebu by the Mactan Channel, however, at present it is connected with the Province of Cebu by  two bridges, known as the 1st Mandaue – Mactan Bridge and Marcelo H. Fernan Bridge.  The City of Lapu-Lapu and Municipality of Cordova comprises the whole Mactan Island.  These are connected by two bridges,   bound from Suba-Basbas, the Suba-Basbas-Gabi bridge and bound from Babag, the Babag-Pilipog bridge.  Her proximity to a highly developed area which is Cebu City has resulted in a mutually reinforcing relationship.
-                <br>
-                <br>
             </h5>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-8">
+            <br><br>
             <h5>
                 <span class="ml-5"><strong>The City of Lapu-Lapu</strong></span> utilizes some of the facilities of Cebu City in the field of education (undergraduate and graduate studies) and communications (television, radio and newspaper).  The Metro Cebu Water District (MCWD) has included The City of Lapu-Lapu in its distribution of water supply.
                 <br>
@@ -40,8 +40,6 @@
                 <br>
                 
                 <span class="ml-5"></span>It services domestic flights to and from major cities of the country, as well as international flights to Japan (Narita), Sourth Korea (Inchon and Pusan), Singapore, Qatar (Doha), Taiwan (Taipei), Hongkong, China (Pudong and Kaoshiung), Thailand (Bangkok) and Malaysia (Kuala Lumpur).
-                <br>
-                <br>
             </h5>
         </div>
         <div class="col-md-4">

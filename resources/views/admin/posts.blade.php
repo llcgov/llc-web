@@ -28,7 +28,7 @@
                     <tbody>
                         @foreach ($posts as $item)
                         <tr>
-                            <td><img src="{{ url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) }}" width="100"></td>
+                            <td><img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" width="100"></td>
                             <td>{{ $item->title}}</td>
                             <td>{{ $item->content}}</td>
                             <td>{{ $item->post_type}}</td>
