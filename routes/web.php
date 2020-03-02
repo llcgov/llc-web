@@ -13,7 +13,9 @@
 
 Route::get('/', 'MainController@index')->name('client.home');
 Route::get('home', 'HomeController@index')->name('home');
-Route::get('about', function(){return view('client.about');})->name('client.about');
+Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
+Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
+Route::get('transparancy', function(){return view('client.pdf');})->name('client.pdf');
 
 Route::group(['middleware' => ['auth']], function () {
     // Posts
@@ -27,6 +29,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('upload', 'ImagesController@upload')->name('images.upload');
     Route::get('delete/{id}', 'ImagesController@delete')->name('images.delete');
     Route::resource('departments', 'DepartmentsController');
+    // Route::resource('transparancy', function(){return view('client.pdf');})->name('client.pdf');
 
 });
 
