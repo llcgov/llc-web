@@ -1,8 +1,8 @@
 @extends('client.layout.master')
 @section('content')
 <div class="container-fluid">
-    <div class="row">
-        <div class="offset-md-2 col-md-8 offset-md-2 my-2">
+    <div class="row bg-white">
+        <div class="offset-md-2 col-md-8 my-2">
             <div id="demo" class="carousel slide" data-ride="carousel">
                 <ul class="carousel-indicators">
                     @foreach ($images as $key => $image_count)
@@ -12,7 +12,7 @@
                 <div class="carousel-inner">
                     @foreach ($images as $key_image => $image)
                         <div class="carousel-item {{ $key_image == 0 ? 'active': ''}}">
-                            <img src="{{ url( 'storage/' . $image->path . '/' . $image->name) }}" class="cover" alt="Los Angeles" width="1300" height="500">
+                            <img src="{{ url( 'storage/' . $image->path . '/' . $image->name) }}" class="d-block img-fluid" alt="Los Angeles" width="1300" height="500">
                         </div>
                     @endforeach
                 </div>
@@ -26,8 +26,8 @@
         </div>
     </div>
     
-    <div class="row">
-        <div class="offset-md-2 col-md-8 offset-md-2 my-2">
+    <div class="row bg-white">
+        <div class="offset-md-2 col-md-8 offset-md-2">
             <div class="row bg-white rounded py-3">
                 <div class="col-md-3">
                     <div class="card text-white bg-danger">
@@ -130,7 +130,7 @@
                 </div>
             </div>
 
-            <div class="row my-2 bg-white rounded py-3">
+            <div class="row my-2 bg-white rounded">
                 <div class="col-md-6"> 
                     <div class="card text-white bg-danger">
                         <div class="card-header">
@@ -205,6 +205,21 @@
                 </div>
             </div>
             
+            {{-- <div class="row my-2  bg-white rounded py-3">
+                <div class="col-md-6"> 
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flapulapucitygovernment%2Fvideos%2F395809897803594%2F&show_text=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div id='calendar'></div>
+                </div>
+            </div> --}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="offset-md-2 col-md-8">
             <div class="row my-2  bg-white rounded py-3">
                 <div class="col-md-6"> 
                     <div class="embed-responsive embed-responsive-16by9">

@@ -36,7 +36,7 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
+                    <a class="nav-link" data-toggle="dropdown" href="{{ route('client.transparency') }}" role="button" aria-haspopup="true" aria-expanded="true">
                         <h4 class="font-weight-light text-light dropdown-toggle">  
                             TRANSPARENCY
                         </h4></a>

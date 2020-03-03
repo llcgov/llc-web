@@ -22,6 +22,13 @@ class MainController extends Controller
         return view('client.index', $data);
     }
 
+    public function transparency()
+    {
+        $data['transparency'] = Transparency::all();
+
+        return view('client.transparency', $data);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
