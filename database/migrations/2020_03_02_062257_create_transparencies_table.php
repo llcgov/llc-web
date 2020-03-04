@@ -15,6 +15,7 @@ class CreateTransparenciesTable extends Migration
     {
         Schema::create('transparencies', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
             $table->string('name');
             $table->string('path');
             $table->timestamps();

@@ -27,7 +27,7 @@
                     <tbody>
                         @foreach ($transparency as $item)
                         <tr>
-                            <td>{{ "Testing " }}</td>
+                            <td>{{ $item->title }}</td>
                             <td>{{ $item->name}}</td>
                             <td>{{ $item->path}}</td>
                             <td>

@@ -1,5 +1,5 @@
 .scroll {
-    max-height: 250px;
+    max-height: 300px;
     overflow-y: auto;
 }
 
@@ -28,6 +28,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+p{
+    font-size: 12px;
+}
+
 .bg_gray {
     background-size: 100% 0%;
     background-color: gray;

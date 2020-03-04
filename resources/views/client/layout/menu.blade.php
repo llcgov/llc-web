@@ -41,7 +41,7 @@
                             TRANSPARENCY
                         </h4></a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#"><h5 class="font-weight-light">Full Disclosure Data</h5></a>
+                      <a class="dropdown-item" href="{{ route('client.transparency') }}"><h5 class="font-weight-light">Full Disclosure Data</h5></a>
                       <a class="dropdown-item" href="#"><h5 class="font-weight-light">Executive Order</h5></a>
                       <a class="dropdown-item" href="#"><h5 class="font-weight-light">Citizen's Chart</h5></a>
                     </div>

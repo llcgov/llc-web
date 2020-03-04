@@ -1,7 +1,7 @@
 @extends('client.layout.master')
 @section('content')
 <div class="container-fluid">
-    <div class="row bg-white">
+    <div class="row bg-secondary">
         <div class="offset-md-2 col-md-8 my-2">
             <div id="demo" class="carousel slide" data-ride="carousel">
                 <ul class="carousel-indicators">
@@ -12,7 +12,7 @@
                 <div class="carousel-inner">
                     @foreach ($images as $key_image => $image)
                         <div class="carousel-item {{ $key_image == 0 ? 'active': ''}}">
-                            <img src="{{ url( 'storage/' . $image->path . '/' . $image->name) }}" class="d-block img-fluid" alt="Los Angeles" width="1300" height="500">
+                            <img class="img-thumbnail" src="{{ url( 'storage/' . $image->path . '/' . $image->name) }}" class="d-block img-fluid" alt="Los Angeles" width="1300" height="500">
                         </div>
                     @endforeach
                 </div>
@@ -27,7 +27,7 @@
     </div>
     
     <div class="row bg-white">
-        <div class="offset-md-2 col-md-8 offset-md-2">
+        <div class="offset-md-2 col-md-8">
             <div class="row bg-white rounded py-3">
                 <div class="col-md-3">
                     <div class="card text-white bg-danger">
@@ -40,10 +40,10 @@
                                     <li class="text-dark list-group-item"> 
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="" width="80px">
+                                                <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
                                             <div class="col-md-8">
-                                                <span class="text-uppercase font-content"><p> {{ $item->title}}</p></span>
+                                                <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 {{-- {{ dd($item->created_at) }} --}}
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                             </div>
@@ -65,10 +65,10 @@
                                 <li class="text-dark list-group-item">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="" width="80px">
+                                            <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                         </div>
                                         <div class="col-md-8">
-                                            <span class="text-uppercase font-content"><p> {{ $item->title}}</p></span>
+                                            <span class="font-content"><p> {{ $item->title}}</p></span>
                                             <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                         </div>
                                     </div>
@@ -89,10 +89,10 @@
                                     <li class="text-dark list-group-item"> 
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="" width="80px">
+                                                <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
                                             <div class="col-md-12">
-                                                <span class="text-uppercase font-content"><p>{{ $item->title}}</p></span>
+                                                <span class="font-content"><p>{{ $item->title}}</p></span>
                                                 {{-- {{ dd($item->created_at) }} --}}
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                             </div>
@@ -114,10 +114,10 @@
                                 <li class="text-dark list-group-item"> 
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="" width="80px">
+                                            <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                         </div>
                                         <div class="col-md-8">
-                                            <span class="text-uppercase font-content"><p>{{ $item->title}}</p></span>
+                                            <span class="font-content"><p>{{ $item->title}}</p></span>
                                             {{-- {{ dd($item->created_at) }} --}}
                                             <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                         </div>
@@ -142,10 +142,10 @@
                                     <li class="text-dark list-group-item"> 
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="" width="80px">
+                                                <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
                                             <div class="col-md-8">
-                                                <span class="text-uppercase font-content"><p> {{ $item->title}}</p></span>
+                                                <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                             </div>
                                         </div>
@@ -166,10 +166,10 @@
                                     <li class="text-dark list-group-item"> 
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="" width="80px">
+                                                <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
                                             <div class="col-md-8">
-                                                <span class="text-uppercase font-content"><p> {{ $item->title}}</p></span>
+                                                <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                             </div>
                                         </div>
@@ -190,10 +190,10 @@
                                     <li class="text-dark list-group-item"> 
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="" width="80px">
+                                                <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
                                             <div class="col-md-8">
-                                                <span class="text-uppercase font-content"><p> {{ $item->title}}</p></span>
+                                                <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                             </div>
                                         </div>

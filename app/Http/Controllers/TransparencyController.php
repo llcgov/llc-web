@@ -42,7 +42,7 @@ class TransparencyController extends Controller
         $fileName =  $file->getClientOriginalName();
         $file_path = Storage::put('public/PDF', $file);
 
-        $post = Transparency::create(['name' => request()->file('name')->hashName(), 'path' => 'public/PDF']);
+        $post = Transparency::create(['name' => request()->file('name')->hashName(), 'path' => 'public/PDF', 'title' => $request->input('title')]);
         return redirect()->back();
     }
 

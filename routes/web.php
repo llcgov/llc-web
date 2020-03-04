@@ -15,7 +15,7 @@ Route::get('/', 'MainController@index')->name('client.home');
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
-Route::get('transparency', function(){return view('client.transparency');})->name('client.transparency');
+Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 
 Route::get('posts/show/{id}', 'PostsController@show')->name('posts.show');
 
