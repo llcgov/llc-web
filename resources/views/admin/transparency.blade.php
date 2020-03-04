@@ -49,10 +49,32 @@
                     <div class="container">
                         <form action="{{ route('transparencies.store') }}" enctype="multipart/form-data" method="POST">
                             @csrf
-                            <div class="form-group">
-                                <label for="title">Name</label>
-                                <input type="text" placeholder="Transparency Name" name="title" class="form-control">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="title">Name</label>
+                                    <input type="text" placeholder="Document Name" name="title" class="form-control">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="year">Year</label>
+                                    <select name="year" id="year" class="form-control">
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                    </select>                                </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="title">Responsible Offices/Functionaries</label>
+                                    <input type="text" placeholder="Responsible Offices/Functionaries" name="functionaries" class="form-control">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="title">Type</label>
+                                    <input type="text" placeholder="Document Type" name="type" class="form-control">
+                                </div>
+                            </div>
+                            
                             <div class="form-group">
                                 <input type="file" name="name" class="form-control">
                             </div>

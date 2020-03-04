@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transparency extends Model
 {
-    protected $fillable = ['name', 'path', 'title'];
+    protected $fillable = ['name', 'path', 'title', 'year', 'type', 'functionaries'];
 }
