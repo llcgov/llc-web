@@ -71,7 +71,7 @@
             </div>
             <div>
               <div class="small text-gray-500">December 7, 2019</div>
-              $290.29 has been deposited into your account!
+                A new monthly report is ready to download!
             </div>
           </a>
           <a class="dropdown-item d-flex align-items-center" href="#">
@@ -82,7 +82,7 @@
             </div>
             <div>
               <div class="small text-gray-500">December 2, 2019</div>
-              Spending Alert: We've noticed unusually high spending for your account.
+              Warning, Alert notification sample.
             </div>
           </a>
           <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
@@ -150,8 +150,8 @@
       <!-- Nav Item - User Information -->
       <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-          <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+          <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrator</span>
+          <img class="img-profile rounded-circle" src="{{ asset('/img/pg-new.png') }}">
         </a>
         <!-- Dropdown - User Information -->
         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Images</h1>
+    <h1 class="h3 mb-0 text-gray-800">News</h1>
     <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
   </div>
 
   <div class="container-fluid">
 
         <ul class="nav nav-tabs">
-            <li class="nav-item nav-link active"><a data-toggle="tab" href="#gallery">Posts</a></li>
-            <li class="nav-item nav-link" ><a data-toggle="tab" href="#images">Create Posts</a></li>
+            <li class="nav-item nav-link active"><a data-toggle="tab" href="#gallery">News</a></li>
+            <li class="nav-item nav-link" ><a data-toggle="tab" href="#images">Upload News</a></li>
         </ul>
     
         <div class="tab-content mt-4">
@@ -25,7 +25,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($posts as $item)
+                        @foreach ($news as $item)
                         <tr>
                             <td>{{ $item->title}}</td>
                             <td>{{ $item->content}}</td>
@@ -39,11 +39,11 @@
             <div id="images" class="tab-pane">
                 <div class="row">
                     <div class="container">
-                        <form action="{{route('posts.store')}}" method="POST">
+                        <form action="{{route('news.store')}}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="title">Title</label>
-                                <input type="text" placeholder="Post Title" name="title" class="form-control">
+                                <input type="text" placeholder="News Title" name="title" class="form-control">
                             </div>
 
                             <div class="form-group">

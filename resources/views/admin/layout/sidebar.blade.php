@@ -6,7 +6,7 @@
           <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
           </div>
-          <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+          <div class="sidebar-brand-text mx-3">LLC - ADMIN<sup></sup></div>
         </a>
   
         <!-- Divider -->
@@ -14,7 +14,7 @@
   
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="{{ route('home') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
         </li>
@@ -32,7 +32,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-fw fa-wrench"></i><span>News</span></a>
+          <a class="nav-link" href="{{ route('news.index') }}"><i class="fas fa-fw fa-wrench"></i><span>News</span></a>
         </li>
   
         <!-- Divider -->

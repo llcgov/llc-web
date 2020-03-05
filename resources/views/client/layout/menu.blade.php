@@ -60,7 +60,7 @@
                         </h4></a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="{{ route('client.aboutcity') }}"><h5 class="font-weight-light">About Lapu-Lapu City</h5></a>
-                      <a class="dropdown-item" href="{{ route('client.aboutmayor') }}"><h5 class="font-weight-light">About the Mayor</h5></a>
+                      {{-- <a class="dropdown-item" href="{{ route('client.aboutmayor') }}"><h5 class="font-weight-light">About the Mayor</h5></a> --}}
                     </div>
                   </li>
             </ul>

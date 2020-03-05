@@ -23,7 +23,7 @@
         <div class="offset-md-2 col-md-8 bg-white rounded">
             <div class="row my-4">
                 <div class="col-md-4">
-                    <img src="{{ asset('img/lapu-lapu.jpg') }}" alt="" class="mw-100">
+                    <img src="{{ asset('img/bridge2.jpg') }}" alt="" class="mw-100">
                 </div>
                 <div class="col-md-8">
                     <h5 class="text-justify text-dark">
@@ -55,7 +55,7 @@
                     </h5>
                 </div>
                 <div class="col-md-4 my-2">
-                    <img src="{{ asset('img/lapu-lapu.jpg') }}" alt="" class="mw-100">
+                    <img src="{{ asset('img/llc-hist.jpg') }}" alt="" class="mw-100">
                 </div>
             </div>
         </div>
