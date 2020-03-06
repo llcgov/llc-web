@@ -25,14 +25,35 @@ class MainController extends Controller
 
     public function transparency()
     {
+        // $quarter['one'] = Transparency::where('type', '1st Quarter')->get();
+        // $quarter['two'] = Transparency::where('type', '2nd Quarter')->get();
+        // $quarter['three'] = Transparency::where('type', '3rd Quarter')->get();
+        // $quarter['four'] = Transparency::where('type', '4th Quarter')->get();
+        // $quarter['annual'] = Transparency::where('type', 'Annual')->get();
+        
+        // $data['transparency'] = $quarter;
+
         $data['transparency'] = Transparency::all();
 
-        $data['quarterone'] = Transparency::where('type', '1st Quarter');
-        $data['quartertwo'] = Transparency::where('type', '2nd Quarter');
-        $data['quarterthree'] = Transparency::where('type', '3rd Quarter');
-        $data['quarterfour'] = Transparency::where('type', '4th Quarter');
-        $data['annual'] = Transparency::where('type', 'Annual');
+        // $year = $transparency->groupBy('year');
+        // $data['transparency'] = $year->groupBy('type');
 
+        // foreach($year as $key => $item){
+        //     echo $key;
+        //     echo '<br>';
+
+        //     $data = $item->groupBy('type');
+        //     foreach($data as $key_quarter => $skit){
+        //         echo $key_quarter;
+        //         foreach($skit as $data){
+        //     echo '<br>';
+        //             echo $data['title'];
+        //         }
+        //     }
+        //     echo '<br>';
+
+        // }
+        
         return view('client.transparency', $data);
     }
 
