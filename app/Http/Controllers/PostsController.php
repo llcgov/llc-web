@@ -64,7 +64,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['post'] = Post::find($id);
+
+        return view('client.posts', $data);
     }
 
     /**
