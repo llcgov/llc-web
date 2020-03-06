@@ -58,3 +58,10 @@ p{
 .modal-xl{
     max-width: 82vw;
 }
+
+.bs-accordion{
+    margin: 20px;
+}
+.accordion .fa{
+    margin-right: 0.5rem;
+}

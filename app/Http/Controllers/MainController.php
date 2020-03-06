@@ -27,6 +27,12 @@ class MainController extends Controller
     {
         $data['transparency'] = Transparency::all();
 
+        $data['quarterone'] = Transparency::where('type', '1st Quarter');
+        $data['quartertwo'] = Transparency::where('type', '2nd Quarter');
+        $data['quarterthree'] = Transparency::where('type', '3rd Quarter');
+        $data['quarterfour'] = Transparency::where('type', '4th Quarter');
+        $data['annual'] = Transparency::where('type', 'Annual');
+
         return view('client.transparency', $data);
     }
 
