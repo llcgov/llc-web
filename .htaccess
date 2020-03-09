@@ -27,8 +27,9 @@
 #RewriteRule ^ index.php [L]
 
 
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^staging.lapulapucity.gov.ph$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.staging.lapulapucity.gov.ph$
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^lapulapucity.gov.ph$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.lapulapucity.gov.ph$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]

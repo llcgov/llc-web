@@ -12,3 +12,7 @@
 [21-Feb-2020 02:05:26 UTC] PHP Fatal error:  require_once(): Failed opening required '/home2/lapulap1/public_html/staging/vendor/composer/autoload_real.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home2/lapulap1/public_html/staging/vendor/autoload.php on line 5
 [21-Feb-2020 02:05:32 UTC] PHP Warning:  require_once(/home2/lapulap1/public_html/staging/vendor/composer/autoload_real.php): failed to open stream: No such file or directory in /home2/lapulap1/public_html/staging/vendor/autoload.php on line 5
 [21-Feb-2020 02:05:32 UTC] PHP Fatal error:  require_once(): Failed opening required '/home2/lapulap1/public_html/staging/vendor/composer/autoload_real.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home2/lapulap1/public_html/staging/vendor/autoload.php on line 5
+[09-Mar-2020 00:22:24 America/Boise] PHP Parse error:  syntax error, unexpected '=' in /home2/lapulap1/public_html/vendor/laravel/framework/src/Illuminate/Support/Arr.php on line 384
+[09-Mar-2020 00:22:32 America/Boise] PHP Parse error:  syntax error, unexpected '=' in /home2/lapulap1/public_html/vendor/laravel/framework/src/Illuminate/Support/Arr.php on line 384
+[09-Mar-2020 00:29:41 America/Boise] PHP Parse error:  syntax error, unexpected '=' in /home2/lapulap1/public_html/vendor/laravel/framework/src/Illuminate/Support/Arr.php on line 384
+[09-Mar-2020 00:29:47 America/Boise] PHP Parse error:  syntax error, unexpected '=' in /home2/lapulap1/public_html/vendor/laravel/framework/src/Illuminate/Support/Arr.php on line 384
