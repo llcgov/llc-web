@@ -32,7 +32,7 @@
                 <div class="col-md-3">
                     <div class="card text-white bg-danger">
                         <div class="card-header">
-                            <h5 class="font-weight-bold">EVENTS</h5>
+                            <h5 class="font-weight-bold font-responsive">EVENTS</h5>
                         </div>
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
@@ -57,7 +57,7 @@
                 <div class="col-md-3">
                     <div class="card text-white bg-success">
                         <div class="card-header">
-                            <h5 class="font-weight-bold">TOURISM</h5>
+                            <h5 class="font-weight-bold font-responsive">TOURISM</h5>
                         </div>
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
@@ -81,7 +81,7 @@
                 <div class="col-md-3">
                     <div class="card text-white bg-success">
                         <div class="card-header">
-                            <h5 class="font-weight-bold">BIDS AND AWARDS</h5>
+                            <h5 class="font-weight-bold font-responsive">BIDS AND AWARDS</h5>
                         </div>
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
@@ -106,7 +106,7 @@
                 <div class="col-md-3">
                     <div class="card text-white bg-success">
                         <div class="card-header">
-                            <h5 class="font-weight-bold">JOBS</h5>
+                            <h5 class="font-weight-bold font-responsive">JOBS</h5>
                         </div>
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
@@ -134,7 +134,7 @@
                 <div class="col-md-6"> 
                     <div class="card text-white bg-danger">
                         <div class="card-header">
-                            <h5 class="font-weight-bold">LATEST NEWS</h5>
+                            <h5 class="font-weight-bold font-responsive">LATEST NEWS</h5>
                         </div>
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
@@ -158,7 +158,7 @@
                 <div class="col-md-3">
                     <div class="card text-white bg-danger">
                         <div class="card-header">
-                            <h5 class="font-weight-bold">LIBRENG SERBISYO</h5>
+                            <h5 class="font-weight-bold font-responsive">LIBRENG SERBISYO</h5>
                         </div>
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
@@ -182,7 +182,7 @@
                 <div class="col-md-3">
                     <div class="card text-white bg-danger">
                         <div class="card-header">
-                            <h5 class="font-weight-bold">SPORTS</h5>
+                            <h5 class="font-weight-bold font-responsive">SPORTS</h5>
                         </div>
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)

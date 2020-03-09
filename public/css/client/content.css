@@ -65,3 +65,7 @@ p{
 .accordion .fa{
     margin-right: 0.5rem;
 }
+
+.font-responsive{
+    font-size: 1.2vw;
+}
