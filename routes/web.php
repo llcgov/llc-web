@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(){return view('coming_soon'); });
+Route::get('/', function(){return view('coming_soon'); })->name('client.home');
 // Route::get('/', 'MainController@index')->name('client.home');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
