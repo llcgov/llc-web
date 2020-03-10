@@ -27,8 +27,16 @@
 #RewriteRule ^ index.php [L]
 
 
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^staging.lapulapucity.gov.ph$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.staging.lapulapucity.gov.ph$
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^lapulapucity.gov.ph$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.lapulapucity.gov.ph$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
