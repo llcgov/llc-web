@@ -44,7 +44,6 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                {{-- {{ dd($item->created_at) }} --}}
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                             </div>
                                         </div>
@@ -93,7 +92,6 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <span class="font-content"><p>{{ $item->title}}</p></span>
-                                                {{-- {{ dd($item->created_at) }} --}}
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                             </div>
                                         </div>
@@ -118,7 +116,6 @@
                                         </div>
                                         <div class="col-md-8">
                                             <span class="font-content"><p>{{ $item->title}}</p></span>
-                                            {{-- {{ dd($item->created_at) }} --}}
                                             <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
                                         </div>
                                     </div>
@@ -204,19 +201,9 @@
                     </div>
                 </div>
             </div>
-            
-            {{-- <div class="row my-2  bg-white rounded py-3">
-                <div class="col-md-6"> 
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Flapulapucitygovernment%2Fvideos%2F395809897803594%2F&show_text=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-                        </div>
-                </div>
-                <div class="col-md-6">
-                    <div id='calendar'></div>
-                </div>
-            </div> --}}
         </div>
     </div>
+    
 
     <div class="row">
         <div class="offset-md-2 col-md-8">
@@ -234,4 +221,29 @@
     </div>
 
 </div>
+
+@push('js')
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+              var calendarEl = document.getElementById('calendar');
+          
+              var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'dayGrid' ],
+                defaultView: 'dayGridMonth',
+                // defaultDate: '2020-02-07',
+                defaultDate: new Date(),
+                header: {
+                  left: 'prev, next',
+                  center: 'title',
+                  right: ''
+                },
+                events:
+                    {!! $schedules->toJson() !!}
+              });
+          
+              calendar.render();
+            });
+           
+    </script>
+@endpush
 @endsection
