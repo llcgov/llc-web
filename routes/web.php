@@ -10,8 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(){return view('coming_soon'); })->name('client.home');
-// Route::get('/', 'MainController@index')->name('client.home');
+// Route::get('/', function(){return view('coming_soon'); })->name('client.home');
+Route::get('/', 'MainController@index')->name('client.home');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
@@ -20,7 +20,6 @@ Route::get('posts/show/{id}','PostsController@show')->name('posts.show');
 Route::prefix('administrator')->group(function () {
     Route::group(['middleware' => ['auth']], function () {
 
-    
         Route::get('home', 'HomeController@index')->name('home');
 
         // Posts

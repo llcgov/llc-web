@@ -203,6 +203,7 @@
             </div>
         </div>
     </div>
+    
 
     <div class="row">
         <div class="offset-md-2 col-md-8">
@@ -220,4 +221,29 @@
     </div>
 
 </div>
+
+@push('js')
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+              var calendarEl = document.getElementById('calendar');
+          
+              var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'dayGrid' ],
+                defaultView: 'dayGridMonth',
+                // defaultDate: '2020-02-07',
+                defaultDate: new Date(),
+                header: {
+                  left: 'prev, next',
+                  center: 'title',
+                  right: ''
+                },
+                events:
+                    {!! $schedules->toJson() !!}
+              });
+          
+              calendar.render();
+            });
+           
+    </script>
+@endpush
 @endsection

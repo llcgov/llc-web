@@ -7,7 +7,7 @@
                             <img src="{{ asset('img/pg-new.png') }}" alt="llc-logo.png" width="100%" class="my-4">
                         </div>
                         <div class="col-md-6 my-3">
-                            <a href="#" class="text-decoration-none text-light"><h6>HERO</h6></a>
+                            <a href="#" class="text-decoration-none text-light"><h6>HOME</h6></a>
                             <a href="#" class="text-decoration-none text-light"><h6>ONLINE SERVICES</h6></a>
                             <a href="#" class="text-decoration-none text-light"><h6>DEPARTMENTS</h6></a>
                             <a href="#" class="text-decoration-none text-light"><h6>TRANSPARENCY</h6></a>

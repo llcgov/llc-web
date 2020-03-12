@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\Transparency;
 use App\Models\News;
 use App\Models\Image;
+use App\Models\Schedule;
 
 class MainController extends Controller
 {
@@ -17,7 +18,19 @@ class MainController extends Controller
      */
     public function index()
     {
-        $data['schedules'] = Schedule::all();
+        $schedule = Schedule::all(['title', 'start', 'end', 'url', 'group_id']);
+        foreach($schedule as $key => $value){
+            if (is_null($value['url'])){
+                // $value['url'][$key] = undefined;
+                unset($schedule[$key]['url']);
+            }
+            if (is_null($value['group_id'])){
+                // $value['url'][$key] = undefined;
+                unset($schedule[$key]['group_id']);
+            }
+        }
+        // dd($schedule);
+        $data['schedules'] = $schedule;
         $data['posts'] = Post::all();
         $data['images'] = Image::where('type', 'Slider')->get();
         
