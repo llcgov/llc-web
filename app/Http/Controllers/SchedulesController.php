@@ -14,7 +14,7 @@ class SchedulesController extends Controller
      */
     public function index()
     {
-        $data['schedule'] = Schedule::all();
+        $data['schedules'] = Schedule::all();
         return view('admin.schedule', $data);
     }
 
@@ -93,5 +93,12 @@ class SchedulesController extends Controller
     public function destroy($id)
     {
         //
+        try {
+            $sched = Schedule::find($id);
+            $sched->delete();
+        } catch (\Throwable $th) {
+            echo $th;
+        }
+        return redirect()->back();
     }
 }

@@ -1,6 +1,3 @@
-@extends('admin.master')
-
-@section('content')
 @extends('admin.layout.master')
 
 @section('content')
@@ -12,8 +9,8 @@
   <div class="container-fluid">
 
         <ul class="nav nav-tabs">
-            <li class="nav-item nav-link active"><a data-toggle="tab" href="#gallery">Posts</a></li>
-            <li class="nav-item nav-link" ><a data-toggle="tab" href="#images">Create Posts</a></li>
+            <li class="nav-item nav-link active"><a data-toggle="tab" href="#gallery">Schedules</a></li>
+            <li class="nav-item nav-link" ><a data-toggle="tab" href="#images">Create Schedules</a></li>
         </ul>
     
         <div class="tab-content mt-4">
@@ -21,22 +18,20 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Image</th>
                             <th scope="col">Title</th>
-                            <th scope="col">Content</th>
-                            <th scope="col">Post Type</th>
+                            <th scope="col">Start</th>
+                            <th scope="col">End</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($posts as $item)
+                        @foreach ($schedules as $item)
                         <tr>
-                            <td><img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" width="100"></td>
                             <td>{{ $item->title}}</td>
-                            <td>{{ $item->content}}</td>
-                            <td>{{ $item->post_type}}</td>
+                            <td>{{ $item->start}}</td>
+                            <td>{{ $item->end}}</td>
                             <td>
-                                <form action="{{ route('posts.destroy', $item->id)}}" method="POST">
+                                <form action="{{ route('schedules.destroy', $item->id)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>
@@ -55,49 +50,43 @@
             <div id="images" class="tab-pane">
                 <div class="row">
                     <div class="container">
-                        <form action="{{route('posts.store')}}" enctype="multipart/form-data" method="POST">
+                        <form action="{{route('schedules.store')}}" method="POST">
                             @csrf
-                            <div class="form-group">
-                                <label for="title">Title</label>
-                                <input type="text" placeholder="Post Title" name="title" class="form-control">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="title">Title</label>
+                                        <input type="text" placeholder="Schedule Title" name="title" class="form-control">
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="content">Content</label>
-                                <textarea name="content" class="form-control" rows="5"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="file" name="name" class="form-control">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="URL">URL</label>
+                                        <input type="text" placeholder="URL" name="url" class="form-control">
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <select name="type" id="" class="form-control">
-                                            <option value="Posts">Posts</option>
-                                            <option value="Slider">News</option>
-                                        </select>
+                                        <label for="URL">Date Start</label>
+                                        <input type="date" placeholder="Start" name="start" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <select name="post_type" class="form-control">
-                                            <option value="Tourism">Tourism</option>
-                                            <option value="Events">Events</option>
-                                            <option value="Jobs">Jobs</option>
-                                            <option value="Bids">Bids And Awards</option>
-                                            <option value="News">Latest News</option>
-                                            <option value="Serbisyo">Libreng Serbisyo</option>
-                                            <option value="Sports">Sports</option>
-                                        </select>
+                                        <label for="URL">Date End</label>
+                                        <input type="date" placeholder="End" name="end" class="form-control">
                                     </div>
                                 </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            </div> 
+                           <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-@endsection
 @endsection
