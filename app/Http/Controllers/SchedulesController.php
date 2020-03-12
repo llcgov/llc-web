@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
-use App\Models\Transparency;
-use App\Models\News;
-use App\Models\Image;
+use App\Models\Schedule;
 
-class MainController extends Controller
+class SchedulesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,44 +15,7 @@ class MainController extends Controller
     public function index()
     {
         $data['schedule'] = Schedule::all();
-        $data['posts'] = Post::all();
-        $data['images'] = Image::where('type', 'Slider')->get();
-        
-        return view('client.index', $data);
-    }
-
-    public function transparency()
-    {
-        // $quarter['one'] = Transparency::where('type', '1st Quarter')->get();
-        // $quarter['two'] = Transparency::where('type', '2nd Quarter')->get();
-        // $quarter['three'] = Transparency::where('type', '3rd Quarter')->get();
-        // $quarter['four'] = Transparency::where('type', '4th Quarter')->get();
-        // $quarter['annual'] = Transparency::where('type', 'Annual')->get();
-        
-        // $data['transparency'] = $quarter;
-
-        $data['transparency'] = Transparency::all();
-
-        // $year = $transparency->groupBy('year');
-        // $data['transparency'] = $year->groupBy('type');
-
-        // foreach($year as $key => $item){
-        //     echo $key;
-        //     echo '<br>';
-
-        //     $data = $item->groupBy('type');
-        //     foreach($data as $key_quarter => $skit){
-        //         echo $key_quarter;
-        //         foreach($skit as $data){
-        //     echo '<br>';
-        //             echo $data['title'];
-        //         }
-        //     }
-        //     echo '<br>';
-
-        // }
-        
-        return view('client.transparency', $data);
+        return view('admin.schedule', $data);
     }
 
     /**
@@ -76,7 +36,18 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            Schedule::create([
+                'start' => $request->input('start'),
+                'end' => $request->input('end'),
+                'title' => $request->input('title'),
+                'group_id' => $request->input('group_id'),
+                'url' => $request->input('url'),
+            ]);
+        }catch(Excemption $e){
+            throw $e;
+        }
+        return redirect()->back();
     }
 
     /**

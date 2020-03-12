@@ -17,9 +17,10 @@ Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('c
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('posts/show/{id}','PostsController@show')->name('posts.show');
 
-Route::group(['middleware' => ['auth']], function () {
+Route::prefix('administrator')->group(function () {
+    Route::group(['middleware' => ['auth']], function () {
 
-    Route::prefix('adminstrator')->group(function () {
+    
         Route::get('home', 'HomeController@index')->name('home');
 
         // Posts
@@ -34,6 +35,7 @@ Route::group(['middleware' => ['auth']], function () {
         // Transparency
         Route::resource('transparencies', 'TransparencyController');
 
+        Route::resource('schedules', 'SchedulesController');
         // Images
         Route::get('images', 'ImagesController@index')->name('admin.images');
         Route::post('upload', 'ImagesController@upload')->name('images.upload');
