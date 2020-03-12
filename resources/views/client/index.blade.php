@@ -26,7 +26,7 @@
         </div>
     </div>
     
-    <div class="row bg-white">
+    <div class="row posts">
         <div class="offset-md-2 col-md-8">
             <div class="row bg-white rounded py-3">
                 <div class="col-md-3">
