@@ -1,7 +1,7 @@
 @extends('client.layout.master')
 @section('content')
 <div class="container-fluid">
-    <div class="row bg-secondary">
+    <div class="row bg-secondary slider">
         <div class="offset-md-2 col-md-8 my-2">
             <div id="demo" class="carousel slide" data-ride="carousel">
                 <ul class="carousel-indicators">
@@ -28,7 +28,7 @@
     
     <div class="row posts">
         <div class="offset-md-2 col-md-8">
-            <div class="row bg-white rounded py-3">
+            <div class="row rounded py-3">
                 <div class="col-md-3">
                     <div class="card text-white bg-danger">
                         <div class="card-header">
@@ -127,7 +127,7 @@
                 </div>
             </div>
 
-            <div class="row my-2 bg-white rounded">
+            <div class="row my-2 rounded">
                 <div class="col-md-6"> 
                     <div class="card text-white bg-danger">
                         <div class="card-header">

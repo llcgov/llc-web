@@ -20,14 +20,23 @@ body {
 
     font-family: 'Lato', sans-serif;
   }
+
+  .slider{
+
+        background: url('/img/500.png');
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;     
+}
+
 .posts{
-    height: 500px;
     background: url('/img/500-white-bg.png');
-    background-color: grey;
-    background-position: center;
+    background-color: rgb(247, 247, 247);
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .content {
     background: url('/img/tribal-2.png');
     background-attachment: fixed;
