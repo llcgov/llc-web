@@ -37,7 +37,9 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Events')
-                                    <li class="text-dark list-group-item"> 
+                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+
+                                    <li class="text-dark list-group-item post"> 
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
@@ -45,9 +47,10 @@
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                     </li>
+                                </a>
                                 @endif
                             @endforeach
                         </ul>
@@ -61,17 +64,20 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Tourism')
-                                <li class="text-dark list-group-item">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
+                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+
+                                    <li class="text-dark list-group-item post"> 
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <span class="font-content"><p> {{ $item->title}}</p></span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                            </div>                                            
                                         </div>
-                                        <div class="col-md-8">
-                                            <span class="font-content"><p> {{ $item->title}}</p></span>
-                                            <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                </a>
                                 @endif
                             @endforeach
                         </ul>
@@ -85,17 +91,20 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Bids')
-                                    <li class="text-dark list-group-item"> 
+                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+
+                                    <li class="text-dark list-group-item post"> 
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
-                                            <div class="col-md-12">
-                                                <span class="font-content"><p>{{ $item->title}}</p></span>
+                                            <div class="col-md-8">
+                                                <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                     </li>
+                                </a>
                                 @endif
                             @endforeach
                         </ul>
@@ -109,17 +118,20 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Jobs')
-                                <li class="text-dark list-group-item"> 
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
+                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+
+                                    <li class="text-dark list-group-item post"> 
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <span class="font-content"><p> {{ $item->title}}</p></span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                            </div>                                            
                                         </div>
-                                        <div class="col-md-8">
-                                            <span class="font-content"><p>{{ $item->title}}</p></span>
-                                            <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                </a>
                                 @endif
                             @endforeach
                         </ul>
@@ -136,7 +148,9 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'News')
-                                    <li class="text-dark list-group-item"> 
+                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+
+                                    <li class="text-dark list-group-item post"> 
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
@@ -144,9 +158,10 @@
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                     </li>
+                                </a>
                                 @endif
                             @endforeach
                         </ul>
@@ -160,7 +175,9 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Serbisyo')
-                                    <li class="text-dark list-group-item"> 
+                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+
+                                    <li class="text-dark list-group-item post"> 
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
@@ -168,9 +185,10 @@
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                     </li>
+                                </a>
                                 @endif
                             @endforeach
                         </ul>
@@ -184,7 +202,9 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Sports')
-                                    <li class="text-dark list-group-item"> 
+                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+
+                                    <li class="text-dark list-group-item post"> 
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
@@ -192,9 +212,10 @@
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                     </li>
+                                </a>
                                 @endif
                             @endforeach
                         </ul>

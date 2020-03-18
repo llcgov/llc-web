@@ -31,10 +31,14 @@ body {
 
 .posts{
     background: url('/img/500-white-bg.png');
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(240, 240, 240);
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.post:hover{
+    background-color: #c5f2ff;
 }
 
 .content {

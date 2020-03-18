@@ -66,7 +66,7 @@ class PostsController extends Controller
     {
         $data['post'] = Post::find($id);
 
-        return view('client.posts', $data);
+        return view('client.article', $data);
     }
 
     /**

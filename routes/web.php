@@ -15,7 +15,7 @@ Route::get('/', 'MainController@index')->name('client.home');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
-Route::get('posts/show/{id}','PostsController@show')->name('posts.show');
+Route::get('post/show/{id}','PostsController@show')->name('post.show');
 
 Route::prefix('administrator')->group(function () {
     Route::group(['middleware' => ['auth']], function () {
