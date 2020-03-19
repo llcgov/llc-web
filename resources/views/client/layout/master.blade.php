@@ -33,80 +33,11 @@
         <link href='https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.css' rel='stylesheet' />
         <link href='https://unpkg.com/@fullcalendar/timegrid@4.3.0/main.min.css' rel='stylesheet' />
       
-        <script src='/assets/demo-to-codepen.js'></script>
+        {{-- <script src='/assets/demo-to-codepen.js'></script> --}}
         <script src='https://unpkg.com/@fullcalendar/core@4.3.1/main.min.js'></script>
         <script src='https://unpkg.com/@fullcalendar/interaction@4.3.0/main.min.js'></script>
         <script src='https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.js'></script>
         <script src='https://unpkg.com/@fullcalendar/timegrid@4.3.0/main.min.js'></script>
-        <script>
-
-            document.addEventListener('DOMContentLoaded', function() {
-              var calendarEl = document.getElementById('calendar');
-          
-              var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
-                defaultView: 'dayGridMonth',
-                defaultDate: '2020-02-07',
-                header: {
-                  left: 'prev,next today',
-                  center: 'title',
-                  right: 'dayGridMonth,timeGridWeek,timeGridDay'
-                },
-                events: [
-                  {
-                    title: 'All Day Event',
-                    start: '2020-02-01'
-                  },
-                  {
-                    title: 'Long Event',
-                    start: '2020-02-07',
-                    end: '2020-02-10'
-                  },
-                  {
-                    groupId: '999',
-                    title: 'Repeating Event',
-                    start: '2020-02-09T16:00:00'
-                  },
-                  {
-                    groupId: '999',
-                    title: 'Repeating Event',
-                    start: '2020-02-16T16:00:00'
-                  },
-                  {
-                    title: 'Conference',
-                    start: '2020-02-11',
-                    end: '2020-02-13'
-                  },
-                  {
-                    title: 'Meeting',
-                    start: '2020-02-12T10:30:00',
-                    end: '2020-02-12T12:30:00'
-                  },
-                  {
-                    title: 'Lunch',
-                    start: '2020-02-12T12:00:00'
-                  },
-                  {
-                    title: 'Meeting',
-                    start: '2020-02-12T14:30:00'
-                  },
-                  {
-                    title: 'Birthday Party',
-                    start: '2020-02-13T07:00:00'
-                  },
-                  {
-                    title: 'Click for Google',
-                    url: 'http://google.com/',
-                    start: '2020-02-28'
-                  }
-                ]
-              });
-          
-              calendar.render();
-            });
-          
-          </script>
-          
     </head>
     <body id="page-top">
         <div id="wrapper">
@@ -120,6 +51,19 @@
           </div>
         </div>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+          (function(){
+          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+          s1.async=true;
+          s1.src='https://embed.tawk.to/5e72136e8d24fc2265885a98/default';
+          s1.charset='UTF-8';
+          s1.setAttribute('crossorigin','*');
+          s0.parentNode.insertBefore(s1,s0);
+          })();
+        </script>
+          <!--End of Tawk.to Script-->
         @stack('js')
       </body>
 </html>

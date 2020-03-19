@@ -3,13 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
-use App\Models\Transparency;
-use App\Models\News;
-use App\Models\Image;
 use App\Models\Schedule;
 
-class MainController extends Controller
+class SchedulesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,30 +14,8 @@ class MainController extends Controller
      */
     public function index()
     {
-        $schedule = Schedule::all(['title', 'start', 'end', 'url', 'group_id']);
-        foreach($schedule as $key => $value){
-            if (is_null($value['url'])){
-                // $value['url'][$key] = undefined;
-                unset($schedule[$key]['url']);
-            }
-            if (is_null($value['group_id'])){
-                // $value['url'][$key] = undefined;
-                unset($schedule[$key]['group_id']);
-            }
-        }
-        // dd($schedule);
-        $data['schedules'] = $schedule;
-        $data['posts'] = Post::all();
-        $data['images'] = Image::where('type', 'Slider')->get();
-        
-        return view('client.index', $data);
-    }
-
-    public function transparency()
-    {
-        $data['transparency'] = Transparency::all();
-        
-        return view('client.transparency', $data);
+        $data['schedules'] = Schedule::all();
+        return view('admin.schedule', $data);
     }
 
     /**
@@ -62,7 +36,18 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            Schedule::create([
+                'start' => $request->input('start'),
+                'end' => $request->input('end'),
+                'title' => $request->input('title'),
+                'group_id' => $request->input('group_id'),
+                'url' => $request->input('url'),
+            ]);
+        }catch(Excemption $e){
+            throw $e;
+        }
+        return redirect()->back();
     }
 
     /**
@@ -108,5 +93,12 @@ class MainController extends Controller
     public function destroy($id)
     {
         //
+        try {
+            $sched = Schedule::find($id);
+            $sched->delete();
+        } catch (\Throwable $th) {
+            echo $th;
+        }
+        return redirect()->back();
     }
 }
