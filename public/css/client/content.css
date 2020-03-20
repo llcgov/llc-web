@@ -2,6 +2,25 @@
     max-height: 300px;
     overflow-y: auto;
 }
+.scroll-lg {
+    max-height: 655px;
+    overflow-y: auto;
+}
+
+.fc-event-time, .fc-event-title {
+    padding: 0 1px;
+    white-space: nowrap;
+    
+}
+    
+.fc-title {
+    color:red;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
 
 .font-content {
     font-family: Roboto, Helvetica, Arial, sans-serif;
