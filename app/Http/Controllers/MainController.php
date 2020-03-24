@@ -21,17 +21,14 @@ class MainController extends Controller
         $schedule = Schedule::all(['title', 'start', 'end', 'url', 'group_id']);
         foreach($schedule as $key => $value){
             if (is_null($value['url'])){
-                // $value['url'][$key] = undefined;
                 unset($schedule[$key]['url']);
             }
             if (is_null($value['group_id'])){
-                // $value['url'][$key] = undefined;
                 unset($schedule[$key]['group_id']);
             }
         }
-        // dd($schedule);
         $data['schedules'] = $schedule;
-        $data['posts'] = Post::all();
+        $data['posts'] = Post::orderBy('created_at','desc')->get();
         $data['images'] = Image::where('type', 'Slider')->get();
         
         return view('client.index', $data);
