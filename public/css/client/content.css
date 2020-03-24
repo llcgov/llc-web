@@ -14,12 +14,12 @@
 }
     
 .fc-title {
-    color:red;
+    color:white;
     white-space: normal;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
 }
 
 .font-content {
