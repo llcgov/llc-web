@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create(
+            [
+                'email' => 'blana@lapulapucity.gov.ph',
+                'name' => 'Brisco Lana',
+                'password' => Hash::make('d4rkl0z3r')
+            ]
+        );
         // $this->call(UsersTableSeeder::class);
     }
 }

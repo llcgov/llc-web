@@ -22,6 +22,7 @@
                             <th scope="col">Title</th>
                             <th scope="col">Content</th>
                             <th scope="col">Post Type</th>
+                            <th scope="col">Date Posted</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
@@ -32,6 +33,7 @@
                             <td>{{ $item->title}}</td>
                             <td>{{ $item->content}}</td>
                             <td>{{ $item->post_type}}</td>
+                            <td>{{ $item->date_posted}}</td>
                             <td>
                                 <form action="{{ route('posts.destroy', $item->id)}}" method="POST">
                                     @csrf
@@ -75,7 +77,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <select name="post_type" class="form-control">
                                             <option value="Tourism">Tourism</option>
@@ -86,6 +88,11 @@
                                             <option value="Serbisyo">Libreng Serbisyo</option>
                                             <option value="Sports">Sports</option>
                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <input type="date" name="date_posted" class="form-control">
                                     </div>
                                 </div>
                             </div>

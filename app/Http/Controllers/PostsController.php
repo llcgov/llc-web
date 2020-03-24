@@ -38,7 +38,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $post = Post::create(['title' => $request->input('title'), 'content' => $request->input('content'), 'post_type' => $request->input('post_type')]);
+        $carbon = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('date_posted'));
+        $post = Post::create([
+            'title' => $request->input('title'), 
+            'content' => $request->input('content'), 
+            'post_type' => $request->input('post_type'),
+            'date_posted' => $carbon->format('Y-m-d')
+            ]);
 
         $file = request()->file('name');
         $fileName =  $file->getClientOriginalName();

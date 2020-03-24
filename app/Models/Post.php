@@ -7,7 +7,7 @@ use App\Models\Media;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'content', 'post_type'];
+    protected $fillable = ['title', 'content', 'post_type', 'date_posted'];
     
     public function media(){
         return $this->morphToMany(Media::class, 'mediable');
