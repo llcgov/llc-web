@@ -3,14 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
-use App\Models\Transparency;
-use App\Models\ExecutiveOrder as EO;
-use App\Models\News;
-use App\Models\Image;
-use App\Models\Schedule;
+use App\Models\ExecutiveOrder;
+use Illuminate\Support\Facades\Storage;
 
-class MainController extends Controller
+class ExecutiveOrdersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,33 +15,8 @@ class MainController extends Controller
      */
     public function index()
     {
-        $schedule = Schedule::all(['title', 'start', 'end', 'url', 'group_id']);
-        foreach($schedule as $key => $value){
-            if (is_null($value['url'])){
-                unset($schedule[$key]['url']);
-            }
-            if (is_null($value['group_id'])){
-                unset($schedule[$key]['group_id']);
-            }
-        }
-        $data['schedules'] = $schedule;
-        $data['posts'] = Post::orderBy('created_at','desc')->get();
-        $data['images'] = Image::where('type', 'Slider')->get();
-        
-        return view('client.index', $data);
-    }
-
-    public function transparency()
-    {
-        $data['transparency'] = Transparency::all();
-        
-        return view('client.transparency', $data);
-    }
-
-    public function executiveorders()
-    {
-        $data['eo'] = EO::all();
-        return view('client.executiveorders', $data);
+        $data['eo'] = ExecutiveOrder::all();
+        return view('admin.eo', $data);
     }
 
     /**
@@ -66,7 +37,17 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file = request()->file('name');
+        $fileName =  $file->getClientOriginalName();
+        $file_path = Storage::put('public/EO', $file);
+
+        $post = ExecutiveOrder::create([
+            'name' => request()->file('name')->hashName(), 
+            'path' => 'public/EO',             
+            'title' => $request->input('title'),
+            'year' => $request->input('year'),
+            ]);
+        return redirect()->back();
     }
 
     /**
@@ -111,6 +92,16 @@ class MainController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $file = ExecutiveOrder::find($id);
+
+        try {
+            unlink('storage/EO/' . $file->name);    
+            $file->delete();
+
+        } catch (\Throwable $th) {
+            return $th;
+        }
+
+        return redirect()->back();
     }
 }

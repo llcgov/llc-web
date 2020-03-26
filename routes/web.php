@@ -15,6 +15,7 @@ Route::get('/', 'MainController@index')->name('client.home');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
+Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
 
 Route::prefix('administrator')->group(function () {
@@ -33,6 +34,8 @@ Route::prefix('administrator')->group(function () {
 
         // Transparency
         Route::resource('transparencies', 'TransparencyController');
+
+        Route::resource('eo', 'ExecutiveOrdersController');
 
         Route::resource('schedules', 'SchedulesController');
         // Images
