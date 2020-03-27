@@ -45,6 +45,9 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('departments.index') }}">e<i class="fas fa-fw fa-chart-area"></i><span>Departments</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('eo.index') }}">e<i class="fas fa-fw fa-chart-area"></i><span>Executive Orders</span></a>
+        </li>
   
         <li class="nav-item">
           <a class="nav-link" href="{{ route('transparencies.index') }}">
