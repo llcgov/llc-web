@@ -1,23 +1,19 @@
 @extends('client.layout.master')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
       <div class="row bg-white">
-        <div class="row m-4 rounded">
-            <div class="offset-md-2 col-md-8"> 
-              <h5>  In compliance with DILG Memorandum Circular No. 2011-08, entitled “Strict Adherence to Section 90 of Republic Act No. 10147, General Appropriations Act, Fiscal Year 2012” and DILG Memorandum Circular 2010-83, entitled “Full Disclosure of Local Budget and Finances, and Bids and Public Offerings“.
-              </h5>
-              <br>
-
+        <div class="row m-4">
+            <div class=" col-md-12"> 
               <h4>Executive Orders</h4>
 
                     <div class="card">
                       <div class="card-header" id="headChild">  
                           <ul>
                           @foreach ($eo as $item)
-                              <li>
-                            <a href="" class="text-decoration-none" data-toggle="modal" data-target="#{{ str_replace(' ', '', $item->title)  }}"><h5 class="text-uppercase"><span class="text-dark">[PDF] </span> {{ $item->title }} </h5></a>
-                          </li>                          
+                            <li>
+                              <a href="" class="text-decoration-none" data-toggle="modal" data-target="#{{ str_replace([' ', '-', '.'], '', $item->title)  }}"><h5 class="text-uppercase"><span class="text-dark">[PDF] </span> {{ $item->title }} </h5></a>
+                            </li>                          
                             <div class="modal fade bd-example-modal-xl" id="{{ str_replace([' ', '-', '.'], '', $item->title) }}" tabindex="-1" role="dialog" aria-labelledby="{{ $item->id }}" aria-hidden="true">
                               <div class="modal-dialog modal-xl" role="document">
                                 <div class="modal-content">
