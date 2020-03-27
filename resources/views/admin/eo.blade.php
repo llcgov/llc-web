@@ -9,8 +9,8 @@
   <div class="container-fluid">
 
         <ul class="nav nav-tabs">
-            <li class="nav-item nav-link active"><a data-toggle="tab" href="#gallery">Transparency Files</a></li>
-            <li class="nav-item nav-link" ><a data-toggle="tab" href="#images">Upload Transparencies</a></li>
+            <li class="nav-item nav-link active"><a data-toggle="tab" href="#gallery">Executive Orders</a></li>
+            <li class="nav-item nav-link" ><a data-toggle="tab" href="#images">Upload Executive Orders</a></li>
         </ul>
     
         <div class="tab-content mt-4">
