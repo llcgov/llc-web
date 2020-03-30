@@ -9,14 +9,10 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>City of Lapu-Lapu | Official Website of City Government of Cebu | Admin Dashboard</title>
+        <title>City of Lapu-Lapu | Official Website of City Government of Cebu</title>
 
-        <!-- Custom fonts for this template-->
-        {{-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> --}}
         <link href="https://fonts.googleapis.com/css?family=Lato:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-        {{-- <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> --}}
-        <!-- Custom styles for this template-->
-        
+
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/client/footer.css') }}" rel="stylesheet">
         <link href="{{ asset('css/client/content.css') }}" rel="stylesheet">

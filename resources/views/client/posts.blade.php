@@ -5,10 +5,11 @@
         <div class="row">
             <div class="col-md-8">
                 {{ $post->content }}
-
             </div>
                 
-                <div class="col-md-4">{{ $post->content }}</div>
+                <div class="col-md-4">
+                    {{ $post->content }}
+                </div>
         </div>
     </div>
 

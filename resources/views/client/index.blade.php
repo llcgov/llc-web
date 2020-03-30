@@ -46,7 +46,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
                                             </div>                                            
                                         </div>
                                     </li>
@@ -73,7 +73,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
                                             </div>                                            
                                         </div>
                                     </li>
@@ -100,7 +100,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
                                             </div>                                            
                                         </div>
                                     </li>
@@ -127,7 +127,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
                                             </div>                                            
                                         </div>
                                     </li>
@@ -156,7 +156,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
                                             </div>                                            
                                         </div>
                                     </li>
@@ -197,7 +197,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
                                             </div>                                            
                                         </div>
                                     </li>
@@ -234,7 +234,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
                                             </div>                                            
                                         </div>
                                     </li>
@@ -261,7 +261,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->created_at))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
                                             </div>                                            
                                         </div>
                                     </li>
