@@ -24,11 +24,11 @@
         <link href='https://unpkg.com/@fullcalendar/core@4.3.1/main.min.css' rel='stylesheet' />
 
 
-  
+
 
         <link href='https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.css' rel='stylesheet' />
         <link href='https://unpkg.com/@fullcalendar/timegrid@4.3.0/main.min.css' rel='stylesheet' />
-      
+
         {{-- <script src='/assets/demo-to-codepen.js'></script> --}}
         <script src='https://unpkg.com/@fullcalendar/core@4.3.1/main.min.js'></script>
         <script src='https://unpkg.com/@fullcalendar/interaction@4.3.0/main.min.js'></script>
@@ -47,7 +47,7 @@
           </div>
         </div>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        
+
           <script type="text/javascript">
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
             (function(){
