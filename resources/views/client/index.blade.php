@@ -274,17 +274,16 @@
             </div>
         </div>
     </div>
-
 </div>
-<div class="icon-bar bg-primary rounded text-center p-2">
-  <h4 class="text-light">COVID-19 UPDATE</h4>
-  <h5 class="text-light text-center">Confirmed Cases</h5>
-  <h5 class="text-white"><img src="{{ asset('img/icons/people.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->confirmed) ? $covid->first()->confirmed: 0 }}</span></h5>
-  <h5 class="text-light text-center">PUIs</h5>
-  <h5 class="text-white"><img src="{{ asset('img/icons/bed.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pui) ? $covid->first()->pui: 0 }}</span></h5>
-  <h5 class="text-light text-center">PUMs</h5>
-  <h5 class="text-white"><img src="{{ asset('img/icons/house.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pum) ? $covid->first()->pum: 0 }}</span></h5>
-</div>
+    <div class="icon-bar bg-primary rounded text-center p-2">
+    <h2 class="text-light">COVID-19 UPDATE</h2>
+    <h4 class="text-light text-center">Confirmed Cases</h4>
+    <h4 class="text-white"><img src="{{ asset('img/icons/people.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->confirmed) ? $covid->first()->confirmed: 0 }}</span></h4>
+    <h4 class="text-light text-center">PUIs</h4>
+    <h4 class="text-white"><img src="{{ asset('img/icons/bed.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pui) ? $covid->first()->pui: 0 }}</span></h4>
+    <h4 class="text-light text-center">PUMs</h4>
+    <h4 class="text-white"><img src="{{ asset('img/icons/house.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pum) ? $covid->first()->pum: 0 }}</span></h4>
+    </div>
 @push('js')
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
