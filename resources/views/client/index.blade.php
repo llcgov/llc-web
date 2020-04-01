@@ -276,11 +276,14 @@
     </div>
 
 </div>
-<div class="icon-bar">
-  <h5>COVID-19 UPDATE</h5>
-  <a href="#" class="facebook"><img src="{{asset('img/500.png')}}" width="50px" alt=""> 100</a>
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i>200</a>
-  <a href="#" class="google"><i class="fa fa-google"></i></a>
+<div class="icon-bar bg-primary rounded text-center p-2">
+  <h4 class="text-light">COVID-19 UPDATE</h4>
+  <h5 class="text-light text-center">Confirmed Cases</h5>
+  <h5 class="text-white"><img src="{{ asset('img/icons/people.png') }}" alt="" width="50px"> <span class="text-warning">100</span></h5>
+  <h5 class="text-light text-center">PUIs</h5>
+  <h5 class="text-white"><img src="{{ asset('img/icons/bed.png') }}" alt="" width="50px"> <span class="text-warning">100</span></h5>
+  <h5 class="text-light text-center">PUMs</h5>
+  <h5 class="text-white"><img src="{{ asset('img/icons/house.png') }}" alt="" width="50px"> <span class="text-warning">100</span></h5>
 </div>
 @push('js')
     <script type="text/javascript">
