@@ -9,6 +9,7 @@ use App\Models\ExecutiveOrder as EO;
 use App\Models\News;
 use App\Models\Image;
 use App\Models\Schedule;
+use App\Models\CovidCase;
 
 class MainController extends Controller
 {
@@ -28,6 +29,7 @@ class MainController extends Controller
                 unset($schedule[$key]['group_id']);
             }
         }
+        $data['covid'] = CovidCase::orderBy('created_at', 'DESC')->get();
         $data['schedules'] = $schedule;
         $data['posts'] = Post::orderBy('created_at','desc')->get();
         $data['images'] = Image::where('type', 'Slider')->get();

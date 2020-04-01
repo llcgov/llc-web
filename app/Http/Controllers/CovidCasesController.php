@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CovidCase;
 
 class CovidCasesController extends Controller
 {
@@ -13,7 +14,8 @@ class CovidCasesController extends Controller
      */
     public function index()
     {
-        //
+        $data['covid'] = CovidCase::all();
+        return view('admin.covidcase', $data);
     }
 
     /**
@@ -34,7 +36,14 @@ class CovidCasesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        CovidCase::create([
+            'confirmed' => $request->input('confirmed'),
+            'pui' => $request->input('pui'), 
+            'pum' => $request->input('pum'), 
+        ]);
+
+        return redirect()->back();
     }
 
     /**

@@ -38,6 +38,9 @@ Route::prefix('administrator')->group(function () {
         Route::resource('eo', 'ExecutiveOrdersController');
 
         Route::resource('schedules', 'SchedulesController');
+
+        Route::resource('covidcase', 'CovidCasesController');
+
         // Images
         Route::get('images', 'ImagesController@index')->name('admin.images');
         Route::post('upload', 'ImagesController@upload')->name('images.upload');
