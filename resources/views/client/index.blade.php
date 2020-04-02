@@ -276,13 +276,17 @@
     </div>
 </div>
     <div class="icon-bar bg-primary rounded text-center p-2">
-    <h2 class="text-light">COVID-19 UPDATE</h2>
-    <h4 class="text-light text-center">Confirmed Cases</h4>
-    <h4 class="text-white"><img src="{{ asset('img/icons/people.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->confirmed) ? $covid->first()->confirmed: 0 }}</span></h4>
-    <h4 class="text-light text-center">PUIs</h4>
-    <h4 class="text-white"><img src="{{ asset('img/icons/bed.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pui) ? $covid->first()->pui: 0 }}</span></h4>
-    <h4 class="text-light text-center">PUMs</h4>
-    <h4 class="text-white"><img src="{{ asset('img/icons/house.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pum) ? $covid->first()->pum: 0 }}</span></h4>
+    {{-- <h2 class="text-light">COVID UPDATE</h2> --}}
+    <a data-toggle="collapse" class="text-white text-decoration-none" href="#collapse1"><h3>COVID-19 UPDATE <i class="fas fa-arrow-alt-circle-down"></i> </h3></a>
+    <div id="collapse1" class="panel-collapse collapse">
+        <h4 class="text-light text-center">Confirmed Cases</h4>
+        <h4 class="text-white"><img src="{{ asset('img/icons/people.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->confirmed) ? $covid->first()->confirmed: 0 }}</span></h4>
+        <h4 class="text-light text-center">PUIs</h4>
+        <h4 class="text-white"><img src="{{ asset('img/icons/bed.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pui) ? $covid->first()->pui: 0 }}</span></h4>
+        <h4 class="text-light text-center">PUMs</h4>
+        <h4 class="text-white"><img src="{{ asset('img/icons/house.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pum) ? $covid->first()->pum: 0 }}</span></h4>
+      </div>
+  
     </div>
 @push('js')
     <script type="text/javascript">
