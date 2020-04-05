@@ -285,7 +285,10 @@
         <h4 class="text-white"><img src="{{ asset('img/icons/bed.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pui) ? $covid->first()->pui: 0 }}</span></h4>
         <h4 class="text-light text-center">PUMs</h4>
         <h4 class="text-white"><img src="{{ asset('img/icons/house.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pum) ? $covid->first()->pum: 0 }}</span></h4>
-      </div>
+        <h4 class="text-light text-center">Recovered</h4>
+        <h4 class="text-white"><img src="{{ asset('img/icons/check.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->recovered) ? $covid->first()->recovered: 0 }}</span></h4>
+        <a href="#" class="text-light"> More details! </a>
+    </div>
   
     </div>
 @push('js')

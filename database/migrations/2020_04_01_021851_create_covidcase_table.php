@@ -18,6 +18,7 @@ class CreateCovidcaseTable extends Migration
             $table->integer('confirmed');
             $table->integer('pui');
             $table->integer('pum');
+            $table->integer('recovered');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateCovidcaseTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('covidcase');
+        Schema::dropIfExists('covid_cases');
     }
 }
