@@ -41,6 +41,7 @@ class CovidCasesController extends Controller
             'confirmed' => $request->input('confirmed'),
             'pui' => $request->input('pui'), 
             'pum' => $request->input('pum'), 
+            'recovered' => $request->input('recovered'), 
         ]);
 
         return redirect()->back();
