@@ -17,6 +17,7 @@
                             <td><input type="text" class="form-control" placeholder="Confirmed" name="confirmed" value="{{ !empty($covid->confirmed) ? $covid->confirmed : '' }}"></td>
                             <td><input type="text" class="form-control" placeholder="PUIs" name="pui" value="{{ !empty($covid->pui) ? $covid->pui : '' }}"></td>
                             <td><input type="text" class="form-control" placeholder="PUMs" name="pum" value="{{ !empty($covid->pum) ? $covid->pum : '' }}"></td>
+                            <td><input type="text" class="form-control" placeholder="RECOVERED" name="recovered" value="{{ !empty($covid->recovered) ? $covid->recovered : '' }}"></td>
                             <td><input type="submit" value="UPDATE" class="form-control bg-primary text-white"></td>
                         </form>
                         </tr>
@@ -24,6 +25,7 @@
                             <th scope="col">Confirmed Cases</th>
                             <th scope="col">PUIs</th>
                             <th scope="col">PUMs</th>
+                            <th scope="col">RECOVERED</th>
                             <th scope="col">Date</th>
                         </tr>
                     </thead>
@@ -34,6 +36,7 @@
                                 <td>{{ $item->confirmed }}</td>
                                 <td>{{ $item->pui }}</td>
                                 <td>{{ $item->pum }}</td>
+                                <td>{{ $item->recovered }}</td>
                                 <td>{{ $item->created_at }}</td>
                             </tr>    
                         @endforeach
