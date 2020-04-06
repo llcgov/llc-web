@@ -36,6 +36,7 @@ class BarangayCovidController extends Controller
      */
     public function store(Request $request)
     {
+        $carbon = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('date_posted'));
         BarangayCovid::create([
             'barangay'          => $request->input('barangay'),
             'confirmed_case'    => $request->input('confirmed_case'),
@@ -44,7 +45,7 @@ class BarangayCovidController extends Controller
             'recovered'         => $request->input('recovered'),
             'deaths'            => $request->input('deaths'),
             'pui_tested'        => $request->input('pui_tested'),
-            'posted'            => $request->input('date-posted'),    
+            'date_posted' => $carbon->format('Y-m-d')  
         ]);
         return redirect()->back();
     }
