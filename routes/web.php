@@ -40,6 +40,8 @@ Route::prefix('administrator')->group(function () {
         Route::resource('schedules', 'SchedulesController');
 
         Route::resource('covidcase', 'CovidCasesController');
+        
+        Route::resource('covid-case-details', 'BarangayCovidController');
 
         // Images
         Route::get('images', 'ImagesController@index')->name('admin.images');

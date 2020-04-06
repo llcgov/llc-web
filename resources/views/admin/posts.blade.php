@@ -42,8 +42,6 @@
                                 </form>
                                 <a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a>
                             </td>
-                                {{-- <a href="{{ route('posts.destroy', $item) }}"><button class="btn btn-danger">Danger</button></a> --}}
-                                {{-- <a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a> --}}
                           
                         </tr>
                         @endforeach
