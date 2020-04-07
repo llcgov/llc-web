@@ -64,7 +64,7 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Tourism')
-                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+                                <a href="{{ route('post.show', $item->id) }}" class="text-dark">
 
                                     <li class="text-dark list-group-item post">
                                         <div class="row">
@@ -91,7 +91,7 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Bids')
-                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+                                <a href="{{ route('post.show', $item->id) }}" class="text-dark">
 
                                     <li class="text-dark list-group-item post">
                                         <div class="row">
@@ -118,7 +118,7 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Jobs')
-                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+                                <a href="{{ route('post.show', $item->id) }}" class="text-dark">
 
                                     <li class="text-dark list-group-item post">
                                         <div class="row">
@@ -195,7 +195,7 @@
                         <ul class="list-group list-group-flush scroll-lg">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Events')
-                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+                                <a href="{{ route('post.show', $item->id) }}" class="text-dark">
 
                                     <li class="text-dark list-group-item post">
                                         <div class="row">
@@ -232,7 +232,7 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Serbisyo')
-                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+                                <a href="{{ route('post.show', $item->id) }}" class="text-dark">
 
                                     <li class="text-dark list-group-item post">
                                         <div class="row">
@@ -259,7 +259,7 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'Sports')
-                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+                                <a href="{{ route('post.show', $item->id) }}" class="text-dark">
 
                                     <li class="text-dark list-group-item post">
                                         <div class="row">
