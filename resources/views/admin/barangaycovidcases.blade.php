@@ -9,7 +9,7 @@
     
         <div class="tab-content mt-4">
             <div id="gallery" class="tab-pane active">
-                <form action="{{ route('covidcase.store')}}" method="POST">
+                <form action="{{ route('covid-case-details.store')}}" method="POST">
                     @csrf
                     <div class="row p-2">
                         <div class="col-md-4">
@@ -94,6 +94,7 @@
                             <th scope="col">DEATHS</th>
                             <th scope="col">PUIs Tested</th>
                             <th scope="col">Date Posted</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -108,6 +109,12 @@
                                 <td>{{ $item->deaths }}</td>
                                 <td>{{ $item->pui_tested }}</td>
                                 <td>{{ $item->date_posted }}</td>
+                                <td><form action="{{ route('covid-case-details.destroy', $item->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                                <a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a></td>
                             </tr>    
                         @endforeach
                        
