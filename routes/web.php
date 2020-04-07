@@ -17,7 +17,7 @@ Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('c
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
-Route::get('coviddetails', 'MainController@covid_details');
+Route::get('coviddetails', 'MainController@covid_details')->name('coviddetails');
 Route::prefix('administrator')->group(function () {
     Route::group(['middleware' => ['auth']], function () {
 
