@@ -10,6 +10,7 @@ use App\Models\News;
 use App\Models\Image;
 use App\Models\Schedule;
 use App\Models\CovidCase;
+use App\Models\BarangayCovid;
 
 class MainController extends Controller
 {
@@ -48,6 +49,13 @@ class MainController extends Controller
     {
         $data['eo'] = EO::all();
         return view('client.executiveorders', $data);
+    }
+
+    public function covid_details()
+    {
+        $data['covid'] = BarangayCovid::all();
+
+        return view('client.coviddetails', $data);
     }
 
     /**

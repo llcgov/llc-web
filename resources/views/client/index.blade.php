@@ -147,10 +147,11 @@
                         <ul class="list-group list-group-flush scroll">
                             @foreach ($posts as $item)
                                 @if ($item->post_type == 'News')
-                                <a href="{{ route('post.show', $item->id) }}" class="text-decoration-none">
+                                <a href="{{ route('post.show', $item->id) }}" class="text-dark">
 
                                     <li class="text-dark list-group-item post">
                                         <div class="row">
+                                            @if (!empty($item->media()->first()->path))
                                             <div class="col-md-4">
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
@@ -158,6 +159,12 @@
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
                                             </div>
+                                            @else
+                                            <div class="col-md-8 offset-md-2">
+                                                <span class="font-content"><p> {{ $item->title}}</p></span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
+                                            </div>
+                                            @endif
                                         </div>
                                     </li>
                                 </a>
@@ -169,8 +176,6 @@
                 <div class="col-md-6">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F1597892066938019%2Fvideos%2F2281064598857138%2F&show_text=0&width=560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-                        {{-- <iframe class="embed-responsive-item"  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F1597892066938019%2Fvideos%2F251789805842179%2F&show_text=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe> --}}
-                        {{-- <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F1597892066938019%2Fvideos%2F2498574453785960%2F&show_text=0&width=560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe> --}}
                     </div>
                 </div>
             </div>

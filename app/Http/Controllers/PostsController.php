@@ -45,19 +45,21 @@ class PostsController extends Controller
             'post_type' => $request->input('post_type'),
             'date_posted' => $carbon->format('Y-m-d')
             ]);
+        logs()->info(empty(request()->file('name')));
+        if(request()->file('name'))
+        {
+            $file = request()->file('name');
+            $image = Storage::put('public/' . $request->input('type'), $file);
 
-        $file = request()->file('name');
-        $fileName =  $file->getClientOriginalName();
-        $image = Storage::put('public/' . $request->input('type'), $file);
+            $media = Media::create([
+                'name' => request()->file('name')->hashName(),
+                'path' => $request->input('type'),
+                'type' => $request->input('type'),
+                'size' => request()->file('name')->getSize()
+            ]);
 
-        $media = Media::create([
-            'name' => request()->file('name')->hashName(),
-            'path' => $request->input('type'),
-            'type' => $request->input('type'),
-            'size' => request()->file('name')->getSize()
-        ]);
-
-        $post->media()->save($media);
+            $post->media()->save($media);
+        }
         
         return redirect()->back();
     }
