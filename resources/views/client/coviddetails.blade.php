@@ -17,7 +17,7 @@
                 <td><h5>{{ $item->barangay }}</h5></td>
                 <td><h5>{{ $item->pum }}</h5></td>
                 <td><h5>{{ $item->pui }}</h5></td>
-                <td><h5>{{ $item->confirmed }}</h5></td>
+                <td><h5>{{ $item->confirmed_case }}</h5></td>
                 <td><h5>{{ $item->recovered }}</h5></td>
             </tr>
             @endforeach
