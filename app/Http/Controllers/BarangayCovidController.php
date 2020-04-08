@@ -39,7 +39,7 @@ class BarangayCovidController extends Controller
         $carbon = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('date_posted'));
         $logs = BarangayCovid::create([
             'barangay'          => $request->input('barangay'),
-            'confirmed_case'    => $request->input('confirmed_case'),
+            'confirmed_case'    => $request->input('confirmed'),
             'pum'               => $request->input('pum'),
             'pui'               => $request->input('pui'),
             'recovered'         => $request->input('recovered'),
