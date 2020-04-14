@@ -20,6 +20,8 @@
                         <tr>
                             <th scope="col">Image</th>
                             <th scope="col">Title</th>
+                            <th scope="col">Headline</th>
+                            <th scope="col">Video Url</th>
                             <th scope="col">Content</th>
                             <th scope="col">Post Type</th>
                             <th scope="col">Date Posted</th>
@@ -31,6 +33,8 @@
                         <tr>
                             <td><img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" width="100"></td>
                             <td>{{ $item->title}}</td>
+                            <td>{{ $item->headline}}</td>
+                            <td>{{ $item->video_url}}</td>
                             <td>{{ $item->content}}</td>
                             <td>{{ $item->post_type}}</td>
                             <td>{{ $item->date_posted}}</td>
@@ -57,6 +61,14 @@
                             <div class="form-group">
                                 <label for="title">Title</label>
                                 <input type="text" placeholder="Post Title" name="title" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="title">Headline</label>
+                                <input type="text" placeholder="Headline" name="headline" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="title">Video URL</label>
+                                <input type="text" placeholder="Video URL" name="video_url" class="form-control">
                             </div>
 
                             <div class="form-group">
