@@ -18,14 +18,14 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Image</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Headline</th>
-                            <th scope="col">Video Url</th>
-                            <th scope="col">Content</th>
-                            <th scope="col">Post Type</th>
-                            <th scope="col">Date Posted</th>
-                            <th scope="col">Actions</th>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Headline</th>
+                            <th>Video Url</th>
+                            <th>Content</th>
+                            <th>Post Type</th>
+                            <th>Date Posted</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,7 +34,7 @@
                             <td><img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" width="100"></td>
                             <td>{{ $item->title}}</td>
                             <td>{{ $item->headline}}</td>
-                            <td>{{ $item->video_url}}</td>
+                            <td><iframe src="{{ $item->video_url}}" frameborder="0"></iframe></td>
                             <td>{{ $item->content}}</td>
                             <td>{{ $item->post_type}}</td>
                             <td>{{ $item->date_posted}}</td>
