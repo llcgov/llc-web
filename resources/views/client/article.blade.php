@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-md-6">
                     <span class="font-content text-justify"><p id="text-content"></p></span>
-                    <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($post->created_at))}}</span>
+                    <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($post->created_at))}}</span>
                     @if ($post->video_url)
                         <br>
                         <iframe src="{{ $post->video_url }}" frameborder="0"></iframe>         
@@ -19,12 +19,13 @@
                 </div>
                 
             @else
-                <div class="col-md-12"><span class="font-content text-justify"><p id="text-content"></p></span>
-                    <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($post->created_at))}}</span>
-
-
-
-
+                <div class="col-md-12">
+                    <span class="font-content text-justify">
+                        <p id="text-content"></p>
+                    </span>
+                    <span class="text-uppercase font-content small text-muted"> 
+                        {{ date('F d, Y', strtotime($post->created_at))}}
+                    </span>
                     @if ($post->video_url)
                         <br>
                         <iframe src="{{ $post->video_url }}" frameborder="0"></iframe>         
@@ -40,7 +41,6 @@
 
 <script>
     var pp = {!! json_encode($post->toArray()) !!};
-    // console.log(pp.content);
     document.getElementById('text-content').innerHTML = pp.content;
 </script>
 @endpush
