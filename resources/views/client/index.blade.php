@@ -297,7 +297,7 @@
     </div>
   
     </div>
-@push('js')
+@push('scripts')
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
               var calendarEl = document.getElementById('calendar');
@@ -314,7 +314,6 @@
                 events:
                     {!! $schedules->toJson() !!}
               });
-
               calendar.render();
             });
 
