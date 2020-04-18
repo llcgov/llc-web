@@ -7,56 +7,9 @@
   </div>
 
   <div class="container-fluid">
-
-        <ul class="nav nav-tabs">
-            <li class="nav-item nav-link active"><a data-toggle="tab" href="#gallery">Posts</a></li>
-            <li class="nav-item nav-link" ><a data-toggle="tab" href="#images">Create Posts</a></li>
-        </ul>
-    
-        <div class="tab-content mt-4">
-            <div id="gallery" class="tab-pane active">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Image</th>
-                            <th>Title</th>
-                            <th>Headline</th>
-                            <th>Video Url</th>
-                            <th>Content</th>
-                            <th>Post Type</th>
-                            <th>Date Posted</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($posts as $item)
-                        <tr>
-                            <td><img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" width="100"></td>
-                            <td>{{ $item->title}}</td>
-                            <td>{{ $item->headline}}</td>
-                            <td><iframe src="{{ $item->video_url}}" frameborder="0"></iframe></td>
-                            <td>{{ $item->content}}</td>
-                            <td>{{ $item->post_type}}</td>
-                            <td>{{ $item->date_posted}}</td>
-                            <td>
-                                <form action="{{ route('posts.destroy', $item->id)}}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                </form>
-                                <a href="{{ route('posts.edit', $item->id) }}"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a>
-                            </td>
-                          
-                        </tr>
-                        @endforeach
-                    </tbody>
-                  </table>
-            </div>
-
-            <div id="images" class="tab-pane">
                 <div class="row">
                     <div class="container">
-                        <form action="{{route('posts.store')}}" enctype="multipart/form-data" method="POST">
+                        <form action="#" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="title">Title</label>
@@ -110,7 +63,5 @@
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
     </div>
 @endsection

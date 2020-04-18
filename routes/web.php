@@ -18,6 +18,7 @@ Route::get('transparency', 'MainController@transparency')->name('client.transpar
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
 Route::get('coviddetails', 'MainController@covid_details')->name('coviddetails');
+Route::get('covidtracker', function(){ return view('client.map'); } );
 Route::prefix('administrator')->group(function () {
     Route::group(['middleware' => ['auth']], function () {
 
