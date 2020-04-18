@@ -12,12 +12,18 @@
 */
 // Route::get('/', function(){return view('coming_soon'); })->name('client.home');
 Route::get('/', 'MainController@index')->name('client.home');
+// View Pages
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
+Route::get('onlinerequests', function(){return view('client.requests'); })->name('client.requests');
+
+// Controlled Pages
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
 Route::get('coviddetails', 'MainController@covid_details')->name('coviddetails');
+
+// Administrator Pages
 Route::prefix('administrator')->group(function () {
     Route::group(['middleware' => ['auth']], function () {
 
@@ -26,10 +32,10 @@ Route::prefix('administrator')->group(function () {
         // Posts
         Route::resource('posts', 'PostsController');
 
-        // News 
+        // News
         Route::resource('news', 'NewsController');
-        
-        // Departments 
+
+        // Departments
         Route::resource('departments', 'DepartmentsController');
 
         // Transparency
@@ -40,7 +46,7 @@ Route::prefix('administrator')->group(function () {
         Route::resource('schedules', 'SchedulesController');
 
         Route::resource('covidcase', 'CovidCasesController');
-        
+
         Route::resource('covid-case-details', 'BarangayCovidController');
 
         // Images
