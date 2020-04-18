@@ -17,10 +17,10 @@ Route::get('aboutcity', function(){return view('client.aboutcity');})->name('cli
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
 Route::get('exemptionrequest', function(){return view('client.requests'); })->name('client.requests');
 
-Route::get('employees-request-form', function(){return view('client.requestform.employees'); })->name('client.employees');
-Route::get('delivery-request-form', function(){return view('client.requestform.delivery'); })->name('client.delivery');
-Route::get('individual-request-form', function(){return view('client.requestform.individuals'); })->name('client.individual');
-Route::get('company-shuttle-request-form', function(){return view('client.requestform.shuttle'); })->name('client.shuttle');
+// Route::get('employees-request-form', function(){return view('client.requestform.employees'); })->name('client.employees');
+// Route::get('delivery-request-form', function(){return view('client.requestform.delivery'); })->name('client.delivery');
+// Route::get('individual-request-form', function(){return view('client.requestform.individuals'); })->name('client.individual');
+// Route::get('company-shuttle-request-form', function(){return view('client.requestform.shuttle'); })->name('client.shuttle');
 
 
 
