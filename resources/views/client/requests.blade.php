@@ -16,6 +16,12 @@
     <div class="my-4 text-center">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfE0N9k2iXKSWmalVzupU24bRQhyhB96-Rg-ynfbHeqJpZ2aw/viewform"><button class="btn btn-primary btn-lg w-50">Company Shuttle/Vehicles Of Exempt Establishment</button></a>
     </div>
+    <div class="my-4 text-center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSek_uLOJV-LLFNDFdPtF-LdSHhVGEEd5BkvRYu0187q3EXgWA/viewform"><button class="btn btn-primary btn-lg w-50">Grab Food / Lalamove / Food Panda</button></a>
+    </div>
+    <div class="my-4 text-center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKy0RNhCWs0RubAkkzKqpxgoN2Q3uXCZKlY8g0aGZSg4cSqg/viewform"><button class="btn btn-primary btn-lg w-50">Government Employees (National or LGU)</button></a>
+    </div>
   </div>
 </div>
 
