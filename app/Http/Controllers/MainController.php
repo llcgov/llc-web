@@ -61,7 +61,7 @@ class MainController extends Controller
     }
     public function sap()
     {
-        $data['sap'] = Sap::all();
+        $data['sap'] = Sap::orderBy('title')->get();
         return view('client.sap', $data);
     }
 

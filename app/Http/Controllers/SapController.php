@@ -48,7 +48,7 @@ class SapController extends Controller
      */
         public function destroy($id)
     {
-        $file = ExecutiveOrder::find($id);
+        $file = Sap::find($id);
 
         try {
             unlink('storage/SAP/' . $file->name);    
