@@ -25,6 +25,7 @@ Route::get('exemptionrequest', function(){return view('client.requests'); })->na
 
 
 // Controlled Pages
+Route::get('sap', 'MainController@sap')->name('client.sap');
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
@@ -59,6 +60,8 @@ Route::prefix('administrator')->group(function () {
         Route::resource('covidcase', 'CovidCasesController');
 
         Route::resource('covid-case-details', 'BarangayCovidController');
+
+        Route::resource('sap', 'SapController');
 
         // Images
         Route::get('images', 'ImagesController@index')->name('admin.images');
