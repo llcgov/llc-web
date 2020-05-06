@@ -4,7 +4,7 @@
     <div class="container">
       {{-- <div class="row"> --}}
         <div class="row m-4 bg-white">
-            <div class="col-md-6 offset-md-3"> 
+            <div class="col-md-8 offset-md-2"> 
               <h4>Social Amelioration Program</h4>
                     <div class="card">
                       <div class="card-header" id="headChild">  
