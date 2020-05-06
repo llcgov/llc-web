@@ -2,18 +2,17 @@
 
 @section('content')
     <div class="container">
-      <div class="row bg-white">
-        <div class="row m-4">
-            <div class=" col-md-12"> 
+      {{-- <div class="row"> --}}
+        <div class="row m-4 bg-white">
+            <div class="col-md-6 offset-md-3"> 
               <h4>Social Amelioration Program</h4>
-
                     <div class="card">
                       <div class="card-header" id="headChild">  
-                          <ul>
+                          <ul style="column-count: 3">
                           @foreach ($sap as $item)
                             <li>
                               <a href="" class="text-decoration-none" data-toggle="modal" data-target="#{{ str_replace([' ', '-', '.'], '', $item->title)  }}"><h5 class="text-uppercase"><span class="text-dark"> </span> {{ $item->title }} </h5></a>
-                            </li>                          
+                            </li>
                             <div class="modal fade bd-example-modal-xl" id="{{ str_replace([' ', '-', '.'], '', $item->title) }}" tabindex="-1" role="dialog" aria-labelledby="{{ $item->id }}" aria-hidden="true">
                               <div class="modal-dialog modal-xl" role="document">
                                 <div class="modal-content">
@@ -37,7 +36,7 @@
                     </div>
             </div>
         </div>
-      </div>
+      {{-- </div> --}}
     </div>   
 
     @push('js')
