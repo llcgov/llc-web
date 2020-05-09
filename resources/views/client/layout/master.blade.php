@@ -59,7 +59,6 @@
             s0.parentNode.insertBefore(s1,s0);
             })();
           </script>
-
-        @stack('js')
+        @stack('scripts')
       </body>
 </html>

@@ -24,6 +24,7 @@
 
 .font-content {
     font-family: Roboto, Helvetica, Arial, sans-serif;
+    text-indent: 50px;
 }
 
 .nav-bg{
@@ -69,7 +70,7 @@ body {
 }
 
 p{
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .bg_gray {
@@ -116,4 +117,9 @@ p{
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+@media only screen and (max-width: 768px) {
+.icon-bar  {
+    visibility:hidden;
+  }
 }
