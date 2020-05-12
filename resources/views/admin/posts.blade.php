@@ -73,7 +73,7 @@
 
                             <div class="form-group">
                                 <label for="content">Content</label>
-                                <textarea name="content" class="form-control" rows="5"></textarea>
+                                <textarea name="content"></textarea>
                             </div>
                             <div class="form-group">
                                 <input type="file" name="name" class="form-control">
@@ -114,3 +114,10 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+    <script>
+        new FroalaEditor('textarea');
+    </script>
+@endpush

@@ -20,6 +20,7 @@
         {{-- Slim Select --}}
         <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.25.0/slimselect.min.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.25.0/slimselect.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
 
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
@@ -48,5 +49,6 @@
                 select: '#barangay'
             });
         </script>
+        @stack('scripts')
     </body>
 </html>
