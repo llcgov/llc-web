@@ -124,3 +124,11 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script type="text/javascript">
+            new SlimSelect({
+                select: '#barangay'
+            });
+        </script>
+@endpush

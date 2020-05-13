@@ -73,7 +73,7 @@
 
                             <div class="form-group">
                                 <label for="content">Content</label>
-                                <textarea name="content"></textarea>
+                                <textarea name="content" id="postcontent" row="8"></textarea>
                             </div>
                             <div class="form-group">
                                 <input type="file" name="name" class="form-control">
@@ -116,5 +116,11 @@
 @endsection
 
 @push('scripts')
-
+<script src="https://cdn.tiny.cloud/1/sm401jmgnvll4zpk0sphqogk2mnxf4n9mevuwetqlhfme9a6/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#postcontent',
+            height : "480"
+        });
+    </script>
 @endpush
