@@ -34,9 +34,7 @@
                     <div class="col-md-5 text-light">
                         <h4 class="text-center"><strong>CONTACT INFORMATION</strong></h4>
                         <div>
-                            <h5><strong>Hotline: </strong> (032)-341 6666</h5>
-                            
-                            <h5><strong>Mobile: </strong> +6395 6546 586</h5>
+                            <h5><strong>Hotline: </strong> (032)-340 2124</h5>
                             
                             <h5> <strong>Office Hours: </strong> 8:00 AM - 5:00 PM Monday to Friday</h5>
 

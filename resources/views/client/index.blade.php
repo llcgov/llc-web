@@ -242,7 +242,7 @@
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
                                             <div class="col-md-8">
-                                                <span class="font-content"><p> {{ $item->title}}</p></span>
+                                                <span><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                         </div>
@@ -269,7 +269,7 @@
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
                                             <div class="col-md-8">
-                                                <span class="font-content"><p> {{ $item->title}}</p></span>
+                                                <span><p> {{ $item->title}}</p></span>
                                                 <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                         </div>
