@@ -15,8 +15,8 @@ Route::get('/', 'MainController@index')->name('client.home');
 // View Pages
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
-Route::get('exemptionrequest', function(){return view('client.requests'); })->name('client.requests');
 
+// Route::get('exemptionrequest', function(){return view('client.requests'); })->name('client.requests');
 // Route::get('employees-request-form', function(){return view('client.requestform.employees'); })->name('client.employees');
 // Route::get('delivery-request-form', function(){return view('client.requestform.delivery'); })->name('client.delivery');
 // Route::get('individual-request-form', function(){return view('client.requestform.individuals'); })->name('client.individual');

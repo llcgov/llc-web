@@ -21,12 +21,12 @@
                             ONLINE SERVICE
                         </h4></a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#"><h5 class="font-weight-light">New/Renew Business Permit</h5></a>
-                      <a class="dropdown-item" href="#"><h5 class="font-weight-light">Local Civil Registry Services</h5></a>
-                      <a class="dropdown-item" href="#"><h5 class="font-weight-light">Cedula</h5></a>
-                      <a class="dropdown-item" href="#"><h5 class="font-weight-light">Tax Declaration</h5></a>
-                      <a class="dropdown-item" href="{{ route('client.requests') }}"><h5 class="font-weight-light">Exemption Request Form</h5></a>
-                      <a class="dropdown-item" href="{{ route('client.sap') }}"><h5 class="font-weight-light">SAP Qualifiers</h5></a>
+                        <a class="dropdown-item" href="#"><h5 class="font-weight-light">New/Renew Business Permit</h5></a>
+                        <a class="dropdown-item" href="#"><h5 class="font-weight-light">Local Civil Registry Services</h5></a>
+                        <a class="dropdown-item" href="#"><h5 class="font-weight-light">Cedula</h5></a>
+                        <a class="dropdown-item" href="#"><h5 class="font-weight-light">Tax Declaration</h5></a>
+                        {{-- <a class="dropdown-item" href="{{ route('client.requests') }}"><h5 class="font-weight-light">Exemption Request Form</h5></a> --}}
+                        {{-- <a class="dropdown-item" href="{{ route('client.sap') }}"><h5 class="font-weight-light">SAP Qualifiers</h5></a> --}}
                     </div>
                   </li>
                 <li class="nav-item">
@@ -45,6 +45,7 @@
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="{{ route('client.transparency') }}"><h5 class="font-weight-light">Full Disclosure Data</h5></a>
                       <a class="dropdown-item" href="{{ route('client.eo') }}"><h5 class="font-weight-light">Executive Order</h5></a>
+                      {{-- <a class="dropdown-item" href="{{ route('client.eo') }}"><h5 class="font-weight-light">City Ordinance</h5></a> --}}
                       <a class="dropdown-item" href="#"><h5 class="font-weight-light">Citizen's Chart</h5></a>
                     </div>
                   </li>

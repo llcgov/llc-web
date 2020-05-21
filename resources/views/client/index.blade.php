@@ -284,7 +284,7 @@
         </div>
     </div>
 </div>
-<div class="icon-bar bg-primary rounded text-center p-4">
+{{-- <div class="icon-bar bg-primary rounded text-center p-4">
   <a class="text-white text-decoration-none" href="#collapse1"><h3>COVID-19 UPDATE </h3></a>
   <div>
       <h4 class="text-light text-center">Confirmed Cases</h4>
@@ -297,7 +297,7 @@
       <h4 class="text-white"><img src="{{ asset('img/icons/check.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->recovered) ? $covid->first()->recovered: 0 }}</span></h4>
       <a href="{{ route('coviddetails') }}" class="text-light"> More details! </a>
   </div>
-</div>
+</div> --}}
 @push('scripts')
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {

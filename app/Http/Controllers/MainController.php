@@ -34,7 +34,7 @@ class MainController extends Controller
         $data['covid'] = CovidCase::orderBy('created_at', 'DESC')->get();
         $data['schedules'] = $schedule;
         $data['posts'] = Post::orderBy('date_posted','desc')->get();
-        $data['images'] = Image::where('type', 'Slider')->get();
+        $data['images'] = Image::where('type', 'Slider')->orderBy('created_at', 'asc')->get();
         
         return view('client.index', $data);
     }

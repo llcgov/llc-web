@@ -43,7 +43,7 @@ body {
 
   .slider{
 
-        background: url('/img/500.png');
+        /* background: url('/img/500.png'); */
         background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
