@@ -9,8 +9,6 @@ use App\Models\ExecutiveOrder as EO;
 use App\Models\News;
 use App\Models\Image;
 use App\Models\Schedule;
-use App\Models\CovidCase;
-use App\Models\BarangayCovid;
 use App\Models\Sap;
 
 class MainController extends Controller
@@ -31,7 +29,6 @@ class MainController extends Controller
                 unset($schedule[$key]['group_id']);
             }
         }
-        $data['covid'] = CovidCase::orderBy('created_at', 'DESC')->get();
         $data['schedules'] = $schedule;
         $data['posts'] = Post::orderBy('date_posted','desc')->get();
         $data['images'] = Image::where('type', 'Slider')->orderBy('created_at', 'asc')->get();
@@ -52,13 +49,6 @@ class MainController extends Controller
         return view('client.executiveorders', $data);
     }
 
-    public function covid_details()
-    {
-        $data['covid'] = BarangayCovid::all();
-
-        return view('client.coviddetails', $data);
-    
-    }
     public function sap()
     {
         $data['sap'] = Sap::orderBy('title')->get();
