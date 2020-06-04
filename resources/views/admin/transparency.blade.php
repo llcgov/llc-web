@@ -18,9 +18,9 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Path</th>
+                            <th scope="col">Document Title</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Year</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
@@ -28,8 +28,8 @@
                         @foreach ($transparency as $item)
                         <tr>
                             <td>{{ $item->title }}</td>
-                            <td>{{ $item->name}}</td>
-                            <td>{{ $item->path}}</td>
+                            <td>{{ $item->type}}</td>
+                            <td>{{ $item->year}}</td>
                             <td>
                                 <form action="{{ route('transparencies.destroy', $item->id)}}" method="POST">
                                     @csrf
@@ -40,8 +40,11 @@
                             </td>
                         </tr>
                         @endforeach
+                        
                     </tbody>
                   </table>
+                  {{ $transparency->links() }}
+
             </div>
 
             <div id="images" class="tab-pane">
