@@ -16,23 +16,9 @@ Route::get('/', 'MainController@index')->name('client.home');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
 
-// Route::get('exemptionrequest', function(){return view('client.requests'); })->name('client.requests');
-// Route::get('employees-request-form', function(){return view('client.requestform.employees'); })->name('client.employees');
-// Route::get('delivery-request-form', function(){return view('client.requestform.delivery'); })->name('client.delivery');
-// Route::get('individual-request-form', function(){return view('client.requestform.individuals'); })->name('client.individual');
-// Route::get('company-shuttle-request-form', function(){return view('client.requestform.shuttle'); })->name('client.shuttle');
-
-
-
-// Controlled Pages
-Route::get('sap', 'MainController@sap')->name('client.sap');
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
-Route::get('coviddetails', 'MainController@covid_details')->name('coviddetails');
-Route::get('covidtracker', function(){ return view('client.map'); } );
-
-
 
 
 // Administrator Pages
@@ -56,12 +42,6 @@ Route::prefix('administrator')->group(function () {
         Route::resource('eo', 'ExecutiveOrdersController');
 
         Route::resource('schedules', 'SchedulesController');
-
-        Route::resource('covidcase', 'CovidCasesController');
-
-        Route::resource('covid-case-details', 'BarangayCovidController');
-
-        Route::resource('sap', 'SapController');
 
         // Images
         Route::get('images', 'ImagesController@index')->name('admin.images');
