@@ -55,7 +55,7 @@ class AccountsController extends Controller
             'password' => \Hash::make($data['password']),
         ]);
 
-        dd($response);
+        return redirect()->route('accounts');
     }
 
     /**
