@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('middle_name');
+            $table->string('middle_name')->nullable();
             $table->string('office');
             $table->enum('user_type', ['super_admin', 'admin', 'encoder']);
             $table->string('email')->unique();
