@@ -33,7 +33,12 @@
         <div class="sidebar-heading">
           Menu
         </div>
-
+        @if (Auth::user()->user_type == 'super_admin')
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('accounts.index') }}">s<i class="fas fa-fw fa-chart-area"></i><span>User Accounts</span></a>              
+          </li>
+        @endif
+        
         <li class="nav-item">
           <a class="nav-link" href="{{ route('schedules.index') }}">s<i class="fas fa-fw fa-chart-area"></i><span>Schedules</span></a>
         </li>

@@ -30,7 +30,14 @@
                             <th scope="row"><img src="{{ url( 'storage/' . $item->path . '/' . $item->name) }}" width="100" alt=""></th>
                             <td>{{ $item->name}}</td>
                             <td>{{ $item->type}}</td>
-                            <td><a href="{{ route('images.delete', $item->id) }}"><button class="btn btn-danger">Danger</button></a><a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a></td>
+                            <td>
+                                <a href="{{ route('images.delete', $item->id) }}">
+                                    <button class="btn btn-danger">Danger</button>
+                                </a>
+                                <a href="#"> 
+                                    <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button>
+                                </a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
