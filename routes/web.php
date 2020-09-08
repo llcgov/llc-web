@@ -13,6 +13,8 @@
 // Route::get('/', function(){return view('coming_soon'); })->name('client.home');
 Route::get('/', 'MainController@index')->name('client.home');
 // View Pages
+
+Route::get('business', function(){ return view('client.businesspermit.index');});
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
 
