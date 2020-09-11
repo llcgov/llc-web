@@ -4,7 +4,7 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-md-4 offset-md-4">
+            <div class="col-md-9 offset-md-3">
                 <h2>APPLICATION FORM FOR BUSINESS PERMIT</h2>
             </div>
         </div>
@@ -315,7 +315,75 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="form-check-label" for="emailaddress"><h5>Business Area(in sq. m.):</h5></label>
+                    <input type="text" class="form-control" name="mobile_no" id="mobileno">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="form-check-label" for="emailaddress"><h5>Total No. of Empleyees in the Establishment:</h5></label>
+                    <input type="text" class="form-control" name="mobile_no" id="mobileno">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="form-check-label" for="emailaddress"><h5>No. of Employees Residing within LGU: </h5></label>
+                    <input type="text" class="form-control" name="mobile_no" id="mobileno">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="form-check-label" for="emailaddress"><h5>No. of Employees Residing within LGU: </h5></label>
+                    <input type="text" class="form-control" name="mobile_no" id="mobileno">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="form-check-label" for="emailaddress"><h5>Lessor's Full Name: </h5></label>
+                    <input type="text" class="form-control" name="mobile_no" id="mobileno">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="form-check-label" for="emailaddress"><h5>Lessor's Full Address: </h5></label>
+                    <input type="text" class="form-control" name="mobile_no" id="mobileno">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="form-check-label" for="emailaddress"><h5>Lessor's Telephone/Mobile No.: </h5></label>
+                    <input type="text" class="form-control" name="mobile_no" id="mobileno">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="form-check-label" for="emailaddress"><h5>Lessor's Email Address: </h5></label>
+                    <input type="text" class="form-control" name="mobile_no" id="mobileno">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="form-check-label" for="emailaddress"><h5>Monthly Rental: </h5></label>
+                    <input type="text" class="form-control" name="mobile_no" id="mobileno">
+                </div>
+            </div>
+        </div>
+          
 
-    
     </div>
 @endsection
