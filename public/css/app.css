@@ -1653,6 +1653,10 @@ be a descendant of the grid when it is being dragged.
   background-color: #eee;
 }@charset "UTF-8";
 
+.mt-over {
+  margin-top: -30px;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

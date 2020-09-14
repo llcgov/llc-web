@@ -61697,6 +61697,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./global */ "./resources/js/global.js");
+
 __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
 
 __webpack_require__(/*! @fullcalendar/daygrid */ "./node_modules/@fullcalendar/daygrid/main.esm.js");
@@ -61722,10 +61724,9 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
-var app = new Vue({
-  el: '#app'
-});
+// const app = new Vue({
+//     el: '#app',
+// });
 
 /***/ }),
 
@@ -61840,6 +61841,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/global.js":
+/*!********************************!*\
+  !*** ./resources/js/global.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// $(function(){
+//     return $('.addline').on("click", function(){
+//         // $(this).before($(".businessact").clone().appendTo('.businessact'));
+//         var i=1;
+//         $(".businessact").find('.fas').addClass("fa-minus");
+//         $(".businessact").find('.addline').removeClass("addline");
+//         $(".businessact").find('.addline').addClass("removeline");
+//         $(".businessact").find('.fas').removeClass("fa-plus");
+//         $(".row2").clone().appendTo('.businessact');
+//     });
+// });
+$(function () {
+  return $('.addline').on("click", function () {
+    var i = 1;
+    var ba = $(".businessact");
+    ba.find('.fas').addClass("fa-minus");
+    ba.find('.addline').removeClass("addline");
+    ba.find('.addline').addClass("removeline");
+    ba.find('.fas').removeClass("fa-plus");
+    $(".row2").clone().appendTo('.businessact');
+  });
+});
 
 /***/ }),
 

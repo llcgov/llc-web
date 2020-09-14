@@ -383,7 +383,55 @@
                 </div>
             </div>
         </div>
-          
+        <div class="row">
+            <div class="col-md-4"><h5>Line of Business</h5><br></div>
+            <div class="col-md-2"><h5>No. of Units</h5><br></div>
+            <div class="col-md-2"><h5>Capitalization</h5><small>(for New Business)</small></div>
+            <div class="col-md-4 text-center">
+                <h5>Gross/Sales Receitpts <small>(for Renew)</small></h5>
+                <div class="row">
+                    <div class="col-md-5 text-left">Essential</div>
+                    <div class="col-md-7 text-left">None-Essential</div>                    
+                </div>
+            </div>
+        </div>
+
+        <div class="businessact">
+            <div class="row row2">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="" type="text" name="line_of_business[]" id="">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="" type="text" name="no_of_units[]" id="">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="" type="text" name="capital[]" id="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="" type="text" name="essential[]" id="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="" type="text" name="non_essential[]" id="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button class="addline btn btn-primary"><span><i class="fas fa-plus"></i></span></button>
+                </div>
+            </div>
+        </div>
 
     </div>
 @endsection
