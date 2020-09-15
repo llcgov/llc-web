@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateBusinessActivityTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('business_activity', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('line_of_business');
+            $table->string('no_of_units');
+            $table->string('capitalization');
+            $table->string('essential');
+            $table->string('non-essential');
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('business_activity');
+    }
+}

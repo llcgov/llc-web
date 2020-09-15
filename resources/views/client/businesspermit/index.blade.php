@@ -428,7 +428,7 @@
                     </div>
                 </div>
                 <div class="col-md-1">
-                    <button class="addline btn btn-primary"><span><i class="fas fa-plus"></i></span></button>
+                    <button class="btn btn-primary addline" id="btnline0"><span><i class="fas fa-plus" id="line0"></i></span></button>
                 </div>
             </div>
         </div>
