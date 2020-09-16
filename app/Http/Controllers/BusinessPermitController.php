@@ -13,7 +13,7 @@ class BusinessPermitController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.business');
     }
 
     /**

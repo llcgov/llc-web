@@ -14,7 +14,7 @@
 Route::get('/', 'MainController@index')->name('client.home');
 // View Pages
 
-Route::get('business', function(){ return view('client.businesspermit.index');});
+Route::get('business', function(){ return view('client.businesspermit.index');})->name('business');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
 
@@ -44,6 +44,8 @@ Route::prefix('administrator')->group(function () {
         Route::resource('eo', 'ExecutiveOrdersController');
 
         Route::resource('schedules', 'SchedulesController');
+
+        Route::resource('business', 'BusinessPermitController');
 
         // Images
         Route::get('images', 'ImagesController@index')->name('admin.images');
