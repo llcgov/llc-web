@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('middle_name')->nullable();
             $table->string('office');
-            $table->enum('user_type', ['super_admin', 'admin', 'encoder']);
+            $table->enum('user_type', ['super_admin', 'admin', 'encoder', 'treasurer_admin', 'treasurer_encoder']);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

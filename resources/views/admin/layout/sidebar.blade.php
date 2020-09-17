@@ -38,9 +38,11 @@
             <a class="nav-link" href="{{ route('accounts.index') }}">s<i class="fas fa-fw fa-chart-area"></i><span>User Accounts</span></a>              
           </li>
         @endif
+        @if (Auth::user()->user_type == 'super_admin' || Auth::user()->user_type == 'treasurer_admin' || Auth::user()->user_type == 'treasurer_encoder')
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('business.index') }}">s<i class="fas fa-fw fa-chart-area"></i><span>Business Permits</span></a>              
+          <a class="nav-link" href="{{ route('business.index') }}">s<i class="fas fa-fw fa-chart-area"></i><span>Business Permits</span></a>              
           </li>
+        @endif
         <li class="nav-item">
           <a class="nav-link" href="{{ route('schedules.index') }}">s<i class="fas fa-fw fa-chart-area"></i><span>Schedules</span></a>
         </li>
