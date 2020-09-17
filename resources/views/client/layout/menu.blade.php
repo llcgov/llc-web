@@ -26,6 +26,7 @@
                         <a class="dropdown-item" href="#"><h5 class="font-weight-light">Cedula</h5></a>
                         <a class="dropdown-item" href="#"><h5 class="font-weight-light">Tax Declaration</h5></a>
                         <a class="dropdown-item" href="https://www.hrmdollc.0fees.us"><h5 class="font-weight-light">HR Online Request</h5></a>
+                        <a class="dropdown-item" href="{{ route('client.downloadable')}}"><h5 class="font-weight-light">Downloadables</h5></a>
                         {{-- <a class="dropdown-item" href="{{ route('client.requests') }}"><h5 class="font-weight-light">Exemption Request Form</h5></a> --}}
                         {{-- <a class="dropdown-item" href="{{ route('client.sap') }}"><h5 class="font-weight-light">SAP Qualifiers</h5></a> --}}
                     </div>

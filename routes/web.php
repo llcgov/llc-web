@@ -14,7 +14,10 @@
 Route::get('/', 'MainController@index')->name('client.home');
 // View Pages
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
-Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
+Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
+
+// Downloadables
+Route::get('downloadable', function(){return view('client.downloadable');})->name('client.downloadable');
 
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
