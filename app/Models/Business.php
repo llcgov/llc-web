@@ -4,11 +4,12 @@ namespace App\Models;
 use App\Models\ApplicationSection;
 use App\Models\BusinessInformation;
 use App\Models\TaxPayerInfo;
+use App\Models\BusinessActivity;
 use Illuminate\Database\Eloquent\Model;
 
 class Business extends Model
 {
-    protected $fillable = ['application_id', 'info_id', 'activity_id', 'tax_payer_id', 'city', 'tax_yeaer', 'tin', 'business_name', 'trade_name'];
+    protected $fillable = ['application_id', 'info_id', 'activity_id', 'city', 'tax_yeaer', 'tin', 'business_name', 'trade_name'];
     
     public function app_section()
     {
@@ -19,9 +20,10 @@ class Business extends Model
     {
         return $this->hasOne(BusinessInformation::class());
     }
-    public function tax_payer_info()
+    
+    public function business_activity()
     {
-        return $this->hasOne(TaxPayerInfo::class());
+        return $this->hasOne(BusinessInformation::class());
     }
 }
 

@@ -27,13 +27,13 @@ class CreateBusinessInformationTable extends Migration
             $table->string('owners_telephone_no');
             $table->string('owners_email_address');
 
-            $table->string('emergency_full_name');
-            $table->string('emergency_contact_no');
-            $table->string('emergency_email_address');
+            $table->string('emergency_full_name')->nullable();
+            $table->string('emergency_contact_no')->nullable();
+            $table->string('emergency_email_address')->nullable();
             
             $table->string('area');
-            $table->string('employees_no_in_est');
-            $table->string('employees_residing_lgu');
+            $table->string('employees_no_in_est')->nullable();
+            $table->string('employees_residing_lgu')->nullable();
 
             $table->string('lessors_fullname');
             $table->string('lessors_address');

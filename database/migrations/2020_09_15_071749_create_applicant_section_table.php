@@ -13,7 +13,7 @@ class CreateApplicantSectionTable extends Migration
      */
     public function up()
     {
-        Schema::create('applicant_section', function (Blueprint $table) {
+        Schema::create('application_sections', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->enum('mode_of_payment', ['Annually', 'Semi-Annually', 'Quarterly']);
             $table->enum('type_of_business', ['Single', 'Partnership', 'Corporation', 'Cooperative']);

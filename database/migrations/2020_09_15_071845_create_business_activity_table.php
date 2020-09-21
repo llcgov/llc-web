@@ -17,9 +17,9 @@ class CreateBusinessActivityTable extends Migration
             $table->bigIncrements('id');
             $table->string('line_of_business');
             $table->string('no_of_units');
-            $table->string('capitalization');
-            $table->string('essential');
-            $table->string('non-essential');
+            $table->string('capitalization')->nullable();
+            $table->string('essential')->nullable();
+            $table->string('non_essential')->nullable();
 
             $table->timestamps();
         });

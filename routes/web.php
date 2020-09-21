@@ -14,7 +14,8 @@
 Route::get('/', 'MainController@index')->name('client.home');
 // View Pages
 
-Route::get('business', function(){ return view('client.businesspermit.index');})->name('business');
+Route::get('business', function(){ return view('client.businesspermit.index');})->name('client.business');
+Route::get('business_input', 'BusinessPermitController@store')->name('client.business.store');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
 
