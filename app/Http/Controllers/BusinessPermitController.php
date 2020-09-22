@@ -63,14 +63,13 @@ class BusinessPermitController extends Controller
 
             'emergency_full_name'=>$request->input('emerg_full_name'),
             'emergency_contact_no'=>$request->input('emerg_mobile_no'),
-            // 'emergency_email_addres'=>$request->input('emerg_email'),
-            'emergency_email_addres'=> "Testing",
-            
+            'emergency_email_addres'=>$request->input('emerg_email'),
+
             'area'=>$request->input('business_area'),
             'employees_no_in_est'=>$request->input('no_of_employees'),
             'employees_residing_lgu'=>$request->input('no_of_emp_residing_lgu'),
             
-            'lessors_fullname'=>$request->input('lessors_fullname'),
+            'lessors_fullname'=>$request->input('lessors_full_name'),
             'lessors_address'=>$request->input('lessors_address'),
             'lessors_contact_no'=>$request->input('lessors_contact'),
             'lessors_email'=>$request->input('lessors_email'),
@@ -78,14 +77,40 @@ class BusinessPermitController extends Controller
 
         ]);
 
-        // $act = BusinessActivity::create([
-        //     'line_of_business'=>$request->input('line_of_business'),
-        //     'no_of_units'=>$request->input('no_of_units'),
-        //     'capitalization'=>$request->input('capitalization'),
-        //     'essential'=>$request->input('essential'),
-        //     'non_essential'=>$request->input('non_essential'),
-            
-        // ]);
+        $business = Business::create(
+            [
+                'application_id' => $app->id,
+                'info_id' => $info->id,
+                'city' => $request->input('city'),
+                'tax_year' => $request->input('tax_year'),
+                'business_name' => $request->input('business_name'),
+                'trade_name' => $request->input('trd_name'),
+                'tin' => $request->input('tin')
+                
+            ]
+        );
+
+        $line_of_business = $request->get('line_of_business');
+        $no_of_units = $request->get('no_of_units');
+        $capitalization = $request->get('capital');
+        $essential = $request->get('essential');
+        $non_essential = $request->get('non_essential');
+        
+        $business_activity = [];
+        foreach($line_of_business as $key => $value){
+            $business_activity[$key] = [
+                'business_id'=> $business->id,
+                'line_of_business' => $line_of_business[$key], 
+                'no_of_units' => $no_of_units[$key],
+                'capitalization' => $capitalization[$key],
+                'essential' => $essential[$key],
+                'non_essential' => $non_essential[$key]
+            ];
+        }
+        BusinessActivity::insert($business_activity);
+
+        
+
     }
 
     /**

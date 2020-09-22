@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBusinessActivityTable extends Migration
+class CreateBusinessActivitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateBusinessActivityTable extends Migration
      */
     public function up()
     {
-        Schema::create('business_activity', function (Blueprint $table) {
+        Schema::create('business_activities', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses');
             $table->string('line_of_business');
             $table->string('no_of_units');
             $table->string('capitalization')->nullable();
             $table->string('essential')->nullable();
             $table->string('non_essential')->nullable();
-
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ class CreateBusinessActivityTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('business_activity');
+        Schema::dropIfExists('business_activities');
     }
 }
