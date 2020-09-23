@@ -40,8 +40,9 @@ class CreateBusinessInformationTable extends Migration
             $table->string('lessors_contact_no');
             $table->string('lessors_email');
             $table->string('monthly_rental');
-            
-            
+
+            $table->unsignedBigInteger('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses');
             $table->timestamps();
         });
     }

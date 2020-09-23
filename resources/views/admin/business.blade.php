@@ -18,7 +18,23 @@
                 </tr>
             </thead>
             <tbody>
-             
+                <tr>
+                    {{-- {{ dd($business)}} --}}
+                    
+                    @foreach ($business as $item)
+                        <td>{{ $item->app_section->mode_of_payment }}</td>
+                        <td>Peter Pan</td>
+                        <td>xxx-xxx-0xxx-x0</td>
+                        <td>{{ $item->app_section->mode_of_payment }}</td>
+                        <td>Single</td>
+                        <td>2020</td>
+                        <td>Lapu-Lapu City</td>
+                        <td><span class="badge badge-danger">Danger</span></td>
+                        <td><span><h4><i class="fas fa-eye"></i></h4></span></td>
+                        {{-- {{dd($item->app_section)}}     --}}
+                    @endforeach
+                        {{-- {{dd(}} --}}
+                </tr>
                 <tr>
                     <td>New</td>
                     <td>Peter Pan</td>

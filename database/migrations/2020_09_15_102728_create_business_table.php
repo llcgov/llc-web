@@ -15,10 +15,7 @@ class CreateBusinessTable extends Migration
     {
         Schema::create('businesses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('application_id');
-            $table->foreign('application_id')->references('id')->on('application_sections');
-            $table->unsignedBigInteger('info_id');
-            $table->foreign('info_id')->references('id')->on('business_information');
+            $table->enum('application_type', ['New', 'Renew']);
             $table->string('city');
             $table->string('tax_year');
             $table->string('business_name');

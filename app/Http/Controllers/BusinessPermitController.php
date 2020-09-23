@@ -17,7 +17,11 @@ class BusinessPermitController extends Controller
      */
     public function index()
     {
-        return view('admin.business');
+        $data['business'] = Business::all();
+
+        return view('admin.business', $data);
+
+        // return ;
     }
 
     /**
@@ -38,7 +42,19 @@ class BusinessPermitController extends Controller
      */
     public function store(Request $request)
     {
+        $business = Business::create(
+            [
+                'city' => $request->input('city'),
+                'tax_year' => $request->input('tax_year'),
+                'business_name' => $request->input('business_name'),
+                'trade_name' => $request->input('trd_name'),
+                'tin' => $request->input('tin'),
+                'application_type'=> $request->input('application_type')
+            ]
+        );
+
         $app = ApplicationSection::create([
+            'business_id' => $business->id,
             'mode_of_payment'=>$request->input('mode_of_payment'),
             'type_of_business'=>$request->input('type_of_business'),
             'ammendment_from'=>$request->input('ammendment_from'),
@@ -49,6 +65,7 @@ class BusinessPermitController extends Controller
         ]);
 
         $info = BusinessInformation::create([
+            'business_id' => $business->id,
             'business_address'=>$request->input('business_address'),
             'business_postal_code'=>$request->input('business_postal_code'),
             'business_mobile_no'=>$request->input('business_mobile_no'),
@@ -76,19 +93,6 @@ class BusinessPermitController extends Controller
             'monthly_rental'=>$request->input('monthly_rental')      
 
         ]);
-
-        $business = Business::create(
-            [
-                'application_id' => $app->id,
-                'info_id' => $info->id,
-                'city' => $request->input('city'),
-                'tax_year' => $request->input('tax_year'),
-                'business_name' => $request->input('business_name'),
-                'trade_name' => $request->input('trd_name'),
-                'tin' => $request->input('tin')
-                
-            ]
-        );
 
         $line_of_business = $request->get('line_of_business');
         $no_of_units = $request->get('no_of_units');

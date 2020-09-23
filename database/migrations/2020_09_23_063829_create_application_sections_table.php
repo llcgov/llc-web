@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateApplicantSectionTable extends Migration
+class CreateApplicationSectionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -22,6 +22,9 @@ class CreateApplicantSectionTable extends Migration
             $table->string('tax_payer_lname');
             $table->string('tax_payer_fname');
             $table->string('tax_payer_mname');
+            
+            $table->unsignedBigInteger('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses');
             $table->timestamps();
         });
     }
@@ -33,6 +36,6 @@ class CreateApplicantSectionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('applicant_section');
+        Schema::dropIfExists('application_sections');
     }
 }

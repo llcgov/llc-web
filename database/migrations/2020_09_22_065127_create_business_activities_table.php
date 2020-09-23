@@ -15,13 +15,14 @@ class CreateBusinessActivitiesTable extends Migration
     {
         Schema::create('business_activities', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('business_id');
-            $table->foreign('business_id')->references('id')->on('businesses');
             $table->string('line_of_business');
             $table->string('no_of_units');
             $table->string('capitalization')->nullable();
             $table->string('essential')->nullable();
             $table->string('non_essential')->nullable();
+
+            $table->unsignedBigInteger('business_id');
+            $table->foreign('business_id')->references('id')->on('businesses');
             $table->timestamps();
         });
     }
