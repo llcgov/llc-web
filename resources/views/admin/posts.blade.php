@@ -20,7 +20,7 @@
                         <tr>
                             <th>Image</th>
                             <th>Video Url</th>
-                            <th>Headline</th>
+                            <th>Title</th>
                             <th>Content</th>
                             <th>Date Posted</th>
                         </tr>
@@ -30,7 +30,7 @@
                         <tr>
                             <td><img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" width="100"></td>
                             <td><iframe src="{{ $item->video_url}}" frameborder="0"></iframe></td>
-                            <td>{{ $item->headline }}</td>
+                            <td>{{ $item->title }}</td>
                             <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                                 View Content
                               </button></td>
