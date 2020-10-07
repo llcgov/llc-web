@@ -52,6 +52,7 @@
                                     @push('scripts')
                                         <script>
                                             var pp = {!! json_encode($item->toArray()) !!};
+                                            console.log(pp);
                                             document.getElementById('text-content').innerHTML = pp.content;
                                         </script>
                                     @endpush  
