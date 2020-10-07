@@ -31,18 +31,18 @@
                             <td><img src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" width="100"></td>
                             <td><iframe src="{{ $item->video_url}}" frameborder="0"></iframe></td>
                             <td>{{ $item->title }}</td>
-                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#postModal{{$item->id}}">
                                 View Content
                               </button></td>
                             <td>{{ $item->date_posted}}</td>
                           
                         </tr>
                         {{-- Modal --}}
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal fade" id="postModal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-lg" style="max-width: 1200px;" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title text-center" id="exampleModalLongTitle">{{ $item->headline}}</h5>
+                                  <h5 class="modal-title text-center" id="exampleModalLongTitle">{{ $item->title}}</h5>
                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
