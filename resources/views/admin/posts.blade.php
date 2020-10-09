@@ -48,12 +48,13 @@
                                   </button>
                                 </div>
                                 <div class="modal-body">                                  
-                                    <p id="text-content"></p>
+                                    <p id="textcontent{{$item->id}}"></p>
                                     @push('scripts')
                                         <script>
-                                            var pp = {!! json_encode($item->toArray()) !!};
+                                            var pp = {!! json_encode($item->content) !!};
                                             console.log(pp);
-                                            document.getElementById('text-content').innerHTML = pp.content;
+                                            $content = 'textcontent' + {!! $item->id !!};
+                                            document.getElementById($content).innerHTML = pp;
                                         </script>
                                     @endpush  
                                 </div>
