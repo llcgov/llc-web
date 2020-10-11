@@ -16,6 +16,8 @@ Route::get('/', 'MainController@index')->name('client.home');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
 
+Route::get('balikturismo', function(){ return view('client.tourism');})->name('client.tourism');
+
 // Downloadables
 Route::get('downloadable', function(){return view('client.downloadable');})->name('client.downloadable');
 

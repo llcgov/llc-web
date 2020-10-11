@@ -34,6 +34,7 @@
         <script src='https://unpkg.com/@fullcalendar/interaction@4.3.0/main.min.js'></script>
         <script src='https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.js'></script>
         <script src='https://unpkg.com/@fullcalendar/timegrid@4.3.0/main.min.js'></script>
+        @stack('css')
     </head>
     <body id="page-top">
         <div id="wrapper">
