@@ -7,11 +7,11 @@
                 z-index: -1;
                 position: relative;
                 max-width: 100%;
-                top: -250px;
+                top: -100px;
+                align-content: center;
             }   
             .countdown{
-                margin-top: -58vh;
-                padding: 11vh;
+                margin-top: -30vh;
             }
 
             .countdown span {
@@ -29,7 +29,7 @@
                 width: 100px;
                 height: 100px;
                 border-radius: 50%;
-                background: rgba(255, 255, 255, 0.2);
+                background: rgba(82, 80, 80, 0.9);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -37,12 +37,16 @@
             }
         </style>
     @endpush
-    <div class="container-fluid m-0 p-0">
-        <video playsinline autoplay muted loop id="bgvid">
-            <source src="{{ asset('files/balikturismo.mp4')}}" type="video/mp4">
-        </video>
-        <div class="rounded text-white text-center">
-            <div id="clock-b" class="countdown countdown-circles d-flex flex-wrap justify-content-center pt-4"></div>
+    <div class="container m-0 p-0">
+        <div class="row">
+            <div class="offset-md-4 col-md-12">
+                <video playsinline autoplay muted loop id="bgvid">
+                    <source src="{{ asset('files/balikturismo.mp4')}}" type="video/mp4">
+                </video>
+                <div class="rounded text-white text-center">
+                    <div id="clock-b" class="countdown countdown-circles d-flex flex-wrap justify-content-center pt-4"></div>
+                </div>
+            </div>
         </div>
 
     </div>
