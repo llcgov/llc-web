@@ -37,9 +37,9 @@
             }
         </style>
     @endpush
-    <div class="container m-0 p-0">
+    <div class="container">
         <div class="row">
-            <div class="offset-md-4 col-md-12">
+            <div class="col-md-12">
                 <video playsinline autoplay muted loop id="bgvid">
                     <source src="{{ asset('files/balikturismo.mp4')}}" type="video/mp4">
                 </video>
