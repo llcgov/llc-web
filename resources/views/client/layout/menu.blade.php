@@ -68,6 +68,14 @@
                       {{-- <a class="dropdown-item" href="{{ route('client.aboutmayor') }}"><h5 class="font-weight-light">About the Mayor</h5></a> --}}
                     </div>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{route('client.tourism')}}">
+                        <h4 class="font-weight-light text-light">
+                            TOURISM
+                        </h4>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
             </ul>
             {{-- </div> --}}
         </div>
