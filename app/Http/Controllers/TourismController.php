@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
+
+use App\Models\Tourism;
 use App\Models\Media;
 use Illuminate\Support\Facades\Storage;
 
-class PostsController extends Controller
+
+class TourismController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +18,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $data['posts'] = Post::all();
-        return view('admin.posts', $data);
+        //
     }
 
     /**
@@ -38,16 +39,14 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $carbon = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('date_posted'));
-        $post = Post::create([
-            'title' => $request->input('title'), 
-            'headline' => $request->input('headline'), 
-            'video_url' => $request->input('video_url'), 
-            'content' => $request->input('content'), 
-            'post_type' => $request->input('post_type'),
-            'date_posted' => $carbon->format('Y-m-d')
+        $tour = Tourism::create([
+            'name' => $request->input('name'), 
+            'type' => $request->input('type'), 
+            'description' => $request->input('description'), 
+            'url' => $request->input('url'), 
+            'date_start' => $request->input('date_start'), 
+            'date_end' => $request->input('date_end'),
             ]);
-        // logs()->info(empty(request()->file('name')));
         if(request()->file('name'))
         {
             $file = request()->file('name');
@@ -60,10 +59,8 @@ class PostsController extends Controller
                 'size' => request()->file('name')->getSize()
             ]);
 
-            $post->media()->save($media);
+            $tour->media()->save($media);
         }
-        
-        return redirect()->back();
     }
 
     /**
@@ -74,9 +71,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $data['post'] = Post::find($id);
-
-        return view('client.article', $data);
+        //
     }
 
     /**
@@ -87,9 +82,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $data['post'] = Post::find($id);
-
-        return view('admin.edit.editpost', $data);
+        //
     }
 
     /**
@@ -112,9 +105,6 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::find($id);
-
-        $post->delete();
-        return redirect()->back();
+        //
     }
 }
