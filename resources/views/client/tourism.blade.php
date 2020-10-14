@@ -37,7 +37,7 @@
             }
         </style>
     @endpush
-    <div class="container">
+    <div class="container" id="countdown2">
         <div class="row">
             <div class="col-md-12">
                 <video playsinline autoplay muted loop id="bgvid">
@@ -48,20 +48,82 @@
                 </div>
             </div>
         </div>
-
     </div>
+
+    <div class="container text-center" id="balikturismo" display="none">
+
+        <div class="row bg-secondary slider">
+            <div class="offset-md-2 col-md-8 my-4">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-thumbnail" src="http://localhost:8000/storage/Slider/QtFfKkBnObrWKPLZMXskSGIfzVuj1iQdEB8PXRPl.png" class="d-block img-fluid" alt="Los Angeles" width="800" height="500">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-4 py-4 border-right border-bottom">
+                <h1>Food & Beverage</h1>
+            </div>
+
+            <div class="col-md-4 py-4 border-left border-bottom border-right">
+                <h1>Travel & Tourism</h1>
+            </div>
+
+            <div class="col-md-4 py-4 border-left border-bottom">
+                <h1>Testing</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 py-4 border-right border-bottom"> 
+                <h1>Testing</h1>
+            </div>
+
+            <div class="col-md-4 py-4 border-left border-bottom border-right">
+                <h1>Testing</h1>
+            </div>
+
+            <div class="col-md-4 py-4 border-left border-bottom">
+                <h1>Testing</h1>
+
+            </div>
+        </div>
+    </div>
+
+
     @push('scripts')
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
         <script>
          $(function () {
-            $('#clock-b').countdown('2020/10/17').on('update.countdown', function(event) {
+            $('#clock-b').countdown('2020/10/13').on('update.countdown', function(event) {
                 var $this = $(this).html(event.strftime(''
                     + '<div class="m-2"><span class="h1 font-weight-bold">%D</span> <h4>DAY%!d<h4></div>'
                     + '<div class="m-2"><span class="h1 font-weight-bold">%H</span> <h4>Hr</h4></div>'
                     + '<div class="m-2"><span class="h1 font-weight-bold">%M</span> <h4>Min</h4></div>'
                     + '<div class="m-2"><span class="h1 font-weight-bold">%S</span> <h4>Sec</h4></div>'));
+
+                    balikturismo.style.display = 'none';
+                }).on('stoped.countdown', function(event){
+                    var countdown = document.getElementById("countdown2");
+                    var balikturismo = document.getElementById('balikturismo');
+
+
+                        countdown.style.display = 'none';
+                        balikturismo.style.display = 'block';
+  
                 });
-            });
+        });
         </script>
     @endpush
     
