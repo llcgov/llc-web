@@ -73,30 +73,55 @@
 
 
         <div class="row">
-            <div class="col-md-4 py-4 border-right border-bottom">
-                <h1>Food & Beverage</h1>
+            <div class="col-md-4 py-3 border-right border-bottom">
+                <img class="rounded" src="{{asset('temp_img/goldberry.jpeg')}}" alt="" width="170" height="200">                
             </div>
 
-            <div class="col-md-4 py-4 border-left border-bottom border-right">
-                <h1>Travel & Tourism</h1>
+            <div class="col-md-4 py-3 border-left border-bottom border-right">
+                <img class="rounded"  src="{{asset('temp_img/pacificceburesort.jpeg')}}" alt="" width="170" height="200">
             </div>
 
-            <div class="col-md-4 py-4 border-left border-bottom">
-                <h1>Testing</h1>
+            <div class="col-md-4 py-3 border-left border-bottom">
+                <img class="rounded"  src="{{asset('temp_img/savoy.jpeg')}}" alt="" width="170" height="200">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 py-4 border-right border-bottom"> 
-                <h1>Testing</h1>
+            <div class="col-md-4 py-3 border-right border-bottom">
+                <img class="rounded"  src="{{asset('temp_img/whitesands.jpeg')}}" alt="" width="170" height="200">
             </div>
 
-            <div class="col-md-4 py-4 border-left border-bottom border-right">
-                <h1>Testing</h1>
+            <div class="col-md-4 py-3 border-left border-bottom border-right">
+                <img class="rounded"  src="{{asset('temp_img/jparkisland.jpeg')}}" alt="" width="170" height="200">
             </div>
 
-            <div class="col-md-4 py-4 border-left border-bottom">
-                <h1>Testing</h1>
+            <div class="col-md-4 py-3 border-left border-bottom">
+                <img class="rounded"  src="{{asset('temp_img/beresort.jpeg')}}" alt="" width="170" height="200">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 py-3 border-right border-bottom">
+                <img class="rounded"  src="{{asset('temp_img/crimson.jpeg')}}" alt="" width="170" height="200">
+            </div>
 
+            <div class="col-md-4 py-3 border-left border-bottom border-right">
+                <img  class="rounded" src="{{asset('temp_img/bluewater.jpeg')}}" alt="" width="180" height="200">
+            </div>
+
+            <div class="col-md-4 py-3 border-left border-bottom">
+                <img  class="rounded" src="{{asset('temp_img/waterfront.jpeg')}}" alt="" width="170" height="200">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 py-3 border-right border-bottom">
+                <img class="rounded"  src="{{asset('temp_img/tambuli.jpeg')}}" alt="" width="170" height="200">
+            </div>
+
+            <div class="col-md-4 py-3 border-left border-bottom border-right">
+                <img  class="rounded" src="{{asset('temp_img/costabella1.jpg')}}" alt="" width="180" height="200">
+            </div>
+
+            <div class="col-md-4 py-3 border-left border-bottom">
+                <img  class="rounded" src="{{asset('temp_img/egi1.jpg')}}" alt="" width="170" height="200">
             </div>
         </div>
     </div>
@@ -106,7 +131,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
         <script>
          $(function () {
-            $('#clock-b').countdown('2020/10/13').on('update.countdown', function(event) {
+            $('#clock-b').countdown('2020/10/12').on('update.countdown', function(event) {
                 var $this = $(this).html(event.strftime(''
                     + '<div class="m-2"><span class="h1 font-weight-bold">%D</span> <h4>DAY%!d<h4></div>'
                     + '<div class="m-2"><span class="h1 font-weight-bold">%H</span> <h4>Hr</h4></div>'
