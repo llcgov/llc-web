@@ -389,7 +389,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
         <script>
          $(function () {
-            $('#clock-b').countdown('2020/10/11').on('update.countdown', function(event) {
+            $('#clock-b').countdown('2020/10/17').on('update.countdown', function(event) {
                 var $this = $(this).html(event.strftime(''
                     + '<div class="m-2"><span class="h1 font-weight-bold">%D</span> <h4>DAY%!d<h4></div>'
                     + '<div class="m-2"><span class="h1 font-weight-bold">%H</span> <h4>Hr</h4></div>'
