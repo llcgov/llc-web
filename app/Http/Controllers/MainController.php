@@ -38,7 +38,8 @@ class MainController extends Controller
 
     public function transparency()
     {
-        $data['transparency'] = Transparency::all();
+        $data['transparency'] = Transparency::where('functionaries', '!=', 'BAC')->get();
+        $data['bac'] = Transparency::where('functionaries', 'BAC')->get();
         
         return view('client.transparency', $data);
     }
