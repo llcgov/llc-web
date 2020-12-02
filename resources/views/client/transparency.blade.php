@@ -15,6 +15,7 @@
           <div class="bs-accordion">
             <div class="accordion" id="accordionsParent">
             @php $year = $transparency->groupBy('year') @endphp
+            @php $specials = array(",", ".", " ", "-") @endphp
               @foreach ($year as $key_year => $item)
               <div class="card">
                 <div class="card-header" id="headParent">
@@ -31,7 +32,7 @@
                           <div class="card">
                             <div class="card-header" id="headChild">
                                 <h2 class="mb-0">
-                                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#FDP{{ str_replace(' ', '', $key_quarter) }}"><i class="fa fa-plus"></i>{{ $key_quarter }}</button>                     
+                                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#FDP{{ str_replace($specials, '', $key_quarter) }}"><i class="fa fa-plus"></i>{{ $key_quarter }}</button>                     
                                 </h2>
                             </div>
                             <div id="FDP{{ str_replace(' ', '', $key_quarter) }}" class="collapse" aria-labelledby="headChild" data-parent="#accordionsChild">
@@ -39,10 +40,10 @@
                                   <ul>
                                     @foreach ($quart as $fdpdocs)
                                     <li>
-                                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#{{ str_replace(' ', '', $fdpdocs->title)  }}"><h5 class="text-uppercase">{{ $fdpdocs->title }}</h5></a>
+                                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#{{ str_replace($specials, '', $fdpdocs->title)  }}"><h5 class="text-uppercase">{{ $fdpdocs->title }}</h5></a>
                                       </li>                          
                                         {{-- MODAL --}}
-                                        <div class="modal fade bd-example-modal-xl" id="{{ str_replace(' ', '', $fdpdocs->title) }}" tabindex="-1" role="dialog" aria-labelledby="{{ $fdpdocs->id }}" aria-hidden="true">
+                                        <div class="modal fade bd-example-modal-xl" id="{{ str_replace($specials, '', $fdpdocs->title) }}" tabindex="-1" role="dialog" aria-labelledby="{{ $fdpdocs->id }}" aria-hidden="true">
                                           <div class="modal-dialog modal-xl" role="document">
                                             <div class="modal-content">
                                               <div class="modal-header">
@@ -98,18 +99,19 @@
                                                 <div class="card">
                                                     <div class="card-header" id="headChild">
                                                         <h2 class="mb-0">
-                                                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#BAC{{ str_replace(' ', '', $key_quarter) }}"><i class="fa fa-plus"></i>{{ $key_quarter }}</button>                     
+                                                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#BAC{{ str_replace($specials, '', $key_quarter) }}"><i class="fa fa-plus"></i>{{ $key_quarter }}</button>                     
                                                         </h2>
                                                     </div>
-                                                    <div id="BAC{{ str_replace(' ', '', $key_quarter) }}" class="collapse" aria-labelledby="headChild" data-parent="#accordionsChild">
+                                                    <div id="BAC{{ str_replace($specials, '', $key_quarter) }}" class="collapse" aria-labelledby="headChild" data-parent="#accordionsChild">
                                                         <div class="card-body">
                                                             <ul>
                                                                 @foreach ($quart as $fdpdocs)
                                                                     <li>
-                                                                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#{{ str_replace(' ', '', $fdpdocs->title)  }}"><h5 class="text-uppercase">{{ $fdpdocs->title }}</h5></a>
+                                                                        @php $specials = array(",", ".", " ", "-") @endphp
+                                                                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#{{ str_replace($specials, '', $fdpdocs->title)  }}"><h5 class="text-uppercase">{{ $fdpdocs->title }}</h5></a>
                                                                     </li>                          
                                                                     {{-- MODAL --}}
-                                                                    <div class="modal fade bd-example-modal-xl" id="{{ str_replace(' ', '', $fdpdocs->title) }}" tabindex="-1" role="dialog" aria-labelledby="{{ $fdpdocs->id }}" aria-hidden="true">
+                                                                    <div class="modal fade bd-example-modal-xl" id="{{ str_replace($specials, '', $fdpdocs->title) }}" tabindex="-1" role="dialog" aria-labelledby="{{ $fdpdocs->id }}" aria-hidden="true">
                                                                     <div class="modal-dialog modal-xl" role="document">
                                                                         <div class="modal-content">
                                                                         <div class="modal-header">
