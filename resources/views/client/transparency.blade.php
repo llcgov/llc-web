@@ -15,7 +15,7 @@
           <div class="bs-accordion">
             <div class="accordion" id="accordionsParent">
             @php $year = $transparency->groupBy('year') @endphp
-            @php $specials = array(",", ".", " ", "-") @endphp
+            @php $specials = array(",", ".", " ", "-", "(", ")" ) @endphp
               @foreach ($year as $key_year => $item)
               <div class="card">
                 <div class="card-header" id="headParent">
@@ -107,11 +107,11 @@
                                                             <ul>
                                                                 @foreach ($quart as $fdpdocs)
                                                                     <li>
-                                                                        @php $specials = array(",", ".", " ", "-") @endphp
-                                                                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#{{ str_replace($specials, '', $fdpdocs->title)  }}"><h5 class="text-uppercase">{{ $fdpdocs->title }}</h5></a>
+                                                                      @php $specials = array(",", ".", " ", "-", "(", ")" ) @endphp
+                                                                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#BAC{{ str_replace($specials, '', $fdpdocs->title)  }}"><h5 class="text-uppercase">{{ $fdpdocs->title }}</h5></a>
                                                                     </li>                          
                                                                     {{-- MODAL --}}
-                                                                    <div class="modal fade bd-example-modal-xl" id="{{ str_replace($specials, '', $fdpdocs->title) }}" tabindex="-1" role="dialog" aria-labelledby="{{ $fdpdocs->id }}" aria-hidden="true">
+                                                                    <div class="modal fade bd-example-modal-xl" id="BAC{{ str_replace($specials, '', $fdpdocs->title) }}" tabindex="-1" role="dialog" aria-labelledby="{{ $fdpdocs->id }}" aria-hidden="true">
                                                                     <div class="modal-dialog modal-xl" role="document">
                                                                         <div class="modal-content">
                                                                         <div class="modal-header">
