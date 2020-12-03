@@ -21,7 +21,7 @@
                             ONLINE SERVICE
                         </h4></a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#"><h5 class="font-weight-light">New/Renew Business Permit</h5></a>
+                        <a class="dropdown-item" href="https://online.lapulapucity.gov.ph"><h5 class="font-weight-light">New/Renew Business Permit</h5></a>
                         <a class="dropdown-item" href="#"><h5 class="font-weight-light">Local Civil Registry Services</h5></a>
                         <a class="dropdown-item" href="#"><h5 class="font-weight-light">Cedula</h5></a>
                         <a class="dropdown-item" href="#"><h5 class="font-weight-light">Tax Declaration</h5></a>
