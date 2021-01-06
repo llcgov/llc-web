@@ -24,43 +24,37 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('admin.images') }}"><i class="fas fa-fw fa-image"></i><span>Images</span></a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('news.index') }}"><i class="fas fa-fw fa-wrench"></i><span>News</span></a>
+          <a class="nav-link" href="{{ route('posts.index') }}"><i class="fas fa-fw fa-folder"></i><span>Posts</span></a>
         </li>
   
         <hr class="sidebar-divider">
   
         <div class="sidebar-heading">
-          Addons
+          Menu
         </div>
-  
+        @if (Auth::user()->user_type == 'super_admin')
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('accounts.index') }}">s<i class="fas fa-fw fa-chart-area"></i><span>User Accounts</span></a>              
+          </li>
+        @endif
+        
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('posts.index') }}"><i class="fas fa-fw fa-folder"></i><span>Posts</span></a>
+          <a class="nav-link" href="{{ route('schedules.index') }}">s<i class="fas fa-fw fa-chart-area"></i><span>Schedules</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('departments.index') }}">d<i class="fas fa-fw fa-chart-area"></i><span>Departments</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('eo.index') }}">e
+            <i class="fas fa-fw fa-chart-area"></i><span>Executive Orders</span></a>
         </li>
   
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('schedules.index') }}">e<i class="fas fa-fw fa-chart-area"></i><span>Schedules</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('departments.index') }}">e<i class="fas fa-fw fa-chart-area"></i><span>Departments</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('covidcase.index') }}">e<i class="fas fa-fw fa-chart-area"></i><span>Covid Case Update</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('covid-case-details.index') }}">e<i class="fas fa-fw fa-chart-area"></i><span>Covid Case Per Barangay</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('eo.index') }}">e<i class="fas fa-fw fa-chart-area"></i><span>Executive Orders</span></a>
-        </li>
-  
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('transparencies.index') }}">
-            <i class="fas fa-fw fa-table"></i>
+          <a class="nav-link" href="{{ route('transparencies.index') }}">t
+            <i class="fas fa-fw fa-chart-area"></i>
             <span>Transparency Files</span></a>
         </li>
-  
         <hr class="sidebar-divider d-none d-md-block">
           <div class="text-center d-none d-md-inline">
           <button class="rounded-circle border-0" id="sidebarToggle"></button>

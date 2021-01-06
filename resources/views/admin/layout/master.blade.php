@@ -42,11 +42,7 @@
           
 
         </div>
+        @stack('scripts')
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-            new SlimSelect({
-                select: '#barangay'
-            });
-        </script>
     </body>
 </html>

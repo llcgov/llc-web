@@ -41,11 +41,13 @@ class PostsController extends Controller
         $carbon = \Carbon\Carbon::createFromFormat('Y-m-d', $request->input('date_posted'));
         $post = Post::create([
             'title' => $request->input('title'), 
+            'headline' => $request->input('headline'), 
+            'video_url' => $request->input('video_url'), 
             'content' => $request->input('content'), 
             'post_type' => $request->input('post_type'),
             'date_posted' => $carbon->format('Y-m-d')
             ]);
-        logs()->info(empty(request()->file('name')));
+        // logs()->info(empty(request()->file('name')));
         if(request()->file('name'))
         {
             $file = request()->file('name');
@@ -85,7 +87,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['post'] = Post::find($id);
+
+        return view('admin.edit.editpost', $data);
     }
 
     /**

@@ -15,7 +15,11 @@ class DatabaseSeeder extends Seeder
         User::create(
             [
                 'email' => 'blana@lapulapucity.gov.ph',
-                'name' => 'Brisco Lana',
+                'first_name' => 'Brisco',
+                'last_name' => 'Lana',
+                'middle_name' => 'Arcipe',
+                'office' => 'IT Main',
+                'user_type' => 'super_admin',
                 'password' => Hash::make('d4rkl0z3r')
             ]
         );

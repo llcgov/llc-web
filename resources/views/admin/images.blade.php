@@ -11,7 +11,6 @@
         <ul class="nav nav-tabs">
             <li class="nav-item nav-link active"><a data-toggle="tab" href="#gallery">Gallery</a></li>
             <li class="nav-item nav-link" ><a data-toggle="tab" href="#images">Images</a></li>
-            <li class="nav-item nav-link"><a data-toggle="tab" href="#menu2">Menu 2</a></li>
         </ul>
     
         <div class="tab-content mt-4">
@@ -21,7 +20,6 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Path</th>
                             <th scope="col">Type</th>
                             <th scope="col">Actions</th>
                         </tr>
@@ -31,9 +29,15 @@
                         <tr>
                             <th scope="row"><img src="{{ url( 'storage/' . $item->path . '/' . $item->name) }}" width="100" alt=""></th>
                             <td>{{ $item->name}}</td>
-                            <td>{{ $item->path}}</td>
                             <td>{{ $item->type}}</td>
-                            <td><a href="{{ route('images.delete', $item->id) }}"><button class="btn btn-danger">Danger</button></a><a href="#"> <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button></a></td>
+                            <td>
+                                <a href="{{ route('images.delete', $item->id) }}">
+                                    <button class="btn btn-danger">Danger</button>
+                                </a>
+                                <a href="#"> 
+                                    <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</button>
+                                </a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -60,11 +64,6 @@
                         </form>
                     </div>
                 </div>
-            </div>
-
-            <div id="menu2" class="tab-pane">
-                <h3>Menu 2</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
             </div>
         </div>
     </div>

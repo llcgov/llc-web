@@ -9,8 +9,7 @@ use App\Models\ExecutiveOrder as EO;
 use App\Models\News;
 use App\Models\Image;
 use App\Models\Schedule;
-use App\Models\CovidCase;
-use App\Models\BarangayCovid;
+use App\Models\Sap;
 
 class MainController extends Controller
 {
@@ -30,17 +29,17 @@ class MainController extends Controller
                 unset($schedule[$key]['group_id']);
             }
         }
-        $data['covid'] = CovidCase::orderBy('created_at', 'DESC')->get();
         $data['schedules'] = $schedule;
         $data['posts'] = Post::orderBy('date_posted','desc')->get();
-        $data['images'] = Image::where('type', 'Slider')->get();
+        $data['images'] = Image::where('type', 'Slider')->orderBy('created_at', 'asc')->get();
         
         return view('client.index', $data);
     }
 
     public function transparency()
     {
-        $data['transparency'] = Transparency::all();
+        $data['transparency'] = Transparency::where('functionaries', '!=', 'BAC')->get();
+        $data['bac'] = Transparency::where('functionaries', 'BAC')->get();
         
         return view('client.transparency', $data);
     }
@@ -51,76 +50,10 @@ class MainController extends Controller
         return view('client.executiveorders', $data);
     }
 
-    public function covid_details()
+    public function sap()
     {
-        $data['covid'] = BarangayCovid::all();
-
-        return view('client.coviddetails', $data);
+        $data['sap'] = Sap::orderBy('title')->get();
+        return view('client.sap', $data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -15,7 +15,7 @@ class TransparencyController extends Controller
      */
     public function index()
     {
-        $data['transparency'] = Transparency::all();
+        $data['transparency'] = Transparency::orderBy('year', 'desc')->paginate(10);
         return view('admin.transparency', $data);
     }
 

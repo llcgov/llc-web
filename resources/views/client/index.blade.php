@@ -73,7 +73,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                         </div>
                                     </li>
@@ -100,7 +100,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                         </div>
                                     </li>
@@ -127,7 +127,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                         </div>
                                     </li>
@@ -157,12 +157,12 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                             @else
                                             <div class="col-md-8 offset-md-2">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                             @endif
                                         </div>
@@ -175,9 +175,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <!-- <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F1597892066938019%2Fvideos%2F2281064598857138%2F&show_text=0&width=560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe> -->
-                        <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F1597892066938019%2Fvideos%2F220053672607358%2F&show_text=0&width=560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-                    
+                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F1597892066938019%2Fvideos%2F315767959413480%2F&show_text=0&width=560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                        {{-- <iframe src="https://web.facebook.com/plugins/video.php?href=https%3A%2F%2Fweb.facebook.com%2F1597892066938019%2Fvideos%2F1116422672050279%2F&show_text=0&width=560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe> --}}
                     </div>
                 </div>
             </div>
@@ -206,7 +205,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                         </div>
                                     </li>
@@ -242,8 +241,8 @@
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
                                             <div class="col-md-8">
-                                                <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
+                                                <span><p> {{ $item->title}}</p></span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                         </div>
                                     </li>
@@ -269,8 +268,8 @@
                                                 <img class="img-thumbnail" src="{{ !empty($item->media()->first()->path) ? url( 'storage/' . $item->media()->first()->path . '/' . $item->media()->first()->name) : '' }}" alt="">
                                             </div>
                                             <div class="col-md-8">
-                                                <span class="font-content"><p> {{ $item->title}}</p></span>
-                                                <span class="text-uppercase font-content small text-muted"> {{ date('d-m-Y', strtotime($item->date_posted))}}</span>
+                                                <span><p> {{ $item->title}}</p></span>
+                                                <span class="text-uppercase font-content small text-muted"> {{ date('F d, Y', strtotime($item->date_posted))}}</span>
                                             </div>
                                         </div>
                                     </li>
@@ -284,22 +283,21 @@
         </div>
     </div>
 </div>
-    <div class="icon-bar bg-primary rounded text-center p-4">
-    <a class="text-white text-decoration-none" href="#collapse1"><h3>COVID-19 UPDATE </h3></a>
-    <div>
-        <h4 class="text-light text-center">Confirmed Cases</h4>
-        <h4 class="text-white"><img src="{{ asset('img/icons/people.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->confirmed) ? $covid->first()->confirmed: 0 }}</span></h4>
-        <h4 class="text-light text-center">PUIs</h4>
-        <h4 class="text-white"><img src="{{ asset('img/icons/bed.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pui) ? $covid->first()->pui: 0 }}</span></h4>
-        <h4 class="text-light text-center">PUMs</h4>
-        <h4 class="text-white"><img src="{{ asset('img/icons/house.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pum) ? $covid->first()->pum: 0 }}</span></h4>
-        <h4 class="text-light text-center">Recovered</h4>
-        <h4 class="text-white"><img src="{{ asset('img/icons/check.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->recovered) ? $covid->first()->recovered: 0 }}</span></h4>
-        <a href="{{ route('coviddetails') }}" class="text-light"> More details! </a>
-    </div>
-  
-    </div>
-@push('js')
+{{-- <div class="icon-bar bg-primary rounded text-center p-4">
+  <a class="text-white text-decoration-none" href="#collapse1"><h3>COVID-19 UPDATE </h3></a>
+  <div>
+      <h4 class="text-light text-center">Confirmed Cases</h4>
+      <h4 class="text-white"><img src="{{ asset('img/icons/people.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->confirmed) ? $covid->first()->confirmed: 0 }}</span></h4>
+      <h4 class="text-light text-center">PUIs</h4>
+      <h4 class="text-white"><img src="{{ asset('img/icons/bed.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pui) ? $covid->first()->pui: 0 }}</span></h4>
+      <h4 class="text-light text-center">PUMs</h4>
+      <h4 class="text-white"><img src="{{ asset('img/icons/house.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->pum) ? $covid->first()->pum: 0 }}</span></h4>
+      <h4 class="text-light text-center">Recovered</h4>
+      <h4 class="text-white"><img src="{{ asset('img/icons/check.png') }}" alt="" width="50px"> <span class="text-warning">{{ !empty($covid->first()->recovered) ? $covid->first()->recovered: 0 }}</span></h4>
+      <a href="{{ route('coviddetails') }}" class="text-light"> More details! </a>
+  </div>
+</div> --}}
+@push('scripts')
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
               var calendarEl = document.getElementById('calendar');
@@ -316,7 +314,6 @@
                 events:
                     {!! $schedules->toJson() !!}
               });
-
               calendar.render();
             });
 

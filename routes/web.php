@@ -12,12 +12,21 @@
 */
 // Route::get('/', function(){return view('coming_soon'); })->name('client.home');
 Route::get('/', 'MainController@index')->name('client.home');
+// View Pages
 Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
-Route::get('aboutmayor', function(){return view('client.aboutmayor');})->name('client.aboutmayor');
+Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
+
+Route::get('balikturismo', function(){ return view('client.tourism');})->name('client.tourism');
+
+// Downloadables
+Route::get('downloadable', function(){return view('client.downloadable');})->name('client.downloadable');
+
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
-Route::get('coviddetails', 'MainController@covid_details')->name('coviddetails');
+
+
+// Administrator Pages
 Route::prefix('administrator')->group(function () {
     Route::group(['middleware' => ['auth']], function () {
 
@@ -26,10 +35,10 @@ Route::prefix('administrator')->group(function () {
         // Posts
         Route::resource('posts', 'PostsController');
 
-        // News 
+        // News
         Route::resource('news', 'NewsController');
-        
-        // Departments 
+
+        // Departments
         Route::resource('departments', 'DepartmentsController');
 
         // Transparency
@@ -39,14 +48,13 @@ Route::prefix('administrator')->group(function () {
 
         Route::resource('schedules', 'SchedulesController');
 
-        Route::resource('covidcase', 'CovidCasesController');
-        
-        Route::resource('covid-case-details', 'BarangayCovidController');
-
         // Images
         Route::get('images', 'ImagesController@index')->name('admin.images');
         Route::post('upload', 'ImagesController@upload')->name('images.upload');
         Route::get('delete/{id}', 'ImagesController@delete')->name('images.delete');
+
+
+        Route::resource('accounts', 'AccountsController');
     });
 });
 Auth::routes(['register' => False]);
