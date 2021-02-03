@@ -28,7 +28,7 @@
         @stack('css')
     </head>
     <body id="page-top">
-      <!-- Load Facebook SDK for JavaScript -->
+      {{-- <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
       <script>
         window.fbAsyncInit = function() {
@@ -52,7 +52,7 @@
         page_id="105912244829200"
         logged_in_greeting="Hi! How can we help you?"
         logged_out_greeting="Hi! How can we help you?">
-      </div>
+      </div> --}}
         <div id="wrapper">
           <div id="content-wrapper" class="d-flex flex-column">
             @include('client.layout.nav')
