@@ -3,13 +3,45 @@
 @section('content')
 
     {{-- Hero Section --}}
-  <section id="hero" class="d-flex justify-content-center align-items-center">
+  {{-- <section id="hero" class="d-flex justify-content-center align-items-center">
       <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
           <h1>Learning Today,<br>Leading Tomorrow</h1>
           <h2>We are team of talented designers making websites with Bootstrap</h2>
           <a href="courses.html" class="btn-get-started">Get Started</a>
       </div>
-  </section>
+  </section> --}}
+  
+  <div class="container-fluid px-0 pt-4 mt-5">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            @foreach ($images as $key => $image_count)
+                <li data-target="#demo" data-slide-to="{{$key}}" class="{{ $key == 0 ? 'active' : ''}}"></li>
+            @endforeach
+        </ul>
+        <div class="carousel-inner bg-info" role="listbox">
+            @foreach ($images as $key_image => $image)
+                <div class="carousel-item {{ $key_image == 0 ? 'active': ''}}">
+                    <div class="min-vhd d-flex align-items-center justify-content-center">
+                        <img class="img-thumbnail" src="{{ url( 'storage/' . $image->path . '/' . $image->name) }}" class="d-block img-fluid" alt="Los Angeles" width="1300" height="500">
+                    </div>
+                </div>
+            @endforeach
+            {{-- <div class="carousel-item">
+                <div class="d-flex align-items-center justify-content-center min-vh-100">
+                    <h1 class="display-1">TWO</h1>
+                </div>
+            </div> --}}
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+  </div>
   
   {{-- Content Section --}}
   <main id="main">

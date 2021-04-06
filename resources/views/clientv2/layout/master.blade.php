@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>City of Lapu-Lapu | Official Website of City Government of Lapu-Lapu</title>
+  <title>One Lapu-Lapu | City Government of Lapu-Lapu</title>
+  <link rel="icon" href="{{ asset('img/llc-seal.png') }}" type="image/icon type">
   <meta content="" name="description">
   <meta content="" name="keywords">
 

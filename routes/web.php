@@ -25,8 +25,11 @@ Route::get('transparency', 'MainController@transparency')->name('client.transpar
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
 
+
+
 // Tests
-Route::get('template', function(){return view('clientv2.pages.index');})->name('client.downloadable');
+Route::get('template', 'MainController@template')->name('client.template');
+// Route::get('template', function(){return view('clientv2.pages.index');})->name('client.downloadable');
 
 // Administrator Pages
 Route::prefix('administrator')->group(function () {

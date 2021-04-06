@@ -56,4 +56,12 @@ class MainController extends Controller
         return view('client.sap', $data);
     }
 
+    // DESIGN TEMPLATE
+    public function template()
+    {
+        $data['images'] = Image::where('type', 'Slider')->orderBy('created_at', 'asc')->get();
+        
+        return view('clientv2.pages.index', $data);
+    }
+
 }

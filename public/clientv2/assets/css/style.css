@@ -1561,3 +1561,10 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+
+/* Edited CSS */
+
+.min-vhd{
+  min-height: 90vh !important;
+}
