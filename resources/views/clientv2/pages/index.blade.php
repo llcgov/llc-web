@@ -2,16 +2,7 @@
 
 @section('content')
 
-    {{-- Hero Section --}}
-  {{-- <section id="hero" class="d-flex justify-content-center align-items-center">
-      <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-          <h1>Learning Today,<br>Leading Tomorrow</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
-          <a href="courses.html" class="btn-get-started">Get Started</a>
-      </div>
-  </section> --}}
-  
-  <div class="container-fluid px-0 pt-4 mt-5">
+  <div class="container-fluid px-0 pt-5 mt-5">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
             @foreach ($images as $key => $image_count)

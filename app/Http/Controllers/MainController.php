@@ -33,7 +33,7 @@ class MainController extends Controller
         $data['posts'] = Post::orderBy('date_posted','desc')->get();
         $data['images'] = Image::where('type', 'Slider')->orderBy('created_at', 'asc')->get();
         
-        return view('client.index', $data);
+        return view('clientv2.pages.index', $data);
     }
 
     public function transparency()
@@ -41,7 +41,7 @@ class MainController extends Controller
         $data['transparency'] = Transparency::where('functionaries', '!=', 'BAC')->get();
         $data['bac'] = Transparency::where('functionaries', 'BAC')->get();
         
-        return view('client.transparency', $data);
+        return view('clientv2.pages.transparency', $data);
     }
 
     public function executiveorders()

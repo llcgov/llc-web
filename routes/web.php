@@ -13,13 +13,15 @@
 // Route::get('/', function(){return view('coming_soon'); })->name('client.home');
 Route::get('/', 'MainController@index')->name('client.home');
 // View Pages
-Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
-Route::get('aboutcity', function(){return view('client.aboutcity');})->name('client.aboutcity');
+
+Route::get('about', function(){return view('clientv2.pages.about');})->name('client.about');
+Route::get('aboutcity', function(){return view('client.about');})->name('client.aboutcity');
 
 Route::get('balikturismo', function(){ return view('client.tourism');})->name('client.tourism');
 
 // Downloadables
 Route::get('downloadable', function(){return view('client.downloadable');})->name('client.downloadable');
+Route::get('downloadables', function(){return view('clientv2.pages.downloadable');})->name('client.downloadables');
 
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
@@ -28,7 +30,7 @@ Route::get('post/show/{id}','PostsController@show')->name('post.show');
 
 
 // Tests
-Route::get('template', 'MainController@template')->name('client.template');
+// Route::get('template', 'MainController@template')->name('client.template');
 // Route::get('template', function(){return view('clientv2.pages.index');})->name('client.downloadable');
 
 // Administrator Pages
