@@ -64,4 +64,10 @@ class MainController extends Controller
         return view('clientv2.pages.index', $data);
     }
 
+    public function qrCodeGenerate()
+    {
+
+        return $result;
+    }
+
 }
