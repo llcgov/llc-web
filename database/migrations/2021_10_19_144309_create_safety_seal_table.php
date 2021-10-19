@@ -13,12 +13,15 @@ class CreateSafetySealTable extends Migration
      */
     public function up()
     {
-        Schema::create('safety_seal', function (Blueprint $table) {
+        Schema::create('safety_seals', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('serial_number');
-            $table->date('issued_on');
-            $table->date('validity');
+            $table->string('name')->nullable();
+            $table->string('estName')->nullable();
+            $table->string('estAddress')->nullable();
+            $table->string('contactNo')->nullable();
+            $table->string('serial_number')->nullable();
+            $table->date('issued_on')->nullable();
+            $table->date('validity')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ class CreateSafetySealTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('safety_seal');
+        Schema::dropIfExists('safety_seals');
     }
 }

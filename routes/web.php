@@ -25,9 +25,11 @@ Route::get('downloadables', function(){return view('clientv2.pages.downloadable'
 
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
+Route::get('safetyseal', 'MainController@qrCodeGenerate')->name('client.safetyseal');
+
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
 
-
+Route::post('sealrequest', 'MainController@safetyseal')->name('client.safetysealrequest');
 
 // Tests
 // Route::get('template', 'MainController@template')->name('client.template');

@@ -10,6 +10,12 @@ use App\Models\News;
 use App\Models\Image;
 use App\Models\Schedule;
 use App\Models\Sap;
+use App\Models\SafetySeal;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+
+//Development
+use Illuminate\Support\Facades\Log;
+use Laravel\Telescope\Telescope;
 
 class MainController extends Controller
 {
@@ -64,10 +70,32 @@ class MainController extends Controller
         return view('clientv2.pages.index', $data);
     }
 
+    public function safetyseal(Request $request)
+    {
+        $data = $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'estName' => 'required',
+            'estAddress' => 'required',
+            'contactNo' => 'required'
+        ]);
+
+        $response = SafetySeal::create(
+            ['name'         =>  $data['name'],
+            'estName'       =>  $data['estName'],
+            'estAddress'    =>  $data['estAddress'],
+            'contactNo'     =>  $data['contactNo']
+        ]);
+
+        return view('clientv2.pages.safetyseal');
+    }
+    
     public function qrCodeGenerate()
     {
 
-        return $result;
+        return view('clientv2.pages.safetyseal');
     }
+
+
 
 }
