@@ -70,7 +70,7 @@ class MainController extends Controller
         return view('clientv2.pages.index', $data);
     }
 
-    public function safetyseal(Request $request)
+    public function createsealrequest(Request $request)
     {
         $data = $this->validate($request, [
             'name' => 'required',
@@ -79,21 +79,27 @@ class MainController extends Controller
             'estAddress' => 'required',
             'contactNo' => 'required'
         ]);
+        $serial = str_pad( isset(SafetySeal::all()->last()->id) ? SafetySeal::all()->last()->id : 1, 6, "0", STR_PAD_LEFT);
 
         $response = SafetySeal::create(
-            ['name'         =>  $data['name'],
-            'estName'       =>  $data['estName'],
-            'estAddress'    =>  $data['estAddress'],
-            'contactNo'     =>  $data['contactNo']
-        ]);
+            [
+                'name'          =>  $data['name'],
+                'email'         =>  $data['email'],
+                'estName'       =>  $data['estName'],
+                'estAddress'    =>  $data['estAddress'],
+                'contactNo'     =>  $data['contactNo'],
+                'serial_number' =>  $serial
+            ]);
 
-        return view('clientv2.pages.safetyseal');
+        return view('clientv2.pages.safetysealrequest')->with(['flag'=> 1]);
     }
     
-    public function qrCodeGenerate()
-    {
 
-        return view('clientv2.pages.safetyseal');
+
+    public function safetySealVerify($id)
+    {
+        $data['safetySeal'] = SafetySeal::find($id);
+        return view('clientv2.pages.sealverification', $data);
     }
 
 

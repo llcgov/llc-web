@@ -1,9 +1,9 @@
 @extends('clientv2.layout.master')
 
 @section('content')
-
-    <div class="container px-0 pt-5 mt-5">
-        <div class="row mt-5">
+    <div class="container pt-5 mt-5">
+      <h4>Safety Seal Request</h4>
+      <div class="row mt-5 mb-5">
             <div class="col-lg-4">
               <div class="info">
                 <div class="address">
@@ -26,7 +26,7 @@
   
             <div class="col-lg-8 mt-5 mt-lg-0">
   
-              <form action="{{ route('client.safetysealrequest') }}" method="POST" class="php-email-form">
+              <form action="{{ route('client.createsealrequest') }}" method="POST" class="php-email-form">
                 {{ csrf_field() }}
                 <div class="row">
                   <div class="col-md-6 form-group">
@@ -49,7 +49,9 @@
               </form>
   
             </div>
-  
+            @if(isset($flag) && $flag === 1)
+              <div class="alert alert-success">add record successful</div>
+             @endif
           </div>
 
     </div>

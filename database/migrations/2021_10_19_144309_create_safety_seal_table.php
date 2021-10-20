@@ -18,10 +18,12 @@ class CreateSafetySealTable extends Migration
             $table->string('name')->nullable();
             $table->string('estName')->nullable();
             $table->string('estAddress')->nullable();
+            $table->string('email')->nullable();
             $table->string('contactNo')->nullable();
             $table->string('serial_number')->nullable();
             $table->date('issued_on')->nullable();
             $table->date('validity')->nullable();
+            $table->enum('status', ['Pending', 'Removed', 'Approved', 'Declined'])->default('Pending');
             $table->timestamps();
         });
     }
