@@ -28,7 +28,7 @@ Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
 
 //SafetySeal PageView
-Route::get('safetyseal', function(){ return view('clientv2.pages.safetysealrequest');} );
+Route::get('safetyseal', function(){ return view('clientv2.pages.safetysealrequest');} )->name('client.safetyseal');
 
 Route::get('sealverification/{id}', 'MainController@safetySealVerify')->name('client.safetysealverification');
 

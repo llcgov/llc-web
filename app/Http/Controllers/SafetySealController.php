@@ -58,7 +58,7 @@ class SafetySealController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.edit.editsafetyseal', ['est'=> SafetySeal::find($id)]);
     }
 
     /**

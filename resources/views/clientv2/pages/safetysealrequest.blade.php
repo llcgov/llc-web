@@ -23,9 +23,13 @@
                 </div>
               </div>
             </div>
-  
+
+            @isset($message)
+              <div class="alert alert-success">
+                <strong>{{@message}}</strong>
+              </div>
+            @endif
             <div class="col-lg-8 mt-5 mt-lg-0">
-  
               <form action="{{ route('client.createsealrequest') }}" method="POST" class="php-email-form">
                 {{ csrf_field() }}
                 <div class="row">
@@ -49,9 +53,6 @@
               </form>
   
             </div>
-            @if(isset($flag) && $flag === 1)
-              <div class="alert alert-success">add record successful</div>
-             @endif
           </div>
 
     </div>

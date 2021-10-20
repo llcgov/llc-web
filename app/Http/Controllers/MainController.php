@@ -91,7 +91,9 @@ class MainController extends Controller
                 'serial_number' =>  $serial
             ]);
 
-        return view('clientv2.pages.safetysealrequest')->with(['flag'=> 1]);
+        // return redirect()->route('client.safetyseal');
+        $message = "Request Sent";
+        return Redirect::to('client.safetyseal', compact('message'));
     }
     
 
