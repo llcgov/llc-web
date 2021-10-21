@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\SafetySeal;
+use PDF;
 
 class SafetySealController extends Controller
 {
@@ -47,7 +48,9 @@ class SafetySealController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['est'] = SafetySeal::find($id);
+
+        return view('admin.show.showsafetyseal', $data);
     }
 
     /**
