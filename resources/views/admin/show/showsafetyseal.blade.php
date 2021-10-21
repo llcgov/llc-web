@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-md-4">
-                {{ QrCode::size(200)->generate(route('client.safetysealverification', ['id' => $est->serial_number])) }}
+                <img src="{{ asset('img/llc-seal.png') }}" class="rounded mx-auto d-block" id="llclogo" alt="Lapu-Lapu City Logo">
             </div>
             <div class="col-md-4 mt-4">
                 <h5>Safety Seal Number: {{$est->serial_number}}</h5>
@@ -21,8 +21,7 @@
                 <h5>Valid Until: {{isset($est->validity) ? $est->validity : "Not yet Scheduled"}}</h5>
             </div>
             <div class="col-md-4">
-                <img src="{{ asset('img/llc-seal.png') }}" class="rounded mx-auto d-block" id="llclogo" alt="Lapu-Lapu City Logo">
-                
+                {{ QrCode::size(200)->generate(route('client.safetysealverification', ['id' => $est->serial_number])) }}
             </div>
         </div>
     </div>    
