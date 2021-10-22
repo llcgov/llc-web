@@ -19,6 +19,7 @@
                 <h5>Safety Seal Number: {{$est->serial_number}}</h5>
                 <h5>Issued On: {{isset($est->issued_on) ? $est->issued_on : "Not yet Scheduled"}}</h5>
                 <h5>Valid Until: {{isset($est->validity) ? $est->validity : "Not yet Scheduled"}}</h5>
+                <h5>Valid Until: {{isset($est->inspector) ? $est->inspectpr : "Not yet inspected"}}</h5>
             </div>
             <div class="col-md-4">
                 {{ QrCode::size(200)->generate(route('client.safetysealverification', ['id' => $est->serial_number])) }}

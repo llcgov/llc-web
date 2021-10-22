@@ -45,8 +45,9 @@
                                     <input type="text" placeholder="Video URL" name="video_url" value="{{ isset($est->validty) ? $est->validty : "Not yet Valid" }}" class="form-control">
                                 </div>
                                 <div class="col-lg-3 form-group">
-                                    <label for="title">Status</label>
-                                    <input type="text" placeholder="Video URL" name="video_url" value="{{ $est->estAddress }}" class="form-control">
+                                    <label for="title">Inspector</label>
+                                    <input type="text" placeholder="Video URL" name="video_url" value="{{ isset($est->insspector) ? $est->insspector : "Not yet Inspected" }}" class="form-control">
+                                
                                 </div>
                                 <div class="col-lg-3 form-group">
                                     <label for="title">Status</label>
