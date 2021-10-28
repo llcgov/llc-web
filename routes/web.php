@@ -27,11 +27,14 @@ Route::get('transparency', 'MainController@transparency')->name('client.transpar
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
 
+//SafetySeal PageView
+Route::get('safetyseal', function(){ return view('clientv2.pages.safetysealrequest');} )->name('client.safetyseal');
 
+Route::get('sealverification/{id}', 'MainController@safetySealVerify')->name('client.safetysealverification');
 
-// Tests
-// Route::get('template', 'MainController@template')->name('client.template');
-// Route::get('template', function(){return view('clientv2.pages.index');})->name('client.downloadable');
+//SafetySeal Create Request
+Route::post('createsealrequest', 'MainController@createsealrequest')->name('client.createsealrequest');
+
 
 // Administrator Pages
 Route::prefix('administrator')->group(function () {
@@ -60,6 +63,7 @@ Route::prefix('administrator')->group(function () {
         Route::post('upload', 'ImagesController@upload')->name('images.upload');
         Route::get('delete/{id}', 'ImagesController@delete')->name('images.delete');
 
+        Route::resource('safetyseal', 'SafetySealController');
 
         Route::resource('accounts', 'AccountsController');
     });

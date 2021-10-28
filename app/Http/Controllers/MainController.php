@@ -10,6 +10,12 @@ use App\Models\News;
 use App\Models\Image;
 use App\Models\Schedule;
 use App\Models\Sap;
+use App\Models\SafetySeal;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+
+//Development
+use Illuminate\Support\Facades\Log;
+use Laravel\Telescope\Telescope;
 
 class MainController extends Controller
 {
@@ -63,5 +69,41 @@ class MainController extends Controller
         
         return view('clientv2.pages.index', $data);
     }
+
+    public function createsealrequest(Request $request)
+    {
+        $data = $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'estName' => 'required',
+            'estAddress' => 'required',
+            'contactNo' => 'required'
+        ]);
+        $serial = str_pad( isset(SafetySeal::all()->last()->id) ? SafetySeal::all()->last()->id : 1, 6, "0", STR_PAD_LEFT);
+
+        $response = SafetySeal::create(
+            [
+                'name'          =>  $data['name'],
+                'email'         =>  $data['email'],
+                'estName'       =>  $data['estName'],
+                'estAddress'    =>  $data['estAddress'],
+                'contactNo'     =>  $data['contactNo'],
+                'serial_number' =>  $serial
+            ]);
+
+        // return redirect()->route('client.safetyseal');
+        $message = "Request Sent";
+        return Redirect::to('client.safetyseal', compact('message'));
+    }
+    
+
+
+    public function safetySealVerify($id)
+    {
+        $data['safetySeal'] = SafetySeal::find($id);
+        return view('clientv2.pages.sealverification', $data);
+    }
+
+
 
 }
