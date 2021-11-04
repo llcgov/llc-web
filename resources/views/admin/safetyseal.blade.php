@@ -27,13 +27,13 @@
                         <tr>
 
                             {{-- <td> {!! str_pad($item->id, 6, "0", STR_PAD_LEFT) !!} </td> --}}
-                            <td> {!! QrCode::generate(route('client.safetysealverification', ['id' => $item->serial_number])); !!} </td>
+                            <td> {!! QrCode::generate("https://llcgovsafetyseal.000webhostapp.com/index.php?serialno=" . $item->serial_number); !!} </td>
                             <td> {{$item->name}} </td>
                             <td> {{$item->email}} </td>
                             <td> {{$item->contactNo}} </td>
                             <td> {{$item->estName}} </td>
                             <td> {{$item->estAddress}} </td>
-                            <td> {{$item->status}} </td>
+                            <td> {{$item->serial_number}} </td>
                             <td>
                                 <div class="row">
                                     @if ($item->user_type!="super_admin")
