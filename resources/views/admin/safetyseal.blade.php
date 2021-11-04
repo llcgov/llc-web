@@ -37,12 +37,17 @@
                             <td>
                                 <div class="row">
                                     @if ($item->user_type!="super_admin")
-                                        <div class="col-md-6 m-0 p-0">
+                                        <div class="col-md-4 m-0 p-0">
+                                            <a href="{{route('safetyseal.show', $item)}}"> 
+                                                <button class="btn btn-primary"><i class="fa fa-print" aria-hidden="true"></i></button>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4 m-0 p-0">
                                             <a href="{{route('safetyseal.edit', $item)}}"> 
                                                 <button class="btn btn-primary"><i class="fa fa-pencil-alt" aria-hidden="true"></i></button>
                                             </a>
                                         </div>
-                                        <div class="col-md-6 m-0 p-0">
+                                        <div class="col-md-4 m-0 p-0">
                                             <form  action="{{ route('safetyseal.destroy', $item->id) }}" method="POST">
                                                 @method('DELETE')
                                                 @csrf
