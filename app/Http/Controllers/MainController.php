@@ -79,7 +79,7 @@ class MainController extends Controller
             'estAddress' => 'required',
             'contactNo' => 'required'
         ]);
-        $serial = str_pad( isset(SafetySeal::all()->last()->id) ? SafetySeal::all()->last()->id : 1, 6, "0", STR_PAD_LEFT);
+        // $serial = str_pad( isset(SafetySeal::all()->last()->id) ? SafetySeal::all()->last()->id : 1, 6, "0", STR_PAD_LEFT);
 
         $response = SafetySeal::create(
             [
@@ -87,13 +87,10 @@ class MainController extends Controller
                 'email'         =>  $data['email'],
                 'estName'       =>  $data['estName'],
                 'estAddress'    =>  $data['estAddress'],
-                'contactNo'     =>  $data['contactNo'],
-                'serial_number' =>  $serial
+                'contactNo'     =>  $data['contactNo']
             ]);
 
-        // return redirect()->route('client.safetyseal');
-        $message = "Request Sent";
-        return Redirect::to('client.safetyseal', compact('message'));
+        return redirect()->back();
     }
     
 
