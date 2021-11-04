@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="title">Serial Number</label>
-                                <input type="text" name="serial_no" disabled value="{{ $est->serial_number }}" class="form-control">
+                                <input type="text" name="serial_no" value="{{ $est->serial_number }}" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="title">Establishment Name</label>
