@@ -73,7 +73,20 @@ class SafetySealController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $safetyseal = SafetySeal::find($id);
+
+        $safetyseal->name = $request->name;
+        $safetyseal->estName = $request->estName;
+        $safetyseal->estAddress = $request->estAddress;
+        $safetyseal->email = $request->email;
+        $safetyseal->serial_number = $request->serial_number;
+        $safetyseal->issued_on = $request->issued_on;
+        $safetyseal->status = $request->status;
+
+        $safetyseal->save();
+
+        return redirect()->route('safetyseal.index');
+        
     }
 
     /**

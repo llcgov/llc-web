@@ -18,7 +18,7 @@
                             <th>Contact No</th>
                             <th>Establishment Names</th>
                             <th>Establishment Address</th>
-                            <th>Status</th>
+                            <th>Serial Number</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
