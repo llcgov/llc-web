@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="col-lg-3 form-group">
                                     <label for="title">Valid Until</label>
-                                    <input type="date" placeholder="Video URL" name="validty" value="{{ isset($est->validty) ? $est->validty : "Not yet Valid" }}" class="form-control">
+                                    <input type="date" placeholder="Video URL" name="validity" value="{{ isset($est->validity) ? $est->validity : "Not yet Valid" }}" class="form-control">
                                 </div>
                                 <div class="col-lg-3 form-group">
                                     <label for="title">Status</label>

@@ -81,6 +81,7 @@ class SafetySealController extends Controller
         $safetyseal->email = $request->email;
         $safetyseal->serial_number = $request->serial_number;
         $safetyseal->issued_on = $request->issued_on;
+        $safetyseal->validity = $request->validity;
         $safetyseal->status = $request->status;
 
         $safetyseal->save();
