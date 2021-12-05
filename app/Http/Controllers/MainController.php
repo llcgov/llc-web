@@ -15,7 +15,6 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 //Development
 use Illuminate\Support\Facades\Log;
-use Laravel\Telescope\Telescope;
 
 class MainController extends Controller
 {
