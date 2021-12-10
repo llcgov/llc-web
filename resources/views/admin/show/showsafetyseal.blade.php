@@ -22,7 +22,7 @@
                 <h5 class="text-center">Valid Until: {{isset($est->validity) ? $est->validity : "Not yet Scheduled"}}</h5>
             </div>
             <div class="col-md-3 d-flex justify-content-center">
-                {{ QrCode::size(200)->generate(route('client.safetysealverification', ['id' => $est->serial_number])) }}
+                {{ QrCode::size(200)->generate(route('client.safetysealverification', ['serial' => $est->serial_number])) }}
             </div>
         </div>
     </div>    
