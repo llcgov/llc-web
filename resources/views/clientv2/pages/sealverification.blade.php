@@ -12,18 +12,15 @@
             </div>
 
             <div class="row">
-                    <div class="offset-sm-3 col-sm-2 text-center">
-                        <img class="rounded img-fluid" src="{{ asset('img/pg.png') }}" alt="Lapu-Lapu City Seal">
-                    </div>
-                    
                     <div class="col-sm-3">
                         <h4 class="text-center"><strong>{{ $safetySeal['estName'] }}</strong></h4>
                         <h6 class="text-left">Seal Number: <strong>{{ $safetySeal['serial_number'] }}</strong></h6>
                         <h6 class="text-left">Issued On: <strong>{{ $safetySeal['issued_on'] }}</strong></h6>
                         <h6 class="text-left">Valid Until: <strong>{{ $safetySeal['validity'] }}</strong></h6>
                     </div>
-            </div>
-            <div class="row">
+                    <div class="offset-sm-3 col-sm-2 text-center">
+                        <img class="rounded img-fluid" src="{{ asset('img/pg-new.png') }}" alt="Lapu-Lapu City Seal">
+                    </div>
             </div>
         </div>
     </section>
