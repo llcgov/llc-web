@@ -98,7 +98,7 @@ class MainController extends Controller
     {
         $data['safetySeal'] = SafetySeal::where('serial_number', $serial)->first();
 
-        dd($data['safetySeal']);
+        // dd($data['safetySeal']);
         return view('clientv2.pages.sealverification', $data);
     }
 
