@@ -94,9 +94,11 @@ class MainController extends Controller
     
 
 
-    public function safetySealVerify($id)
+    public function safetySealVerify($serial)
     {
-        $data['safetySeal'] = SafetySeal::find($id);
+        $data['safetySeal'] = SafetySeal::where('serial_number', $serial)->first();
+
+        dd($data['safetySeal']);
         return view('clientv2.pages.sealverification', $data);
     }
 
