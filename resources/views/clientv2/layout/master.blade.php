@@ -7,8 +7,8 @@
 
   <title>One Lapu-Lapu | City Government of Lapu-Lapu Official Website</title>
   <link rel="icon" href="{{ asset('img/llc-seal.png') }}" type="image/icon type">
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Lapu-Lapu City Official Website" name="description">
+  <meta content="Opon, Lapu-Lapu City, lapu-lapu" name="keywords">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
