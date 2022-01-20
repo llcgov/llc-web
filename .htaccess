@@ -29,10 +29,12 @@
 
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^lapulapucity.gov.ph$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.lapulapucity.gov.ph$
+RewriteCond %{HTTP_HOST} ^official.lapulapucity.gov.ph$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.official.lapulapucity.gov.ph$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]
+
+Header append X-Frame-Options: "SAMEORIGIN"
 
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php73” package as the default “PHP” programming language.
