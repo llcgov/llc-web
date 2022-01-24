@@ -52,7 +52,7 @@ class MainController extends Controller
     public function executiveorders()
     {
         $data['eo'] = EO::all();
-        return view('client.executiveorders', $data);
+        return view('clientv2.pages.eo', $data);
     }
 
     public function sap()

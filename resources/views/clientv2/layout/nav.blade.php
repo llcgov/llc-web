@@ -2,15 +2,13 @@
 <nav class="nav-menu d-none d-lg-block">
   <ul>
     <li class="active"><a href="{{ route('client.home') }}">Home</a></li>
-    {{-- <li><a href="about.html">Online Services</a></li> --}}
-    <li><a href="courses.html">Departments</a></li>
     <li class="drop-down"><a href="">Online Services</a>
       <ul>
         <li><a href="https://online.lapulapucity.gov.ph">New/Renew Business Permit</a></li>
-        <li><a href="#">Local Civil Registry Services</a></li>
+        {{-- <li><a href="#">Local Civil Registry Services</a></li>
         <li><a href="#">Cedula</a></li>
         <li><a href="#">Tax Decleration</a></li>
-        <li><a href="#">HR Online Requests</a></li>
+        <li><a href="#">HR Online Requests</a></li> --}}
       </ul>
     </li>
     <li class="drop-down"><a href="">Transparency</a>
