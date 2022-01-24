@@ -14,7 +14,7 @@
     <li class="drop-down"><a href="">Transparency</a>
       <ul>
         <li><a href="{{ route('client.transparency') }}">Full Disclosure Data</a></li>
-        <li><a href="{{ route('client.executiveorders') }}">Executive Order</a></li>
+        <li><a href="{{ route('client.eo') }}">Executive Order</a></li>
         <li><a href="#">Citizen's Chart</a></li>
       </ul>
     </li>
