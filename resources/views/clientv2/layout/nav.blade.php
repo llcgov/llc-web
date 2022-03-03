@@ -1,4 +1,4 @@
-<h1 class="logo mr-auto"><a href="index.html"><img src="{{ asset('img/republic_of_ph.png') }}" alt=""></a></h1>
+<h1 class="logo mr-auto"><a href="/"><img src="{{ asset('img/republic_of_ph.png') }}" alt=""></a></h1>
 <nav class="nav-menu d-none d-lg-block">
   <ul>
     <li class="active"><a href="{{ route('client.home') }}">Home</a></li>

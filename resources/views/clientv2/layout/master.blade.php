@@ -6,6 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>One Lapu-Lapu | City Government of Lapu-Lapu Official Website</title>
+  <meta name="description" content="Lapu-Lapu City official Website, Business Renewal, Executive Order, About Lapulapu, Chat with Lapu-Lapu City Government">
   <link rel="icon" href="{{ asset('img/llc-seal.png') }}" type="image/icon type">
   <meta content="Lapu-Lapu City Official Website, Lapu-Lapu, Opon, Lapu-Lapu City" name="description">
   <meta content="Opon, Lapu-Lapu City, lapu-lapu" name="keywords">
