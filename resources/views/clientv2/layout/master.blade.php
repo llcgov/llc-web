@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>One Lapu-Lapu | City Government of Lapu-Lapu Official Website</title>
-  <meta name="description" content="Lapu-Lapu City official Website, Business Renewal, Executive Order, About Lapulapu, Chat with Lapu-Lapu City Government">
+  <meta name="description" content="Official website provides online services, executive orders, City Activities, disclosure policy, bids and awards and Messenger Chat for Community Concerns">
+  <meta name="keywords" content="Lapu-Lapu City, lapu-lapu, lapu lapu, lapu-lapu city hall, Lapu-Lapu City Government, Historic Resort, Lapu-Lapu City Resort, Opon, opon resort, Lapu-Lapu City Tourist, lapu lapu historical spots">
+  <title>Lapu-Lapu City Government Official Website</title>
   <link rel="icon" href="{{ asset('img/llc-seal.png') }}" type="image/icon type">
   <meta content="Lapu-Lapu City Official Website, Lapu-Lapu, Opon, Lapu-Lapu City" name="description">
   <meta content="Opon, Lapu-Lapu City, lapu-lapu" name="keywords">
