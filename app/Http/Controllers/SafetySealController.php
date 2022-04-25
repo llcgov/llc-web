@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SafetySeal;
 use PDF;
+use Log;
+use Session;
+use Redirect;
 
 class SafetySealController extends Controller
 {
@@ -26,7 +29,7 @@ class SafetySealController extends Controller
      */
     public function create()
     {
-        //
+        return view('clientv2.pages.safetysealrequest');
     }
 
     /**
@@ -37,7 +40,26 @@ class SafetySealController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        // Log::debug($request);
+        
+        $data = $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'estName' => 'required',
+            'estAddress' => 'required',
+            'contactNo' => 'required'
+        ]);
+        $db = SafetySeal::create(
+            [
+                'name'          =>  $request['name'],
+                'email'         =>  $request['email'],
+                'estName'       =>  $request['estName'],
+                'estAddress'    =>  $request['estAddress'],
+                'contactNo'     =>  $request['contactNo']
+            ]);
+        
+            return Redirect::action('SafetySealController@create');
     }
 
     /**

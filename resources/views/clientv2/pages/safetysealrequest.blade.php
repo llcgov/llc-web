@@ -1,10 +1,15 @@
 @extends('clientv2.layout.master')
-
 @section('content')
     <div class="container pt-5 mt-5">
-      <h4>Safety Seal Request</h4>
+      <div class="text-center">
+        <h4>Safety Seal Request</h4>
+        @include('clientv2.pages.messages')
+
+      </div>
+
+
       <div class="row mt-5 mb-5">
-            <div class="col-lg-4">
+            <div class="col-md-4">
               <div class="info">
                 <div class="address">
                   <i class="bi bi-geo-alt"></i>
@@ -24,35 +29,50 @@
               </div>
             </div>
 
-            @isset($message)
-              <div class="alert alert-success">
-                <strong>{{@message}}</strong>
-              </div>
-            @endif
-            <div class="col-lg-8 mt-5 mt-lg-0">
-              <form action="{{ route('client.createsealrequest') }}" method="POST" class="php-email-form">
+            <div class="col-md-8">
+              <form action="{{ route('client.createseal') }}" method="POST" class="php-email-form">
                 {{ csrf_field() }}
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Full Name" required>
+                    <label for="email_add">Email address</label>
+                    <input type="email" class="form-control" id="email_add" aria-describedby="emailHelp" name="email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                  <div class="col-md-6 form-group">
+                    <label for="full_name">Name</label>
+                    <input type="text" class="form-control" id="full_name" name="name">
                   </div>
-                </div>
-                <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="contactNo" id="contact" placeholder="Contact No." required>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="estName" id="est_name" placeholder="Establishment Name" required>
-                </div>
-                <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="estAddress" id="est_address" placeholder="Establishment Address" required>
-                  </div>
-                <div class="text-center"><button class="btn get-started-btn" type="submit" value="submit">Send Request</button></div>
-              </form>
   
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="contact">Contact No.</label>
+                    <input type="text" class="form-control" id="contact" name="contactNo">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="estab">Establishment</label>
+                    <input type="text" class="form-control" id="estab" name="estName">
+                  </div>
+  
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label for="estab_address">Establishment Address</label>
+                    <input type="text" class="form-control" id="estab_address" name="estAddress">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    {{-- <input type="submit" class="btn btn-primary">Submit</button> --}}
+                    <button type="submit" class="btn btn-primary"> Submit</button>
+  
+                  </div>
+                </div>
+              </form>
             </div>
+
+
           </div>
 
     </div>

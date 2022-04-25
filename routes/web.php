@@ -28,12 +28,15 @@ Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
 
 //SafetySeal PageView
-Route::get('safetyseal', function(){ return view('clientv2.pages.safetysealrequest');} )->name('client.safetyseal');
+Route::get('safetyseal', 'SafetySealController@create')->name('client.safetyseal');
+
+//SafetySeal Create Request
+Route::post('createseal', 'SafetySealController@store')->name('client.createseal');
+
 
 Route::get('sealverification/{serial}', 'MainController@safetySealVerify')->name('client.safetysealverification');
 
-//SafetySeal Create Request
-Route::post('createsealrequest', 'MainController@createsealrequest')->name('client.createsealrequest');
+
 
 
 // Administrator Pages

@@ -69,31 +69,6 @@ class MainController extends Controller
         return view('clientv2.pages.index', $data);
     }
 
-    public function createsealrequest(Request $request)
-    {
-        $data = $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required',
-            'estName' => 'required',
-            'estAddress' => 'required',
-            'contactNo' => 'required'
-        ]);
-        // $serial = str_pad( isset(SafetySeal::all()->last()->id) ? SafetySeal::all()->last()->id : 1, 6, "0", STR_PAD_LEFT);
-
-        $response = SafetySeal::create(
-            [
-                'name'          =>  $data['name'],
-                'email'         =>  $data['email'],
-                'estName'       =>  $data['estName'],
-                'estAddress'    =>  $data['estAddress'],
-                'contactNo'     =>  $data['contactNo']
-            ]);
-
-        return redirect()->back();
-    }
-    
-
-
     public function safetySealVerify($serial)
     {
         $data['safetySeal'] = SafetySeal::where('serial_number', $serial)->first();
