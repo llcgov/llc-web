@@ -18,7 +18,7 @@ class SafetySealController extends Controller
      */
     public function index()
     {
-        $data['est'] = SafetySeal::all();
+        $data['est'] = SafetySeal::orderBy('serial_number')->paginate(10);
         return view('admin.safetyseal', $data);
     }
 
@@ -41,8 +41,6 @@ class SafetySealController extends Controller
     public function store(Request $request)
     {
         
-        // Log::debug($request);
-        
         $data = $this->validate($request, [
             'name' => 'required',
             'email' => 'required',
@@ -52,14 +50,14 @@ class SafetySealController extends Controller
         ]);
         $db = SafetySeal::create(
             [
-                'name'          =>  $request['name'],
-                'email'         =>  $request['email'],
-                'estName'       =>  $request['estName'],
-                'estAddress'    =>  $request['estAddress'],
-                'contactNo'     =>  $request['contactNo']
+                'name'          =>  $data['name'],
+                'email'         =>  $data['email'],
+                'estName'       =>  $data['estName'],
+                'estAddress'    =>  $data['estAddress'],
+                'contactNo'     =>  $data['contactNo']
             ]);
-        
-            return Redirect::action('SafetySealController@create');
+
+        return back()->with('message', 'Thank you '. $data['name'].', Safety Seal Request has been sent.');        
     }
 
     /**

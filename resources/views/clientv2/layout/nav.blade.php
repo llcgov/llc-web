@@ -5,6 +5,7 @@
     <li class="drop-down"><a href="">Online Services</a>
       <ul>
         <li><a href="https://online.lapulapucity.gov.ph">New/Renew Business Permit</a></li>
+        <li><a href="{{ route('client.safetyseal') }}">Request Establishment Safety Seal</a></li>
         {{-- <li><a href="#">Local Civil Registry Services</a></li>
         <li><a href="#">Cedula</a></li>
         <li><a href="#">Tax Decleration</a></li>

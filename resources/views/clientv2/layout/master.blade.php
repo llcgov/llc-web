@@ -52,11 +52,10 @@
       @yield('content')
   @include('clientv2.layout.footer')
 
-  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
   <script src="{{ asset('clientv2/assets/vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ asset('clientv2/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('clientv2/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
-  <script src="{{ asset('clientv2/assets/vendor/php-email-form/validate.js') }}"></script>
+  {{-- <script src="{{ asset('clientv2/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script> --}}
+  {{-- <script src="{{ asset('clientv2/assets/vendor/php-email-form/validate.js') }}"></script> --}}
   <script src="{{ asset('clientv2/assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
   <script src="{{ asset('clientv2/assets/vendor/counterup/counterup.min.js') }}"></script>
   <script src="{{ asset('clientv2/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>

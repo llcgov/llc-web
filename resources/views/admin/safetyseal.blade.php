@@ -12,7 +12,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Generated QRCode</th>
+                            {{-- <th>Generated QRCode</th> --}}
                             <th>Name</th>
                             <th>Email Address</th>
                             <th>Contact No</th>
@@ -27,11 +27,11 @@
                         <tr>
 
                             {{-- <td> {!! str_pad($item->id, 6, "0", STR_PAD_LEFT) !!} </td> --}}
-                            <td> {!! QrCode::generate("https://llcgovsafetyseal.000webhostapp.com/index.php?serialno=" . $item->serial_number); !!} </td>
+                            {{-- <td> {!! QrCode::generate("https://llcgovsafetyseal.000webhostapp.com/index.php?serialno=" . $item->serial_number); !!} </td> --}}
                             <td> {{$item->name}} </td>
                             <td> {{$item->email}} </td>
                             <td> {{$item->contactNo}} </td>
-                            <td> {{$item->estName}} </td>
+                            <td> <strong>{{$item->estName}}</strong> </td>
                             <td> {{$item->estAddress}} </td>
                             <td> {{$item->serial_number}} </td>
                             <td>
@@ -62,6 +62,7 @@
                         @endforeach
                     </tbody>
                   </table>
+                  {{ $est->links() }}
             </div>
         </div>
     </div>

@@ -4,7 +4,6 @@
       <div class="text-center">
         <h4>Safety Seal Request</h4>
         @include('clientv2.pages.messages')
-
       </div>
 
 
@@ -25,6 +24,7 @@
                   <i class="bi bi-phone"></i>
                   <h4>Call:</h4>
                   <p>+63 999 999 9999</p>
+                  
                 </div>
               </div>
             </div>
@@ -71,9 +71,8 @@
                 </div>
               </form>
             </div>
-
-
           </div>
 
     </div>
+
 @endsection
