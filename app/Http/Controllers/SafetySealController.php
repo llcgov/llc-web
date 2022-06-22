@@ -48,16 +48,20 @@ class SafetySealController extends Controller
             'estAddress' => 'required',
             'contactNo' => 'required'
         ]);
-        $db = SafetySeal::create(
-            [
-                'name'          =>  $data['name'],
-                'email'         =>  $data['email'],
-                'estName'       =>  $data['estName'],
-                'estAddress'    =>  $data['estAddress'],
-                'contactNo'     =>  $data['contactNo']
-            ]);
-
-        return back()->with('message', 'Thank you '. $data['name'].', Safety Seal Request has been sent.');        
+        try {
+            SafetySeal::create(
+                [
+                    'name'          =>  $data['name'],
+                    'email'         =>  $data['email'],
+                    'estName'       =>  $data['estName'],
+                    'estAddress'    =>  $data['estAddress'],
+                    'contactNo'     =>  $data['contactNo']
+                ]);
+            $message = 'Thank you '. $data['name'].', Safety Seal Request has been sent.';
+        } catch (\Throwable $th) {
+            $message = "Error in Sending your request.";
+        }
+        return back()->with('message', $message);        
     }
 
     /**
