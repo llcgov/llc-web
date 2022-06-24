@@ -10,7 +10,7 @@
              Lapu-Lapu City Hall Access Rd<br>
              Lapu-Lapu City, Cebu <br>
              Philippines <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Phone:</strong> +63 (032) 340-2124<br>
               <strong>Email:</strong> info@lapulapucity.gov.ph<br>
             </p>
           </div>
