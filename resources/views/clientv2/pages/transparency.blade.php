@@ -1,7 +1,7 @@
 @extends('clientv2.layout.master')
 
 @section('content')
-    <div class="container-fluid px-0 pt-5 mt-5">
+    <div class="container-fluid pt-5 mt-5">
       <div class="row my-5">
         <div class="col-md-8 offset-md-2">
           <h5 class="text-justify">In compliance with DILG Memorandum Circular No. 2011-08, entitled “Strict Adherence to Section 90 of Republic Act No. 10147, General Appropriations Act, Fiscal Year 2012” and DILG Memorandum Circular 2010-83, entitled “Full Disclosure of Local Budget and Finances, and Bids and Public Offerings“.</h5>
