@@ -1573,7 +1573,7 @@ section {
 .carousel-control-next {
   width: 60px;
   height: 60px;
-  background-color: #0058fc;
+  /* background-color: #0058fc; */
   border-radius: 50%;
   top: calc(50% - 25px);
 }
@@ -1583,4 +1583,13 @@ section {
 }
 .carousel-control-next{
   right: 5%;
+}
+
+.carousel-control-prev.news{
+  background-color: #17a2b8;
+  left: -10%;
+}
+.carousel-control-next.news{
+  background-color: #17a2b8;
+  right: -10%;
 }
