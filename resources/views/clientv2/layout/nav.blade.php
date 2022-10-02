@@ -20,7 +20,12 @@
       </ul>
     </li>
     <li><a href="{{ route('client.downloadables') }}">Downloadables</a></li>
-    <li><a href="{{ route('client.about') }}">About</a></li>
-
+    <li class="drop-down"><a>About</a>
+      <ul>
+        <li><a href="{{ route('client.about') }}">About Opon</a></li>
+        <li><a href="{{ route('client.citizenchart') }}">Citizen's Charter</a></li>
+        {{-- <li><a href="#">Citizen's Chart</a></li> --}}
+      </ul>
+    </li>
   </ul>
 </nav>
