@@ -30,7 +30,7 @@
   </div>
   
   {{-- Content Section --}}
-  <section id="about" class="about">
+  {{-- <section id="about" class="about">
 
     <div class="container" data-aos="fade-up">
       <div class="section-title">
@@ -64,7 +64,7 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
-          </div>
+          </div> --}}
 
         
       </div>

@@ -48,6 +48,13 @@ class MainController extends Controller
         
         return view('clientv2.pages.transparency', $data);
     }
+    public function citizenChart()
+    {
+        $data['citizenchart'] = Transparency::where('type', '=', 'CitizenCharter')->get();
+
+        return view('clientv2.pages.citizenscharter', $data);
+    }
+
 
     public function executiveorders()
     {
