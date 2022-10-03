@@ -20,6 +20,7 @@
                         <tr>
                             <th scope="col">Document Title</th>
                             <th scope="col">Type</th>
+                            <th scope="col">Functionaries</th>
                             <th scope="col">Year</th>
                             <th scope="col">Actions</th>
                         </tr>
@@ -29,6 +30,7 @@
                         <tr>
                             <td>{{ $item->title }}</td>
                             <td>{{ $item->type}}</td>
+                            <td>{{ $item->functionaries}}</td>
                             <td>{{ $item->year}}</td>
                             <td>
                                 <form action="{{ route('transparencies.destroy', $item->id)}}" method="POST">
