@@ -75,11 +75,25 @@
                                     <label for="title">Responsible Offices/Functionaries</label>
                                     <input type="text" placeholder="Responsible Offices/Functionaries" name="functionaries" class="form-control">
                                 </div>
-                                <div class="col-md-6 form-group">
+                                {{-- <div class="col-md-6 form-group">
                                     <label for="title">Type</label>
                                     <input type="text" placeholder="Document Type" name="type" class="form-control">
-                                </div>
+                                </div> --}}
+                                    <div class="col-md-6 form-group">
+
+                                        <label for="year">Year</label>
+                                        <select name="type" id="type" class="form-control">
+                                            <option value="BAC">Bids and Awards</option>
+                                            <option value="Annual">Annual</option>
+                                            <option value="1st Quarter">1st Quarter</option>
+                                            <option value="2nd Quarter">2nd Quarter</option>
+                                            <option value="3rd Quarter">3rd Quarter</option>
+                                            <option value="4th Quarter">4th Quarter</option>
+                                            <option value="CitizenChart">Citizen's Chart</option>
+                                        </select>      
+                                    </div>
                             </div>
+                            
                             
                             <div class="form-group">
                                 <input type="file" name="name" class="form-control">
