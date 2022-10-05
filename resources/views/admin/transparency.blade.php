@@ -89,6 +89,7 @@
                                             <option value="2nd Quarter">2nd Quarter</option>
                                             <option value="3rd Quarter">3rd Quarter</option>
                                             <option value="4th Quarter">4th Quarter</option>
+                                            <option value="DevPlan">Devolution Transition Plan</option>
                                             <option value="CitizenChart">Citizen's Chart</option>
                                         </select>      
                                     </div>

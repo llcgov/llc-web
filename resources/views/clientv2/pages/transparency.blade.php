@@ -77,7 +77,7 @@
         </div>
       </div>
       
-      <div class="row">
+      <div class="row d-none">
         <div class="col-md-8 offset-md-2">
             <h4>Bids and Awards Committee</h4>
             <div class="bs-accordion">

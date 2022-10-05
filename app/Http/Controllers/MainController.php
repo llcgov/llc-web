@@ -54,6 +54,13 @@ class MainController extends Controller
 
         return view('clientv2.pages.citizenscharter', $data);
     }
+    public function DevolutionPlan()
+    {
+        $data['devplan'] = Transparency::where('type', '=', 'DevPlan')->get();
+
+        return view('clientv2.pages.citizenscharter', $data);
+    }
+
 
 
     public function executiveorders()
