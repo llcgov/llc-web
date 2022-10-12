@@ -43,7 +43,7 @@ class MainController extends Controller
 
     public function transparency()
     {
-        $data['transparency'] = Transparency::where('functionaries', '!=', 'BAC')->get();
+        $data['transparency'] = Transparency::whereIn('type', ['Annual', '1st Quarter', '2nd Quarter', '3rd Quarter', '4th Quarter'])->get();
         $data['bac'] = Transparency::where('functionaries', 'BAC')->get();
         
         return view('clientv2.pages.transparency', $data);
@@ -58,7 +58,7 @@ class MainController extends Controller
     {
         $data['devplan'] = Transparency::where('type', '=', 'DevPlan')->get();
 
-        return view('clientv2.pages.citizenscharter', $data);
+        return view('clientv2.pages.dtp', $data);
     }
 
 

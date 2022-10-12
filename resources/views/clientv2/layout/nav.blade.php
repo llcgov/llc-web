@@ -16,6 +16,7 @@
       <ul>
         <li><a href="{{ route('client.transparency') }}">Full Disclosure Data</a></li>
         <li><a href="{{ route('client.eo') }}">Executive Order</a></li>
+        <li><a href="{{ route('client.devplan') }}">Devolution Transition Plan</a></li>
         {{-- <li><a href="#">Citizen's Chart</a></li> --}}
       </ul>
     </li>

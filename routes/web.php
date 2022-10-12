@@ -23,9 +23,11 @@ Route::get('balikturismo', function(){ return view('client.tourism');})->name('c
 Route::get('downloadable', function(){return view('client.downloadable');})->name('client.downloadable');
 Route::get('downloadables', function(){return view('clientv2.pages.downloadable');})->name('client.downloadables');
 
+Route::get('devolutiontransitionplan', 'MainController@DevolutionPlan')->name('client.devplan');
 Route::get('transparency', 'MainController@transparency')->name('client.transparency');
 Route::get('citizenscharter', 'MainController@citizenChart')->name('client.citizenchart');
 Route::get('executiveorders', 'MainController@executiveorders')->name('client.eo');
+
 Route::get('post/show/{id}','PostsController@show')->name('post.show');
 
 //SafetySeal PageView

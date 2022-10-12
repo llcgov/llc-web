@@ -68,6 +68,7 @@
                                         <option value="2021">2021</option>
                                         <option value="2022">2022</option>
                                         <option value="2023">2023</option>
+                                        <option value="2023">2024</option>
                                     </select>                                </div>
                             </div>
                             <div class="row">
@@ -75,13 +76,9 @@
                                     <label for="title">Responsible Offices/Functionaries</label>
                                     <input type="text" placeholder="Responsible Offices/Functionaries" name="functionaries" class="form-control">
                                 </div>
-                                {{-- <div class="col-md-6 form-group">
-                                    <label for="title">Type</label>
-                                    <input type="text" placeholder="Document Type" name="type" class="form-control">
-                                </div> --}}
                                     <div class="col-md-6 form-group">
 
-                                        <label for="year">Year</label>
+                                        <label for="Type">Type</label>
                                         <select name="type" id="type" class="form-control">
                                             <option value="BAC">Bids and Awards</option>
                                             <option value="Annual">Annual</option>
@@ -90,7 +87,7 @@
                                             <option value="3rd Quarter">3rd Quarter</option>
                                             <option value="4th Quarter">4th Quarter</option>
                                             <option value="DevPlan">Devolution Transition Plan</option>
-                                            <option value="CitizenChart">Citizen's Chart</option>
+                                            <option value="CitizenCharter">Citizen's Chart</option>
                                         </select>      
                                     </div>
                             </div>
