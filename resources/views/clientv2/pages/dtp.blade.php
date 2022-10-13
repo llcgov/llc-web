@@ -26,13 +26,13 @@
                         @foreach ($devplan as $key => $fdpdocs)
                             <li>
                               @php $specials = array(",", ".", " ", "-", "(", ")", "[", "]", "/", "'") @endphp
-                                <a href="" class="text-decoration-none" data-toggle="modal" data-target="#CITCHART{{ str_replace($specials, '', $fdpdocs->title . $key)  }}"><h5 class="text-uppercase">{{ $fdpdocs->functionaries }}</h5></a>
+                                <a href="" class="text-decoration-none" data-toggle="modal" data-target="#CITCHART{{ str_replace($specials, '', $fdpdocs->title . $key)  }}"><h5 class="text-uppercase">{{ $fdpdocs->title }}</h5></a>
                             </li>                          
                             <div class="modal fade bd-example-modal-xl" id="CITCHART{{ str_replace($specials, '', $fdpdocs->title . $key)}}" tabindex="-1" role="dialog" aria-labelledby="{{ $fdpdocs->id }}" aria-hidden="true">
                             <div class="modal-dialog modal-xl" role="document">
                                 <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="{{ $fdpdocs->title }}">{{ $fdpdocs->functionaries }}</h5>
+                                    <h5 class="modal-title" id="{{ $fdpdocs->title }}">{{ $fdpdocs->title }}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
